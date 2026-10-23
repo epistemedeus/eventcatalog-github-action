@@ -1,0 +1,12 @@
+{
+  "command": ["pnpm", "install", "--frozen-lockfile", "--child-concurrency=1", "--network-concurrency=2"],
+  "started_utc": "2026-10-23T10:08:14.803626+00:00",
+  "finished_utc": "2026-10-23T10:08:22.112034+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 416068,
+  "peak_command_plus_native_owner_rss_kib": 646032,
+  "native_owner_found": true,
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

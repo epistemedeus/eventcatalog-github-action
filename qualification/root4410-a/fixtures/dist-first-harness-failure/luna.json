@@ -1,0 +1,13 @@
+{
+  "scenario": "luna",
+  "node": "v20.20.2",
+  "comments": [],
+  "requests": [],
+  "licenseCalls": 0,
+  "githubCalls": [],
+  "unexpectedNetwork": ["undefined"],
+  "stdout": "Error: External network is disabled by qualification\n    at deny (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:93:11)\n    at https.request (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:96:107)\n    at /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/node-fetch@3.3.2/node_modules/node-fetch/src/index.js:94:1\n    at new Promise (<anonymous>)\n    at fetch (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/node-fetch@3.3.2/node_modules/node-fetch/src/index.js:49:1)\n    at __webpack_modules__.3696.exports.default (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/src/license/check-license.ts:62:1)\n    at run (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/src/index.ts:53:1)\n    at Object.6677 (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/src/index.ts:88:1)\n    at __nccwpck_require__ (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/webpack/bootstrap:21:1)\n    at /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/webpack/startup:4:1\nNetwork Connection Error: Unable to establish a connection to license server. Check network or proxy settings. Error: External network is disabled by qualification \n::error::Bad credentials - https://docs.github.com/rest\n",
+  "stderr": "",
+  "harnessError": "Action did not reach its terminal output in 15 seconds",
+  "exitCode": 2
+}

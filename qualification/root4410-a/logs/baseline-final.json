@@ -1,0 +1,12 @@
+{
+  "command": ["python3", "qualification/root4410-a/check-baseline.py"],
+  "started_utc": "2026-10-23T10:20:05.074211+00:00",
+  "finished_utc": "2026-10-23T10:20:06.636223+00:00",
+  "exit_code": 1,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 345260,
+  "peak_command_plus_native_owner_rss_kib": 582988,
+  "native_owner_found": true,
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

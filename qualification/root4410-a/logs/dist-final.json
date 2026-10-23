@@ -1,0 +1,13 @@
+{
+  "command": ["node", "--test", "qualification/root4410-a/check-dist.cjs"],
+  "started_utc": "2026-10-23T10:28:00.110427+00:00",
+  "finished_utc": "2026-10-23T10:28:06.595474+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 235616,
+  "peak_command_plus_native_owner_rss_kib": 497248,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

@@ -1,0 +1,480 @@
+Exact baseline shipped bundle: d721c06b0142c55cd23c461734c1423bf95cedb2
+TAP version 13
+# Subtest: generated action: healthy
+not ok 1 - generated action: healthy
+  ---
+  duration_ms: 431.860227
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'o4-mini'
+    - 'gpt-5.6-terra'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'gpt-5.6-terra'
+  actual: 'o4-mini'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:98:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    node:internal/test_runner/harness:255:12
+    node:internal/process/task_queues:140:7
+    AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+  ...
+# Subtest: generated action: luna
+not ok 2 - generated action: luna
+  ---
+  duration_ms: 362.198516
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /85\/100/. Input:
+
+    '\n' +
+      '# EventCatalog: Schema Review\n' +
+      '\n' +
+      'The following schemas were modified in this pull request:\n' +
+      '\n' +
+      '## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n' +
+      '\n' +
+      '| Schema Format | Risk Score |\n' +
+      '|---------------|------------|\n' +
+      '|  | /100 |\n' +
+      '\n' +
+      '\n' +
+      '\n' +
+      '### Potential Effected Consumers\n' +
+      '\n' +
+      'Inventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n' +
+      '\n' +
+      '<sub>Using Model: gpt-5.6-luna | Provider: openai</sub>\n' +
+      '<!-- eventcatalog-schema-review-comment -->'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+
+    # EventCatalog: Schema Review
+
+    The following schemas were modified in this pull request:
+
+    ## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)
+
+    | Schema Format | Risk Score |
+    |---------------|------------|
+    |  | /100 |
+
+
+
+    ### Potential Effected Consumers
+
+    Inventory adjusted (1.0.1) has no consumers mapped in EventCatalog.
+
+    <sub>Using Model: gpt-5.6-luna | Provider: openai</sub>
+    <!-- eventcatalog-schema-review-comment -->
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:88:14)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: legacy
+ok 3 - generated action: legacy
+  ---
+  duration_ms: 374.681147
+  ...
+# Subtest: generated action: zero
+not ok 4 - generated action: zero
+  ---
+  duration_ms: 381.801353
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: zero-threshold
+not ok 5 - generated action: zero-threshold
+  ---
+  duration_ms: 345.901426
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /Danger/. Input:
+
+    '\n' +
+      '# EventCatalog: Schema Review\n' +
+      '\n' +
+      'The following schemas were modified in this pull request:\n' +
+      '\n' +
+      '## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n' +
+      '\n' +
+      '| Schema Format | Risk Score |\n' +
+      '|---------------|------------|\n' +
+      '| json | 0/100 |\n' +
+      '\n' +
+      'Synthetic schema review\n' +
+      '\n' +
+      '### Potential Effected Consumers\n' +
+      '\n' +
+      'Inventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n' +
+      '\n' +
+      '<sub>Using Model:  | Provider: openai</sub>\n' +
+      '<!-- eventcatalog-schema-review-comment -->'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+
+    # EventCatalog: Schema Review
+
+    The following schemas were modified in this pull request:
+
+    ## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)
+
+    | Schema Format | Risk Score |
+    |---------------|------------|
+    | json | 0/100 |
+
+    Synthetic schema review
+
+    ### Potential Effected Consumers
+
+    Inventory adjusted (1.0.1) has no consumers mapped in EventCatalog.
+
+    <sub>Using Model:  | Provider: openai</sub>
+    <!-- eventcatalog-schema-review-comment -->
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:91:16)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: below
+not ok 6 - generated action: below
+  ---
+  duration_ms: 357.579856
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'o4-mini'
+    - 'gpt-5.6-terra'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'gpt-5.6-terra'
+  actual: 'o4-mini'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:98:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: exact
+not ok 7 - generated action: exact
+  ---
+  duration_ms: 347.607581
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'o4-mini'
+    - 'gpt-5.6-terra'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'gpt-5.6-terra'
+  actual: 'o4-mini'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:98:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: sdk-rejection
+not ok 8 - generated action: sdk-rejection
+  ---
+  duration_ms: 344.507708
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: authentication
+not ok 9 - generated action: authentication
+  ---
+  duration_ms: 363.330598
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: timeout
+not ok 10 - generated action: timeout
+  ---
+  duration_ms: 374.533339
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: network
+not ok 11 - generated action: network
+  ---
+  duration_ms: 372.000906
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: invalid-json
+not ok 12 - generated action: invalid-json
+  ---
+  duration_ms: 361.002641
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: invalid-schema
+not ok 13 - generated action: invalid-schema
+  ---
+  duration_ms: 346.597939
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: missing
+not ok 14 - generated action: missing
+  ---
+  duration_ms: 355.020192
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: mixed
+not ok 15 - generated action: mixed
+  ---
+  duration_ms: 363.652273
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:70:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: recovery
+not ok 16 - generated action: recovery
+  ---
+  duration_ms: 341.649068
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:30:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+
+    + 'o4-mini'
+    - 'gpt-5.6-terra'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'gpt-5.6-terra'
+  actual: 'o4-mini'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/check-dist.cjs:98:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: generated action: missing-license
+ok 17 - generated action: missing-license
+  ---
+  duration_ms: 343.568585
+  ...
+# Subtest: generated action: invalid-license
+ok 18 - generated action: invalid-license
+  ---
+  duration_ms: 348.231989
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 3
+# fail 15
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6586.254141

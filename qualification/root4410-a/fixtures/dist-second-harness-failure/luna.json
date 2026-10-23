@@ -1,0 +1,13 @@
+{
+  "scenario": "luna",
+  "node": "v20.20.2",
+  "comments": [],
+  "requests": [],
+  "licenseCalls": 0,
+  "githubCalls": [],
+  "unexpectedNetwork": ["localhost", "localhost"],
+  "stdout": "Error: External network is disabled by qualification\n    at deny (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:104:11)\n    at Socket.net.Socket.connect (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:120:117)\n    at Agent.connect [as createConnection] (node:net:242:17)\n    at Agent.createSocket (node:_http_agent:330:26)\n    at Agent.addRequest (node:_http_agent:278:10)\n    at new ClientRequest (node:_http_client:338:16)\n    at request (node:http:101:10)\n    at https.request (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:111:12)\n    at /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/node-fetch@3.3.2/node_modules/node-fetch/src/index.js:94:1\n    at new Promise (<anonymous>)\nNetwork Connection Error: Unable to establish a connection to license server. Check network or proxy settings. Error: External network is disabled by qualification \n::error::External network is disabled by qualification\n",
+  "stderr": "",
+  "harnessError": "Action did not reach its terminal output in 15 seconds",
+  "exitCode": 2
+}

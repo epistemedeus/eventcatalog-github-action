@@ -1,0 +1,351 @@
+{
+  "numTotalTestSuites": 4,
+  "numPassedTestSuites": 0,
+  "numFailedTestSuites": 4,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 28,
+  "numPassedTests": 7,
+  "numFailedTests": 21,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 2,
+    "uncheckedKeysByFile": [
+      {
+        "filePath": "/tmp/root4410-a-baseline-s8_qawox/tests/ai-models/openai.spec.ts",
+        "keys": [
+          "locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-luna 1",
+          "locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-terra 1"
+        ]
+      }
+    ],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792750805662,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "status": "failed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "duration": 28.488178000000005,
+          "failureMessages": [
+            "AssertionError: expected { model: 'gpt-5.6-terra', …(4) } to match object { model: 'gpt-5.6-terra', …(2) }\n(5 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1146:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/ai-models/openai.spec.ts:42:30\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "status": "failed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "duration": 2.156745000000001,
+          "failureMessages": [
+            "AssertionError: expected { model: 'gpt-5.6-luna', …(4) } to match object { model: 'gpt-5.6-luna', …(2) }\n(5 matching properties omitted from actual)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1146:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/ai-models/openai.spec.ts:42:30\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) migrates the action input and both empty-input fallbacks",
+          "status": "failed",
+          "title": "migrates the action input and both empty-input fallbacks",
+          "duration": 3.191344000000015,
+          "failureMessages": [
+            "AssertionError: expected [ 'o4-mini', 'o4-mini' ] to deeply equal [ 'gpt-5.6-terra', 'gpt-5.6-terra' ]\n    at /tmp/root4410-a-baseline-s8_qawox/tests/ai-models/openai.spec.ts:59:52\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit o4-mini request",
+          "status": "passed",
+          "title": "preserves the explicit o4-mini request",
+          "duration": 1.6112949999999842,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit gpt-4o request",
+          "status": "passed",
+          "title": "preserves the explicit gpt-4o request",
+          "duration": 1.1726840000000038,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Anthropic structured tool output",
+          "status": "passed",
+          "title": "preserves Anthropic structured tool output",
+          "duration": 2.0619060000000218,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Google schema output",
+          "status": "passed",
+          "title": "preserves Google schema output",
+          "duration": 2.058973999999978,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792750806429,
+      "endTime": 1792750806470.059,
+      "status": "failed",
+      "message": "",
+      "name": "/tmp/root4410-a-baseline-s8_qawox/tests/ai-models/openai.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "duration": 49.291394000000025,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on authentication failure without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on authentication failure without a fabricated score or leaking request data",
+          "duration": 2.4277270000000044,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on timeout without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on timeout without a fabricated score or leaking request data",
+          "duration": 2.0634699999999953,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on network error without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on network error without a fabricated score or leaking request data",
+          "duration": 1.6358429999999657,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "duration": 2.23929899999996,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid schema without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on invalid schema without a fabricated score or leaking request data",
+          "duration": 1.887410999999986,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on missing review without a fabricated score or leaking request data",
+          "status": "failed",
+          "title": "fails visibly on missing review without a fabricated score or leaking request data",
+          "duration": 2.15096299999999,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:73:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: undefined",
+          "status": "failed",
+          "title": "rejects an absent or invalid review at the review boundary: undefined",
+          "duration": 1.7759550000000104,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:85:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "status": "failed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "duration": 1.6556429999999978,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:85:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "status": "failed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "duration": 1.390671999999995,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:85:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails if the task receives a file with no review result",
+          "status": "failed",
+          "title": "fails if the task receives a file with no review result",
+          "duration": 1.317982000000029,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:94:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 85 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 85 against threshold 75 (fails=false)",
+          "duration": 2.796299000000033,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 74 against threshold 75 (fails=true)",
+          "status": "passed",
+          "title": "uses the real score 74 against threshold 75 (fails=true)",
+          "duration": 2.1709399999999732,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 75 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 75 against threshold 75 (fails=false)",
+          "duration": 2.3056270000000154,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 0 against threshold 75 (fails=true)",
+          "status": "failed",
+          "title": "uses the real score 0 against threshold 75 (fails=true)",
+          "duration": 4.42933899999997,
+          "failureMessages": [
+            "AssertionError: expected false to be true // Object.is equality\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:102:45\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) accepts real zero at threshold zero",
+          "status": "failed",
+          "title": "accepts real zero at threshold zero",
+          "duration": 4.7107840000000465,
+          "failureMessages": [
+            "AssertionError: expected '\\n# EventCatalog: Schema Review\\n\\nTh…' to contain '🚨 Danger'\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:114:18\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) retains failed siblings alongside successful ones and fails the action",
+          "status": "failed",
+          "title": "retains failed siblings alongside successful ones and fails the action",
+          "duration": 3.8142439999999738,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:120:23\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) orders zero ahead of healthy scores",
+          "status": "failed",
+          "title": "orders zero ahead of healthy scores",
+          "duration": 3.134941000000026,
+          "failureMessages": [
+            "AssertionError: expected 409 to be less than 95\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:133:42\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) recovers on a later healthy task without stale failure state",
+          "status": "failed",
+          "title": "recovers on a later healthy task without stale failure state",
+          "duration": 3.5235470000000078,
+          "failureMessages": [
+            "AssertionError: expected '\\n# EventCatalog: Schema Review\\n\\nTh…' to contain 'Review failed'\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:139:25\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) marks a failed review before attempting to publish its comment",
+          "status": "failed",
+          "title": "marks a failed review before attempting to publish its comment",
+          "duration": 3.8158879999999726,
+          "failureMessages": [
+            "AssertionError: expected [Function] to throw error including 'Synthetic GitHub failure' but got 'expected \"setFailed\" to be called at …'\n    at Assertion.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1411:16)\n    at Assertion.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Assertion.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1630:20\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:154:5\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) preserves the original thrown error without dumping the SDK object",
+          "status": "failed",
+          "title": "preserves the original thrown error without dumping the SDK object",
+          "duration": 4.847555,
+          "failureMessages": [
+            "AssertionError: expected Error: Failed to get a valid structured r… to be Error: private request sk-synthetic-priva… // Object.is equality\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1630:20\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at /tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts:160:5\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792750806050,
+      "endTime": 1792750806153.8477,
+      "status": "failed",
+      "message": "",
+      "name": "/tmp/root4410-a-baseline-s8_qawox/tests/tasks/schema-review/outcomes.spec.ts"
+    }
+  ]
+}

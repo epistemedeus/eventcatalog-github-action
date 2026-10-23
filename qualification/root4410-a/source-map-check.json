@@ -1,0 +1,13 @@
+{
+  "parseable": true,
+  "owning_paths": {
+    "src/ai-models/ai-provider.ts": ".././src/ai-models/ai-provider.ts",
+    "src/ai-models/openai.ts": ".././src/ai-models/openai.ts",
+    "src/lib/ai.ts": ".././src/lib/ai.ts",
+    "src/tasks/schema-review/review.ts": ".././src/tasks/schema-review/review.ts",
+    "src/tasks/schema-review/index.ts": ".././src/tasks/schema-review/index.ts",
+    "src/tasks/schema-review/github-comment.ts": ".././src/tasks/schema-review/github-comment.ts"
+  },
+  "contents": "ncc emitted CommonJS JavaScript, not raw TypeScript",
+  "raw_typescript_equality_check": "initial assertion failed because it compared different representations; execution of the rebuilt bundle is the behavior proof"
+}

@@ -1,0 +1,107 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ✓ tests/tasks/schema-review/outcomes.spec.ts (21 tests) 88ms
+Sending prompt to model gpt-5.6-terra with provider openai
+ ❯ tests/ai-models/openai.spec.ts (7 tests | 1 failed) 35ms
+   ✓ locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-terra 12ms
+   ✓ locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-luna 2ms
+   × locked SDK compatibility (no provider requests) > migrates the action input and both empty-input fallbacks 10ms
+     → expected '<div align="left">\n\n<h1>EventCatalo…' not to contain 'model: o4-mini'
+   ✓ locked SDK compatibility (no provider requests) > preserves the explicit o4-mini request 1ms
+   ✓ locked SDK compatibility (no provider requests) > preserves the explicit gpt-4o request 2ms
+   ✓ locked SDK compatibility (no provider requests) > preserves Anthropic structured tool output 5ms
+   ✓ locked SDK compatibility (no provider requests) > preserves Google schema output 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > migrates the action input and both empty-input fallbacks
+AssertionError: expected '<div align="left">\n\n<h1>EventCatalo…' not to contain 'model: o4-mini'
+
+- Expected
++ Received
+
+- model: o4-mini
++ <div align="left">
++
++ <h1>EventCatalog GitHub Action</h1>
++
++ <p>The EventCatalog GitHub Action brings AI-powered insight into your Git workflows. It uses large language models (LLMs) to automatically review changes to your EventCatalog, helping you catch issues early—before they reach production.</p>
++
++ <p>Think of it as a smart assistant for your pull requests. It doesn't just lint code—it understands the implications of your changes.</p>
++
++ <img width="745" alt="EventCatalog" src="./images/github-actions.png" />
++
++ </div>
++
++ <hr/>
++
++ ## Usage
++
++ To quickly get started, create a new .github/workflows/eventcatalog-ci.yaml file in your repository with the following content:
++
++ ```yaml
++ name: EventCatalog CI
++ on:
++   push:
++   pull_request:
++     types: [opened, synchronize, reopened, labeled, unlabeled]
++   delete:
++ permissions:
++   contents: read
++   pull-requests: write
++ jobs:
++   schema_review:
++     runs-on: ubuntu-latest
++     steps:
++       - uses: actions/checkout@v4
++       - uses: event-catalog/github-action@main
++         with:
++           # The task to run, currently only schema_review is supported
++           task: schema_review
++           # The AI LLM provider to use (openai, anthropic, google)
++           provider: openai
++
++           # The model to use for the task, defaults to gpt-5.6-terra
++           # Find the models in the documentation below
++           model: gpt-5.6-terra
++
++           # Your API KEY for the LLM provider
++           api_key: ${{ secrets.OPENAI_API_KEY }}
++
++           # Your EventCatalog Scale License key
++           license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
++
++ ```
++
++ This will perform schema reviews on every pull request. If any schema in your EventCatalog has changed for your events, queries or commands the action will comment on the pull request with a summary of the changes and a score of how likely the change is to cause issues.
++
++ You can configure the action, choose provides (OpenAI, Anthropic, Google), models (gpt-5.6-terra, claude-3-5-sonnet-20240620, gemini-2.0-flash-001), and more.
++
++ The OpenAI default is `gpt-5.6-terra`, the documented substitute for `o4-mini`'s announced October 23, 2026 retirement. If you copied an older workflow, update its explicit `model: o4-mini` input to `model: gpt-5.6-terra`; changing the action default does not override your workflow. Set a matching model explicitly when choosing Anthropic or Google.
++
++ A failed or invalid AI review is shown as **Review failed** and fails the action, even when other schemas were reviewed successfully. It has no risk score. Valid scores, including zero, fail only when below `failure_threshold`.
++
++ ## Documentation
++
++ You can find more information about the action and more configuration options in the [EventCatalog GitHub Action documentation](https://www.eventcatalog.dev/docs/development/guides/integrate-with-ci-cd/github-action).
++
++ ## License
++
++ This project is licensed under the [BSL-1.1](./LICENSE) license and requires a license key to use. You can get a 14 day free trial at https://eventcatalog.cloud/. If you do not have a license key, the action will fail.
+
+ ❯ tests/ai-models/openai.spec.ts:65:24
+     63|     const readme = readFileSync('README.md', 'utf8');
+     64|     expect(readme).toContain('model: gpt-5.6-terra');
+     65|     expect(readme).not.toContain('model: o4-mini');
+       |                        ^
+     66|   });
+     67|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 27 passed (28)
+   Start at  10:13:27
+   Duration  796ms (transform 114ms, setup 0ms, collect 329ms, tests 123ms, environment 0ms, prepare 86ms)

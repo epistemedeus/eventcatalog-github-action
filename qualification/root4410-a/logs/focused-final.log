@@ -1,0 +1,44 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on SDK rejection without a fabricated score or leaking request data 42ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on authentication failure without a fabricated score or leaking request data 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on timeout without a fabricated score or leaking request data 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on network error without a fabricated score or leaking request data 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid JSON without a fabricated score or leaking request data 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid schema without a fabricated score or leaking request data 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on missing review without a fabricated score or leaking request data 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: undefined 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"score":100} 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"executiveSummary":"Synthetic review","score":null,"schemaFormat":"json","effectedConsumers":[]} 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails if the task receives a file with no review result 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > uses the real score 85 against threshold 75 (fails=false) 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > uses the real score 74 against threshold 75 (fails=true) 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > uses the real score 75 against threshold 75 (fails=false) 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > uses the real score 0 against threshold 75 (fails=true) 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > accepts real zero at threshold zero 2ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > retains failed siblings alongside successful ones and fails the action 3ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > treats an error as a failure even if a score was also returned 1ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > orders zero ahead of healthy scores 3ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > recovers on a later healthy task without stale failure state 3ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > marks a failed review before attempting to publish its comment 3ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > preserves the original thrown error without dumping the SDK object 1ms
+Sending prompt to model gpt-5.6-terra with provider openai
+::add-mask::synthetic-key
+Sending prompt to model claude-3-7-sonnet-20250219 with provider anthropic
+::add-mask::synthetic-key
+Sending prompt to model gemini-1.5-flash with provider google
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-terra 26ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-luna 2ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > migrates the action input and both empty-input fallbacks 2ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > preserves the explicit o4-mini request 1ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > preserves the explicit gpt-4o request 1ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > preserves Anthropic structured tool output 2ms
+ ✓ tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > preserves Google schema output 2ms
+
+ Test Files  2 passed (2)
+      Tests  29 passed (29)
+   Start at  10:25:37
+   Duration  773ms (transform 106ms, setup 0ms, collect 355ms, tests 123ms, environment 0ms, prepare 87ms)
+
+JSON report written to /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/logs/focused-final-cases.json

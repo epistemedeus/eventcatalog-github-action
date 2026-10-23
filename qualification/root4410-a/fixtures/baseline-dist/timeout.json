@@ -1,0 +1,115 @@
+{
+  "scenario": "timeout",
+  "node": "v20.20.2",
+  "comments": [
+    {
+      "method": "POST",
+      "body": "\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n| Schema Format | Risk Score |\n|---------------|------------|\n|  | /100 |\n\n\n\n### Potential Effected Consumers\n\nInventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n\n<sub>Using Model:  | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.openai.com/v1/chat/completions",
+      "body": {
+        "model": "o4-mini",
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "executiveSummary": {
+                  "type": "string",
+                  "description": "A concise summary of key findings and overall impact, suitable for quick review by enterprise stakeholders."
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "A score from 0 to 100, where 0 indicates a very problematic change and 100 indicates a perfectly safe change."
+                },
+                "schemaFormat": {
+                  "type": "string",
+                  "description": "The type of schema For example \"avro\", \"json\", \"yaml\", \"proto\", \"thrift\", \"xml\", \"avsc\". For example JSONDraft7, Avro, Protobuf, etc."
+                },
+                "effectedConsumers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the consumer (service)."
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "The version of the consumer."
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "The URL of the consumer (service)."
+                      },
+                      "warning": {
+                        "type": "string",
+                        "description": "A warning message to the user about the consumer (service)."
+                      }
+                    },
+                    "required": ["name", "version", "url", "warning"],
+                    "additionalProperties": false
+                  },
+                  "description": "A list of consumers that MAY be affected by the changes to the schemas."
+                }
+              },
+              "required": ["executiveSummary", "score", "schemaFormat", "effectedConsumers"],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "strict": true,
+            "name": "response"
+          }
+        },
+        "messages": [
+          {
+            "role": "developer",
+            "content": "\nYou are an expert reviewer specializing in event-driven architectures (EDA).\nYour task is to analyze schema diffs and other architectural information based on the provided EDA rules:\n\n- All schema changes must be backward compatible.\n- Events should be designed to be idempotent.\n- Avoid using generic event types; be specific about the domain and action.\n- All events must have a version number.\n- Consider the impact on downstream consumers before making any changes.\n\n\nYour audience is enterprise development and architecture teams. Maintain a professional and clear tone.\n\nProvide a detailed assessment covering the following aspects:\n- Overall impact of the changes.\n- Specific breaking changes, if any.\n- Adherence to EDA best practices and the provided rules.\n- Potential risks and considerations for downstream systems.\n- If the changes are breaking, and if you have a list of consumers, provide a list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- If you have no list of consumers, do not return any consumer information.\n\nFormat your response as a JSON object with the following keys:\n- \"executiveSummary\": A concise (2-3 sentences) overview of the most critical findings and the overall risk/impact. This should be suitable for quick ingestion by stakeholders.\n- \"effectedConsumers\": A list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- \"score\": A numerical score from 0 to 100, where 0 indicates a very problematic change with high risk of breaking compatibility, and 100 indicates a perfectly safe and well-designed change."
+          },
+          {
+            "role": "user",
+            "content": "\n\nPlease analyze these changes for potential issues, especially breaking changes if this is a schema or configuration file. Provide your assessment.\n\nReview the following changes to the schema:\nPrevious schema:\n```\n{\"synthetic-private-schema\":true}\n```\nNew schema:\n```\n{\"synthetic-private-schema\":true}\n```\n\nThe schema does not have any consumers mapped in EventCatalog. Do not return any consumer information.\n"
+          }
+        ]
+      }
+    }
+  ],
+  "licenseCalls": 1,
+  "githubCalls": [
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "method": "POST"
+    }
+  ],
+  "unexpectedNetwork": [],
+  "stdout": "Catalog path: /tmp/root4410-a-dist-N5fuLx\nReviewing schema: events/InventoryAdjusted/schema.json\nMessage consumers: \nPerforming schema review for file: events/InventoryAdjusted/schema.json\nRequesting AI review for schema changes in events/InventoryAdjusted/schema.json...\nSending prompt to model o4-mini with provider openai\n::error::AI review failed for events/InventoryAdjusted/schema.json: Failed to get a valid structured response from the AI model.\nCreating new comment\n\n::set-output name=comment-url::https://github.com/owner/repo/pull/1#issuecomment-123\n",
+  "stderr": "Error calling AI model or processing structured output: DOMException [TimeoutError]: private request sk-synthetic-private\n    at new DOMException (node:internal/per_context/domexception:53:5)\n    at globalThis.fetch (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4410-a/dist-child.cjs:135:39)\n    at postToApi (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/@ai-sdk+provider-utils@2.2.8_zod@3.25.48/node_modules/@ai-sdk/provider-utils/dist/index.js:627:1)\n    at postJsonToApi (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/@ai-sdk+provider-utils@2.2.8_zod@3.25.48/node_modules/@ai-sdk/provider-utils/dist/index.js:582:1)\n    at OpenAIChatLanguageModel.doGenerate (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/@ai-sdk+openai@1.3.22_zod@3.25.48/node_modules/@ai-sdk/openai/dist/index.js:632:1)\n    at fn (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/dist/index.js:2852:1)\n    at /tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/dist/index.js:556:1\n    at Object.startActiveSpan (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/dist/index.js:483:1)\n    at recordSpan (/tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/dist/index.js:554:1)\n    at /tmp/root4410-a-baseline-dist-ehpnh47_/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/dist/index.js:2821:1\n",
+  "exitCode": 0
+}

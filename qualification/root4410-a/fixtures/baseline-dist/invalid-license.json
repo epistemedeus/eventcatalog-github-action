@@ -1,0 +1,22 @@
+{
+  "scenario": "invalid-license",
+  "node": "v20.20.2",
+  "comments": [
+    {
+      "method": "POST",
+      "body": "Invalid license key for EventCatalog GitHub Action, please check your license key or get a 14 day free trial at https://eventcatalog.cloud/."
+    }
+  ],
+  "requests": [],
+  "licenseCalls": 1,
+  "githubCalls": [
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "method": "POST"
+    }
+  ],
+  "unexpectedNetwork": [],
+  "stdout": "Invalid license key. Please check your plugin license key or purchase a license at https://eventcatalog.cloud/, Error: Unauthorized\n::error::Invalid license key for EventCatalog GitHub Action, please check your license key or get a 14 day free trial at https://eventcatalog.cloud/.\n",
+  "stderr": "",
+  "exitCode": 1
+}

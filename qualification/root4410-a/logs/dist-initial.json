@@ -1,0 +1,7 @@
+{
+  "command": ["node", "--test", "qualification/root4410-a/check-dist.cjs"],
+  "exit_code": 143,
+  "receipt_source": "observed exec session completion, not completed RSS sampler",
+  "peak_rss_kib": null,
+  "reason": "Stopped owned harness after the bundled GitHub transport bypassed global fetch; three refused synthetic-token requests are observed, total attempt count is unreceived."
+}

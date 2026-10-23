@@ -1,0 +1,344 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts (21 tests | 18 failed) 109ms
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on SDK rejection without a fabricated score or leaking request data 43ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on authentication failure without a fabricated score or leaking request data 3ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on timeout without a fabricated score or leaking request data 2ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on network error without a fabricated score or leaking request data 1ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid JSON without a fabricated score or leaking request data 2ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid schema without a fabricated score or leaking request data 10ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails visibly on missing review without a fabricated score or leaking request data 3ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: undefined 1ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"score":100} 4ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"executiveSummary":"Synthetic review","score":null,"schemaFormat":"json","effectedConsumers":[]} 1ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > fails if the task receives a file with no review result 1ms
+     → expected "setFailed" to be called at least once
+   ✓ real schema review task and rendered outcome (offline boundaries) > uses the real score 85 against threshold 75 (fails=false) 7ms
+   ✓ real schema review task and rendered outcome (offline boundaries) > uses the real score 74 against threshold 75 (fails=true) 3ms
+   ✓ real schema review task and rendered outcome (offline boundaries) > uses the real score 75 against threshold 75 (fails=false) 2ms
+   × real schema review task and rendered outcome (offline boundaries) > uses the real score 0 against threshold 75 (fails=true) 4ms
+     → expected false to be true // Object.is equality
+   × real schema review task and rendered outcome (offline boundaries) > accepts real zero at threshold zero 4ms
+     → expected '\n# EventCatalog: Schema Review\n\nTh…' to contain '🚨 Danger'
+   × real schema review task and rendered outcome (offline boundaries) > retains failed siblings alongside successful ones and fails the action 3ms
+     → expected "setFailed" to be called at least once
+   × real schema review task and rendered outcome (offline boundaries) > orders zero ahead of healthy scores 3ms
+     → expected 409 to be less than 95
+   × real schema review task and rendered outcome (offline boundaries) > recovers on a later healthy task without stale failure state 3ms
+     → expected '\n# EventCatalog: Schema Review\n\nTh…' to contain 'Review failed'
+   × real schema review task and rendered outcome (offline boundaries) > marks a failed review before attempting to publish its comment 6ms
+     → expected [Function] to throw error including 'Synthetic GitHub failure' but got 'expected "setFailed" to be called at …'
+   × real schema review task and rendered outcome (offline boundaries) > preserves the original thrown error without dumping the SDK object 2ms
+     → expected Error: Failed to get a valid structured r… to be Error: private request sk-synthetic-priva… // Object.is equality
+Sending prompt to model o4-mini with provider openai
+ ❯ tests/ai-models/openai.spec.ts (7 tests | 3 failed) 30ms
+   × locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-terra 17ms
+     → expected { model: 'gpt-5.6-terra', …(4) } to match object { model: 'gpt-5.6-terra', …(2) }
+(5 matching properties omitted from actual)
+   × locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-luna 2ms
+     → expected { model: 'gpt-5.6-luna', …(4) } to match object { model: 'gpt-5.6-luna', …(2) }
+(5 matching properties omitted from actual)
+   × locked SDK compatibility (no provider requests) > migrates the action input and both empty-input fallbacks 3ms
+     → expected [ 'o4-mini', 'o4-mini' ] to deeply equal [ 'gpt-5.6-terra', 'gpt-5.6-terra' ]
+   ✓ locked SDK compatibility (no provider requests) > preserves the explicit o4-mini request 1ms
+   ✓ locked SDK compatibility (no provider requests) > preserves the explicit gpt-4o request 1ms
+   ✓ locked SDK compatibility (no provider requests) > preserves Anthropic structured tool output 3ms
+   ✓ locked SDK compatibility (no provider requests) > preserves Google schema output 2ms
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 21 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-terra
+AssertionError: expected { model: 'gpt-5.6-terra', …(4) } to match object { model: 'gpt-5.6-terra', …(2) }
+(5 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "model": "gpt-5.6-terra",
+-   "response_format": {
+-     "json_schema": {
+-       "strict": true,
+-     },
+-     "type": "json_schema",
+-   },
+-   "temperature": 1,
++   "temperature": 0,
+  }
+
+ ❯ tests/ai-models/openai.spec.ts:44:30
+     42|     expect(requests).toHaveLength(1);
+     43|     expect(requests[0].url).toBe('https://api.openai.com/v1/chat/compl…
+     44|     expect(requests[0].body).toMatchObject({ model: modelId, temperatu…
+       |                              ^
+     45|     expect(requests[0].body).not.toHaveProperty('tools');
+     46|     expect(requests[0].body).not.toHaveProperty('tool_choice');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/21]⎯
+
+ FAIL  tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > uses strict schema output and supported temperature for explicit gpt-5.6-luna
+AssertionError: expected { model: 'gpt-5.6-luna', …(4) } to match object { model: 'gpt-5.6-luna', …(2) }
+(5 matching properties omitted from actual)
+
+- Expected
++ Received
+
+  {
+    "model": "gpt-5.6-luna",
+-   "response_format": {
+-     "json_schema": {
+-       "strict": true,
+-     },
+-     "type": "json_schema",
+-   },
+-   "temperature": 1,
++   "temperature": 0,
+  }
+
+ ❯ tests/ai-models/openai.spec.ts:44:30
+     42|     expect(requests).toHaveLength(1);
+     43|     expect(requests[0].url).toBe('https://api.openai.com/v1/chat/compl…
+     44|     expect(requests[0].body).toMatchObject({ model: modelId, temperatu…
+       |                              ^
+     45|     expect(requests[0].body).not.toHaveProperty('tools');
+     46|     expect(requests[0].body).not.toHaveProperty('tool_choice');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/21]⎯
+
+ FAIL  tests/ai-models/openai.spec.ts > locked SDK compatibility (no provider requests) > migrates the action input and both empty-input fallbacks
+AssertionError: expected [ 'o4-mini', 'o4-mini' ] to deeply equal [ 'gpt-5.6-terra', 'gpt-5.6-terra' ]
+
+- Expected
++ Received
+
+  [
+-   "gpt-5.6-terra",
+-   "gpt-5.6-terra",
++   "o4-mini",
++   "o4-mini",
+  ]
+
+ ❯ tests/ai-models/openai.spec.ts:60:52
+     58|     await sendPromptToModel('Synthetic system', 'Synthetic user', resp…
+     59|     await new OpenAIProvider({ modelId: '', apiKey: 'synthetic-key' })…
+     60|     expect(requests.map(({ body }) => body.model)).toEqual(['gpt-5.6-t…
+       |                                                    ^
+     61|     const action = readFileSync('action.yml', 'utf8');
+     62|     expect(action).toContain("default: 'gpt-5.6-terra'");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on SDK rejection without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on authentication failure without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on timeout without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on network error without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid JSON without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on invalid schema without a fabricated score or leaking request data
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails visibly on missing review without a fabricated score or leaking request data
+AssertionError: expected "setFailed" to be called at least once
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:73:23
+     71|     fetchMock.mockImplementation(async () => response());
+     72|     const body = await run();
+     73|     expect(setFailed).toHaveBeenCalled();
+       |                       ^
+     74|     expect(body).toContain('Review failed');
+     75|     expect(body).not.toContain('Safe');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: undefined
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"score":100}
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > rejects an absent or invalid review at the review boundary: {"executiveSummary":"Synthetic review","score":null,"schemaFormat":"json","effectedConsumers":[]}
+AssertionError: expected "setFailed" to be called at least once
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:85:23
+     83|     vi.spyOn(providers, 'getProvider').mockReturnValue({ generateObjec…
+     84|     const body = await run();
+     85|     expect(setFailed).toHaveBeenCalled();
+       |                       ^
+     86|     expect(body).toContain('Review failed');
+     87|     expect(body).not.toContain('Safe');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > fails if the task receives a file with no review result
+AssertionError: expected "setFailed" to be called at least once
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:94:23
+     92|     vi.spyOn(reviews, 'reviewSchema').mockResolvedValue({ filePath: fi…
+     93|     const body = await run();
+     94|     expect(setFailed).toHaveBeenCalled();
+       |                       ^
+     95|     expect(body).toContain('Review failed');
+     96|     expect(body).not.toContain('Safe');
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > uses the real score 0 against threshold 75 (fails=true)
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:102:45
+    100|     reply(valid(score));
+    101|     const body = await run();
+    102|     expect(setFailed.mock.calls.length > 0).toBe(fails);
+       |                                             ^
+    103|     expect(body).toContain(`${score}/100`);
+    104|     expect(body).toContain(score === 0 ? '🚨 Danger' : score >= 80 ? '…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > accepts real zero at threshold zero
+AssertionError: expected '\n# EventCatalog: Schema Review\n\nTh…' to contain '🚨 Danger'
+
+- Expected
++ Received
+
+- 🚨 Danger
++
++ # EventCatalog: Schema Review
++
++ The following schemas were modified in this pull request:
++
++ ## [First event (1.0.0) (✅ Safe)](https://github.com/owner/repo/pull/1/files#catalog%2Fevents%2FFirst%2Fschema.json)
++
++ | Schema Format | Risk Score |
++ |---------------|------------|
++ | json | 0/100 |
++
++ Synthetic review
++
++ ### Potential Effected Consumers
++
++ First event (1.0.0) has no consumers mapped in EventCatalog.
++
++ <sub>Using Model: gpt-5.6-terra | Provider: openai</sub>
++ <!-- eventcatalog-schema-review-comment -->
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:114:18
+    112|     expect(setFailed).not.toHaveBeenCalled();
+    113|     expect(body).toContain('0/100');
+    114|     expect(body).toContain('🚨 Danger');
+       |                  ^
+    115|   });
+    116|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > retains failed siblings alongside successful ones and fails the action
+AssertionError: expected "setFailed" to be called at least once
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:122:23
+    120|     fetchMock.mockImplementationOnce(async () => completion(null));
+    121|     const body = await run([first, second]);
+    122|     expect(setFailed).toHaveBeenCalled();
+       |                       ^
+    123|     const sections = body.split('## [');
+    124|     expect(sections.find(s => s.startsWith('First event'))).toContain(…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > orders zero ahead of healthy scores
+AssertionError: expected 409 to be less than 95
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:135:42
+    133|       .mockImplementationOnce(async (_url, init) => completion(valid(0…
+    134|     const body = await run([first, second]);
+    135|     expect(body.indexOf('Second event')).toBeLessThan(body.indexOf('Fi…
+       |                                          ^
+    136|     expect(setFailed).toHaveBeenCalledWith('Schema review failed with …
+    137|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > recovers on a later healthy task without stale failure state
+AssertionError: expected '\n# EventCatalog: Schema Review\n\nTh…' to contain 'Review failed'
+
+- Expected
++ Received
+
+- Review failed
++
++ # EventCatalog: Schema Review
++
++ The following schemas were modified in this pull request:
++
++ ## [First event (1.0.0) (✅ Safe)](https://github.com/owner/repo/pull/1/files#catalog%2Fevents%2FFirst%2Fschema.json)
++
++ | Schema Format | Risk Score |
++ |---------------|------------|
++ |  | /100 |
++
++
++
++ ### Potential Effected Consumers
++
++ First event (1.0.0) has no consumers mapped in EventCatalog.
++
++ <sub>Using Model: gpt-5.6-terra | Provider: openai</sub>
++ <!-- eventcatalog-schema-review-comment -->
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:141:25
+    139|   it('recovers on a later healthy task without stale failure state', a…
+    140|     reply(null);
+    141|     expect(await run()).toContain('Review failed');
+       |                         ^
+    142|     expect(setFailed).toHaveBeenCalled();
+    143|     setFailed.mockClear();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > marks a failed review before attempting to publish its comment
+AssertionError: expected [Function] to throw error including 'Synthetic GitHub failure' but got 'expected "setFailed" to be called at …'
+
+Expected: "Synthetic GitHub failure"
+Received: "expected "setFailed" to be called at least once"
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:156:5
+    154|       throw new Error('Synthetic GitHub failure');
+    155|     });
+    156|     await expect(run()).rejects.toThrow('Synthetic GitHub failure');
+       |     ^
+    157|   });
+    158|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/21]⎯
+
+ FAIL  tests/tasks/schema-review/outcomes.spec.ts > real schema review task and rendered outcome (offline boundaries) > preserves the original thrown error without dumping the SDK object
+AssertionError: expected Error: Failed to get a valid structured r… to be Error: private request sk-synthetic-priva… // Object.is equality
+
+- Expected
++ Received
+
+  Error {
+-   "message": "private request sk-synthetic-private",
++   "message": "Failed to get a valid structured response from the AI model.",
+  }
+
+ ❯ tests/tasks/schema-review/outcomes.spec.ts:162:5
+    160|     const original = new Error('private request sk-synthetic-private');
+    161|     vi.spyOn(providers, 'getProvider').mockReturnValue({ generateObjec…
+    162|     await expect(sendPromptToModel('Synthetic', 'Synthetic', responseS…
+       |     ^
+    163|     expect(rawErrorLog).not.toHaveBeenCalled();
+    164|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/21]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  21 failed | 7 passed (28)
+   Start at  10:11:51
+   Duration  846ms (transform 121ms, setup 0ms, collect 355ms, tests 139ms, environment 0ms, prepare 86ms)

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "tests/ai-models/openai.spec.ts",
+    "tests/tasks/schema-review/outcomes.spec.ts",
+    "--maxWorkers=1",
+    "--minWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=verbose",
+    "--reporter=json",
+    "--outputFile=qualification/root4410-a/logs/focused-final-cases.json"
+  ],
+  "started_utc": "2026-10-23T10:25:37.390224+00:00",
+  "finished_utc": "2026-10-23T10:25:38.861609+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 332396,
+  "peak_command_plus_native_owner_rss_kib": 597456,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

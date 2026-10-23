@@ -1,0 +1,12 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+Sending prompt to model gpt-5.6-terra with provider openai
+ ✓ tests/ai-models/openai.spec.ts (7 tests) 27ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts (21 tests) 90ms
+
+  Snapshots  2 written
+ Test Files  2 passed (2)
+      Tests  28 passed (28)
+   Start at  10:14:58
+   Duration  809ms (transform 118ms, setup 0ms, collect 339ms, tests 117ms, environment 0ms, prepare 83ms)

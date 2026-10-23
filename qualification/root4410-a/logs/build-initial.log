@@ -1,0 +1,15 @@
+
+> @eventcatalog/github-action@0.0.1 build /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+> ncc build src/index.ts -o dist --source-map --license licenses.txt
+
+ncc: Version 0.38.3
+ncc: Compiling file index.js into CJS
+ncc: Using typescript@5.8.3 (local user-provided)
+   1kB  dist/licenses.txt
+  10kB  dist/886.index.js
+  13kB  dist/886.index.js.map
+  40kB  dist/sourcemap-register.js
+2995kB  dist/index.js
+3521kB  dist/index.js.map
+3521kB  dist/index.js.map
+6580kB  [6330ms] - ncc 0.38.3

@@ -1,0 +1,313 @@
+{
+  "source": [
+    {
+      "case": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) migrates the action input and both empty-input fallbacks",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) preserves the explicit o4-mini request",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) preserves the explicit gpt-4o request",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) preserves Anthropic structured tool output",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "locked SDK compatibility (no provider requests) preserves Google schema output",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on SDK rejection without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on authentication failure without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on timeout without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on network error without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid JSON without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid schema without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails visibly on missing review without a fabricated score or leaking request data",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: undefined",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"score\":100}",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) fails if the task receives a file with no review result",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) uses the real score 85 against threshold 75 (fails=false)",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) uses the real score 74 against threshold 75 (fails=true)",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) uses the real score 75 against threshold 75 (fails=false)",
+      "baseline": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) uses the real score 0 against threshold 75 (fails=true)",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) accepts real zero at threshold zero",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) retains failed siblings alongside successful ones and fails the action",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) treats an error as a failure even if a score was also returned",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) orders zero ahead of healthy scores",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) recovers on a later healthy task without stale failure state",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) marks a failed review before attempting to publish its comment",
+      "baseline": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "real schema review task and rendered outcome (offline boundaries) preserves the original thrown error without dumping the SDK object",
+      "baseline": "failed",
+      "repaired": "passed"
+    }
+  ],
+  "dist": [
+    {
+      "case": "authentication",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "below",
+      "baseline_exit": 1,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 0,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "exact",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 0,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "healthy",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "invalid-json",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "invalid-license",
+      "baseline_exit": 1,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 0,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "invalid-schema",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "legacy",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "luna",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "missing-license",
+      "baseline_exit": 1,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 0,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "missing",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "mixed",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 2,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 2,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "network",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "recovery",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "sdk-rejection",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "timeout",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 1,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "zero-threshold",
+      "baseline_exit": 0,
+      "repaired_exit": 0,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "zero",
+      "baseline_exit": 0,
+      "repaired_exit": 1,
+      "baseline_safe_labels": 1,
+      "repaired_failure_labels": 0,
+      "repaired_provider_calls": 1,
+      "unexpected_network_routes": []
+    }
+  ]
+}

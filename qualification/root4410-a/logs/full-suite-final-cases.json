@@ -1,0 +1,445 @@
+{
+  "numTotalTestSuites": 14,
+  "numPassedTestSuites": 14,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 40,
+  "numPassedTests": 40,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 2,
+    "total": 2,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792751144396,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "status": "passed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "duration": 24.263477999999964,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "status": "passed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "duration": 2.059642999999994,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) migrates the action input and both empty-input fallbacks",
+          "status": "passed",
+          "title": "migrates the action input and both empty-input fallbacks",
+          "duration": 2.8415019999999913,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit o4-mini request",
+          "status": "passed",
+          "title": "preserves the explicit o4-mini request",
+          "duration": 1.207316999999989,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit gpt-4o request",
+          "status": "passed",
+          "title": "preserves the explicit gpt-4o request",
+          "duration": 1.414367000000027,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Anthropic structured tool output",
+          "status": "passed",
+          "title": "preserves Anthropic structured tool output",
+          "duration": 2.163166999999987,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Google schema output",
+          "status": "passed",
+          "title": "preserves Google schema output",
+          "duration": 2.126850000000047,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751145445,
+      "endTime": 1792751145481.127,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/ai-models/openai.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["eventcatalog", "getSchemasFromFilePaths"],
+          "fullName": "eventcatalog getSchemasFromFilePaths filters and returns only schema files that have changed in a list of file paths",
+          "status": "passed",
+          "title": "filters and returns only schema files that have changed in a list of file paths",
+          "duration": 1.220704000000012,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751146100,
+      "endTime": 1792751146101.2207,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/lib/eventcatalog.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory only returns files that have changed the catalog directory",
+          "status": "passed",
+          "title": "only returns files that have changed the catalog directory",
+          "duration": 2.34873300000001,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "status": "passed",
+          "title": "if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "duration": 0.3160959999999875,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "status": "passed",
+          "title": "if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "duration": 0.2422679999999957,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751145954,
+      "endTime": 1792751145956.3486,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/lib/github.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["generateGitHubCommentForSchemaReview"],
+          "fullName": "generateGitHubCommentForSchemaReview should generate a GitHubcomment body for a single reviewed file",
+          "status": "passed",
+          "title": "should generate a GitHubcomment body for a single reviewed file",
+          "duration": 13.596883999999989,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["generateGitHubCommentForSchemaReview"],
+          "fullName": "generateGitHubCommentForSchemaReview should return a message with no consumers for message if that schema has no consumers",
+          "status": "passed",
+          "title": "should return a message with no consumers for message if that schema has no consumers",
+          "duration": 2.108040000000017,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751145736,
+      "endTime": 1792751145752.1082,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/github-comment.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "duration": 43.27562899999998,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on authentication failure without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on authentication failure without a fabricated score or leaking request data",
+          "duration": 2.406411999999989,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on timeout without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on timeout without a fabricated score or leaking request data",
+          "duration": 1.8906259999999975,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on network error without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on network error without a fabricated score or leaking request data",
+          "duration": 1.5387110000000348,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "duration": 2.6208479999999668,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid schema without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on invalid schema without a fabricated score or leaking request data",
+          "duration": 2.4160980000000336,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on missing review without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on missing review without a fabricated score or leaking request data",
+          "duration": 1.8777190000000132,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: undefined",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: undefined",
+          "duration": 1.0147850000000176,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "duration": 1.0628919999999766,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "duration": 0.9893999999999892,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails if the task receives a file with no review result",
+          "status": "passed",
+          "title": "fails if the task receives a file with no review result",
+          "duration": 1.0907819999999901,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 85 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 85 against threshold 75 (fails=false)",
+          "duration": 2.280821000000003,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 74 against threshold 75 (fails=true)",
+          "status": "passed",
+          "title": "uses the real score 74 against threshold 75 (fails=true)",
+          "duration": 2.0499489999999696,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 75 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 75 against threshold 75 (fails=false)",
+          "duration": 2.0961379999999963,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 0 against threshold 75 (fails=true)",
+          "status": "passed",
+          "title": "uses the real score 0 against threshold 75 (fails=true)",
+          "duration": 2.062588000000005,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) accepts real zero at threshold zero",
+          "status": "passed",
+          "title": "accepts real zero at threshold zero",
+          "duration": 1.9578789999999913,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) retains failed siblings alongside successful ones and fails the action",
+          "status": "passed",
+          "title": "retains failed siblings alongside successful ones and fails the action",
+          "duration": 3.2404940000000124,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) treats an error as a failure even if a score was also returned",
+          "status": "passed",
+          "title": "treats an error as a failure even if a score was also returned",
+          "duration": 1.004367000000002,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) orders zero ahead of healthy scores",
+          "status": "passed",
+          "title": "orders zero ahead of healthy scores",
+          "duration": 3.238147999999967,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) recovers on a later healthy task without stale failure state",
+          "status": "passed",
+          "title": "recovers on a later healthy task without stale failure state",
+          "duration": 3.0231810000000223,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) marks a failed review before attempting to publish its comment",
+          "status": "passed",
+          "title": "marks a failed review before attempting to publish its comment",
+          "duration": 2.967996000000028,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) preserves the original thrown error without dumping the SDK object",
+          "status": "passed",
+          "title": "preserves the original thrown error without dumping the SDK object",
+          "duration": 0.9603030000000103,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751145100,
+      "endTime": 1792751145184.9602,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/outcomes.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when no schemas have changed, the action does nothing and passes",
+          "status": "passed",
+          "title": "when no schemas have changed, the action does nothing and passes",
+          "duration": 4.425427000000013,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when no eventcatalog schemas have changed, but other files have, the action does nothing and passes",
+          "status": "passed",
+          "title": "when no eventcatalog schemas have changed, but other files have, the action does nothing and passes",
+          "duration": 0.9155240000000049,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review if eventcatalog schemas have changed, but the action fails to find the messages in the catalog, the action fails",
+          "status": "passed",
+          "title": "if eventcatalog schemas have changed, but the action fails to find the messages in the catalog, the action fails",
+          "duration": 13.84292099999999,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when failureThreshold is set below 0, the action fails",
+          "status": "passed",
+          "title": "when failureThreshold is set below 0, the action fails",
+          "duration": 0.6906280000000038,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when failureThreshold is set above 100, the action fails",
+          "status": "passed",
+          "title": "when failureThreshold is set above 100, the action fails",
+          "duration": 3.020526000000018,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792751144792,
+      "endTime": 1792751144815.0205,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/schema-review.spec.ts"
+    }
+  ]
+}

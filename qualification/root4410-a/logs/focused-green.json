@@ -1,0 +1,22 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "tests/ai-models/openai.spec.ts",
+    "tests/tasks/schema-review/outcomes.spec.ts",
+    "--maxWorkers=1",
+    "--minWorkers=1",
+    "--no-file-parallelism"
+  ],
+  "started_utc": "2026-10-23T10:13:26.617011+00:00",
+  "finished_utc": "2026-10-23T10:13:28.074312+00:00",
+  "exit_code": 1,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 341440,
+  "peak_command_plus_native_owner_rss_kib": 570268,
+  "native_owner_found": true,
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}
