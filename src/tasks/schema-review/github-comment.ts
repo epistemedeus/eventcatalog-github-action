@@ -74,7 +74,7 @@ export const generateGitHubCommentForSchemaReview = async ({
   const messages = await Promise.all(
     reviewedFiles.map(async (file) => {
       const relativeFilePath = file.filePath.replace(catalogFolderName, '');
-      const message = await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
+      const message = file.sourceError?.category === 'unsupported_change' ? undefined : await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
       return {
         ...file,
         name: message?.name || file.filePath,

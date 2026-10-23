@@ -70481,42 +70481,102 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SchemaSourceError = exports.GitHubOperationError = void 0;
+exports.getSchemaSourcePaths = getSchemaSourcePaths;
 exports.getFileContentAtRef = getFileContentAtRef;
+exports.getChangedFileDetailsInCatalogDirectory = getChangedFileDetailsInCatalogDirectory;
 exports.getChangedFilesInCatalogDirectory = getChangedFilesInCatalogDirectory;
 exports.upsertComment = upsertComment;
 const core = __importStar(__nccwpck_require__(9999));
 const buffer_1 = __nccwpck_require__(181); // Needed for Buffer.from
 const path_1 = __importDefault(__nccwpck_require__(6928));
+const util_1 = __nccwpck_require__(9023);
+function getHttpStatus(cause) {
+    const status = cause?.status;
+    return typeof status === 'number' && Number.isInteger(status) && status >= 100 && status <= 599 ? status : undefined;
+}
+class GitHubOperationError extends Error {
+    constructor(message, status, cause) {
+        super(message);
+        this.status = status;
+        this.name = 'GitHubOperationError';
+        Object.defineProperty(this, 'cause', { value: cause, enumerable: false });
+    }
+}
+exports.GitHubOperationError = GitHubOperationError;
+class SchemaSourceError extends GitHubOperationError {
+    constructor(message, category, status, cause) {
+        super(message, status, cause);
+        this.category = category;
+        this.name = 'SchemaSourceError';
+    }
+}
+exports.SchemaSourceError = SchemaSourceError;
+function getSchemaSourcePaths(change) {
+    if (change.status === 'removed') {
+        throw new SchemaSourceError('Removed schema review is unsupported: the head catalog no longer defines this schema.', 'unsupported_change');
+    }
+    if (!['modified', 'added', 'renamed'].includes(change.status || '')) {
+        throw new SchemaSourceError('Schema review requires supported, unambiguous PR change metadata.', 'unsupported_change');
+    }
+    if (change.status === 'renamed' && (typeof change.previous_filename !== 'string' || !change.previous_filename)) {
+        throw new SchemaSourceError('Renamed schema review requires its previous filename.', 'unsupported_change');
+    }
+    return {
+        base: change.status === 'added' ? undefined : change.status === 'renamed' ? change.previous_filename : change.filename,
+        head: change.filename,
+    };
+}
 function containsDirectory(targetPath, directoryName) {
     const normalizedPath = path_1.default.normalize(targetPath);
     const segments = normalizedPath.split(path_1.default.sep);
     return segments.includes(directoryName);
 }
-// Helper function to get file content at a specific ref
-async function getFileContentAtRef(octokit, context, path, ref) {
-    const owner = context.repo.owner;
-    const repo = context.repo.repo;
+// A successful result is exact UTF-8 file content, including an empty string.
+// Absence is established separately by PR change metadata, never by a caught 404.
+async function getFileContentAtRef(octokit, context, filePath, ref) {
+    let response;
     try {
-        const { data: contentResponse } = await octokit.rest.repos.getContent({
-            owner,
-            repo,
-            path,
+        const result = await octokit.rest.repos.getContent({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            path: filePath,
             ref,
         });
-        if ('content' in contentResponse && contentResponse.content) {
-            if (contentResponse.encoding === 'base64') {
-                return buffer_1.Buffer.from(contentResponse.content, 'base64').toString('utf-8');
-            }
-            return contentResponse.content;
-        }
-        else if (Array.isArray(contentResponse)) {
-            return 'This is a directory, content not displayed.';
-        }
-        return 'Could not retrieve content for this file.';
+        response = result.data;
     }
-    catch (error) {
-        core.warning(`Failed to fetch content for ${path} at ref ${ref}: ${error.mreessage}`);
-        return `Could not retrieve content (Error: ${error.message})`;
+    catch (cause) {
+        const status = getHttpStatus(cause);
+        const timedOut = cause instanceof Error && ['TimeoutError', 'AbortError'].includes(cause.name);
+        throw new SchemaSourceError(timedOut
+            ? 'Schema source retrieval timed out or was aborted.'
+            : `Schema source retrieval failed (${status ? `HTTP ${status}` : 'network error'}).`, timedOut ? 'timeout' : 'request_failed', status, cause);
+    }
+    if (!response || typeof response !== 'object' || Array.isArray(response)) {
+        throw new SchemaSourceError('Schema source response is not a file.', 'invalid_response');
+    }
+    const file = response;
+    if (file.type !== 'file' ||
+        file.submodule_git_url ||
+        typeof file.content !== 'string' ||
+        !Number.isSafeInteger(file.size) ||
+        file.size < 0 ||
+        file.truncated === true) {
+        throw new SchemaSourceError('Schema source response has missing, unsupported or truncated file content.', 'invalid_response');
+    }
+    if (file.encoding !== 'base64') {
+        throw new SchemaSourceError('Schema source encoding is unsupported; complete base64 content is required.', 'unsupported_encoding');
+    }
+    const encoded = file.content.replace(/\s/g, '');
+    const bytes = buffer_1.Buffer.from(encoded, 'base64');
+    if (bytes.toString('base64') !== encoded || bytes.length !== file.size) {
+        throw new SchemaSourceError('Schema source content is malformed or incomplete.', 'invalid_content');
+    }
+    try {
+        return new util_1.TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes);
+    }
+    catch (cause) {
+        throw new SchemaSourceError('Schema source is not valid UTF-8 text.', 'invalid_content', undefined, cause);
     }
 }
 /**
@@ -70526,19 +70586,21 @@ async function getFileContentAtRef(octokit, context, path, ref) {
  * @param catalogDirectory - The catalog directory
  * @returns The changed files in the catalog directory
  */
-async function getChangedFilesInCatalogDirectory(octokit, context, catalogDirectory) {
+async function getChangedFileDetailsInCatalogDirectory(octokit, context, catalogDirectory) {
     const { data: files } = await octokit.rest.pulls.listFiles({
         owner: context.repo.owner,
         repo: context.repo.repo,
         pull_number: context.payload.pull_request.number,
     });
-    let changedFiles = files.map((file) => file.filename);
-    if (catalogDirectory) {
-        core.info(`Filtering changed files for directory: ${catalogDirectory}`);
-        // The path is inside the catalogDirectory somewhere
-        changedFiles = changedFiles.filter((file) => containsDirectory(file, catalogDirectory));
-    }
-    return changedFiles;
+    if (!catalogDirectory)
+        return files;
+    core.info(`Filtering changed files for directory: ${catalogDirectory}`);
+    return files.filter((file) => containsDirectory(file.filename, catalogDirectory) ||
+        Boolean(file.previous_filename && containsDirectory(file.previous_filename, catalogDirectory)));
+}
+// Preserve the string-list contract for the action entrypoint and existing callers.
+async function getChangedFilesInCatalogDirectory(octokit, context, catalogDirectory) {
+    return (await getChangedFileDetailsInCatalogDirectory(octokit, context, catalogDirectory)).map((file) => file.filename);
 }
 async function upsertComment(octokit, context, pullRequestNumber, commentBody, commentMarker) {
     const owner = context.repo.owner;
@@ -70558,27 +70620,33 @@ async function upsertComment(octokit, context, pullRequestNumber, commentBody, c
         }
     }
     catch (error) {
-        core.warning(`Failed to list comments: ${error instanceof Error ? error.message : String(error)}. Proceeding to create a new comment.`);
+        core.warning(`Failed to list comments (${getHttpStatus(error) ? `HTTP ${getHttpStatus(error)}` : 'request error'}). Proceeding to create a new comment.`);
     }
-    if (existingCommentId) {
-        core.info(`Updating existing comment id: ${existingCommentId}`);
-        const { data: updatedComment } = await octokit.rest.issues.updateComment({
-            owner,
-            repo,
-            comment_id: existingCommentId,
-            body: commentBody,
-        });
-        return updatedComment.id;
+    try {
+        if (existingCommentId) {
+            core.info(`Updating existing comment id: ${existingCommentId}`);
+            const { data: updatedComment } = await octokit.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existingCommentId,
+                body: commentBody,
+            });
+            return updatedComment.id;
+        }
+        else {
+            core.info('Creating new comment');
+            const { data: newComment } = await octokit.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: pullRequestNumber,
+                body: commentBody,
+            });
+            return newComment.id;
+        }
     }
-    else {
-        core.info('Creating new comment');
-        const { data: newComment } = await octokit.rest.issues.createComment({
-            owner,
-            repo,
-            issue_number: pullRequestNumber,
-            body: commentBody,
-        });
-        return newComment.id;
+    catch (cause) {
+        const status = getHttpStatus(cause);
+        throw new GitHubOperationError(`Schema review comment publication failed (${status ? `HTTP ${status}` : 'request error'}).`, status, cause);
     }
 }
 
@@ -70763,7 +70831,7 @@ const generateGitHubCommentForSchemaReview = async ({ context, reviewedFiles, mo
     };
     const messages = await Promise.all(reviewedFiles.map(async (file) => {
         const relativeFilePath = file.filePath.replace(catalogFolderName, '');
-        const message = await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
+        const message = file.sourceError?.category === 'unsupported_change' ? undefined : await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
         return {
             ...file,
             name: message?.name || file.filePath,
@@ -70862,21 +70930,23 @@ const task = async ({ octokit, context, catalogDirectory }) => {
         core.setFailed('Invalid input for `failure_threshold`. Must be a number between 0 and 100.');
         return;
     }
-    const changedEventCatalogFilesInPullRequest = await (0, github_1.getChangedFilesInCatalogDirectory)(octokit, context, catalogDirectory);
-    const changedSchemasInPullRequest = (0, eventcatalog_1.getSchemasFromFilePaths)(changedEventCatalogFilesInPullRequest);
+    const changedEventCatalogFilesInPullRequest = await (0, github_1.getChangedFileDetailsInCatalogDirectory)(octokit, context, catalogDirectory);
+    const changedSchemasInPullRequest = changedEventCatalogFilesInPullRequest.filter((file) => (0, eventcatalog_1.getSchemasFromFilePaths)([file.filename, file.previous_filename || '']).length > 0);
     if (changedSchemasInPullRequest.length === 0) {
         core.info('No schemas have changed, skipping schema review');
         return;
     }
     const reviewedFiles = [];
     // Review all the schemas, the new schema vs the old one
-    for (const filePath of changedSchemasInPullRequest) {
+    for (const change of changedSchemasInPullRequest) {
+        const filePath = change.filename;
         try {
+            (0, github_1.getSchemaSourcePaths)(change);
             core.info(`Reviewing schema: ${filePath}`);
-            const message = await getMessageBySchemaPath(filePath);
+            const message = await getMessageBySchemaPath(path_1.default.relative(catalogDirectory || '.', filePath));
             const { consumers = [] } = await getProducersAndConsumersForMessage(message.id, message.version);
             core.info(`Message consumers: ${consumers.map((c) => `${c.name} (${c.version})`).join(', ')}`);
-            const schemaReviewResponse = await (0, review_1.reviewSchema)(octokit, context, filePath, consumers);
+            const schemaReviewResponse = await (0, review_1.reviewSchema)(octokit, context, filePath, consumers, change);
             reviewedFiles.push(schemaReviewResponse);
         }
         catch (error) {
@@ -70885,7 +70955,10 @@ const task = async ({ octokit, context, catalogDirectory }) => {
                 filePath,
                 oldFileContent: '',
                 newFileContent: '',
-                aiError: 'Schema review could not be completed. Check the schema mapping in EventCatalog.',
+                aiError: error instanceof github_1.SchemaSourceError
+                    ? error.message
+                    : 'Schema review could not be completed. Check the schema mapping in EventCatalog.',
+                ...(error instanceof github_1.SchemaSourceError && { sourceError: error }),
             });
         }
     }
@@ -70962,15 +71035,16 @@ Format your response as a JSON object with the following keys:
 - "effectedConsumers": A list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.
 - "score": A numerical score from 0 to 100, where 0 indicates a very problematic change with high risk of breaking compatibility, and 100 indicates a perfectly safe and well-designed change.`;
 exports.getSystemPromptForSchemaReview = getSystemPromptForSchemaReview;
-const getUserPromptForSchemaReview = (previousSchema, newSchema, consumers) => `
+const getUserPromptForSchemaReview = (previousSchema, newSchema, consumers, changeStatus = 'modified') => `
 
 Please analyze these changes for potential issues, especially breaking changes if this is a schema or configuration file. Provide your assessment.
 
 Review the following changes to the schema:
-Previous schema:
+Change type: ${changeStatus}.
+${previousSchema === null ? 'Base schema: absent, verified by GitHub added-file metadata.' : `Previous schema:
 \`\`\`
 ${previousSchema}
-\`\`\`
+\`\`\``}
 New schema:
 \`\`\`
 ${newSchema}
@@ -71053,27 +71127,31 @@ const core = __importStar(__nccwpck_require__(9999));
 const github_1 = __nccwpck_require__(5006);
 const ai_1 = __nccwpck_require__(95);
 const prompt_1 = __nccwpck_require__(3023);
-const reviewSchema = async (octokit, context, schemaFilePath, messages) => {
+const reviewSchema = async (octokit, context, schemaFilePath, messages, change = { filename: schemaFilePath, status: 'modified' }) => {
     core.info(`Performing schema review for file: ${schemaFilePath}`);
     const baseSha = context.payload.pull_request.base.sha;
     const headSha = context.payload.pull_request.head.sha;
-    const previousFileContent = await (0, github_1.getFileContentAtRef)(octokit, context, schemaFilePath, baseSha);
-    const newFileContent = await (0, github_1.getFileContentAtRef)(octokit, context, schemaFilePath, headSha);
-    const systemPrompt = (0, prompt_1.getSystemPromptForSchemaReview)();
-    const userPrompt = (0, prompt_1.getUserPromptForSchemaReview)(previousFileContent, newFileContent, messages);
-    let reviewedFileEntry = {
-        filePath: schemaFilePath,
-        oldFileContent: previousFileContent,
-        newFileContent,
-    };
+    const reviewedFileEntry = { filePath: schemaFilePath, oldFileContent: null, newFileContent: null };
     try {
+        const paths = (0, github_1.getSchemaSourcePaths)(change);
+        const previousFileContent = paths.base === undefined ? null : await (0, github_1.getFileContentAtRef)(octokit, context, paths.base, baseSha);
+        const newFileContent = await (0, github_1.getFileContentAtRef)(octokit, context, paths.head, headSha);
+        reviewedFileEntry.oldFileContent = previousFileContent;
+        reviewedFileEntry.newFileContent = newFileContent;
+        if (previousFileContent === '' || newFileContent === '') {
+            throw new github_1.SchemaSourceError('Schema source is empty; an empty schema cannot be reviewed.', 'empty_schema');
+        }
+        const systemPrompt = (0, prompt_1.getSystemPromptForSchemaReview)();
+        const userPrompt = (0, prompt_1.getUserPromptForSchemaReview)(previousFileContent, newFileContent, messages, change.status);
         core.info(`Requesting AI review for schema changes in ${schemaFilePath}...`);
         const response = prompt_1.responseSchema.parse(await (0, ai_1.sendPromptToModel)(systemPrompt, userPrompt, prompt_1.responseSchema));
         core.info(`AI review received for ${schemaFilePath}: Score ${response.score}`);
         reviewedFileEntry.aiReview = response;
     }
     catch (error) {
-        const errorMessage = (0, ai_1.getAIErrorMessage)(error);
+        if (error instanceof github_1.SchemaSourceError)
+            reviewedFileEntry.sourceError = error;
+        const errorMessage = error instanceof github_1.SchemaSourceError ? error.message : (0, ai_1.getAIErrorMessage)(error);
         core.error(`AI review failed for ${schemaFilePath}: ${errorMessage}`);
         reviewedFileEntry.aiError = errorMessage;
     }

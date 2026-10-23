@@ -1,0 +1,22 @@
+{
+  "status": "checkpoint; same session continues",
+  "predecessor": "92681dee312e9d9b259ef7da5dcc1c2e54b34185",
+  "session": "01a16839-cd13-7393-9f88-af1e3eaa585e",
+  "branch": "codex/root4410-a-eventcatalog-compatibility-20261023",
+  "base": "d721c06b0142c55cd23c461734c1423bf95cedb2",
+  "operating_commit": "38189420f751f11ec68346ede55181e5f92af50b",
+  "receipt_sha256": "be0d89304af9f941cef756df403024f2483de8c0b09ed05992d2df64cc75dd91",
+  "checkpoint_by": "2026-10-23T11:53:13.567Z",
+  "required_until": "2026-10-23T13:56:31.568Z",
+  "passed_source_cases": 82,
+  "baseline_new_failed": 40,
+  "baseline_new_controls": 2,
+  "sampled_peak_kib": 1117856,
+  "reserve_kib": 2097152,
+  "model_children": 0,
+  "unmet": [
+    "Expanded generated-action acquisition corpus",
+    "Final scoped formatting and final TypeScript after self-review",
+    "Final receiving and artifact identity"
+  ]
+}

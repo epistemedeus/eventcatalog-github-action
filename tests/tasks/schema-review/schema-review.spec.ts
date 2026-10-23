@@ -9,7 +9,7 @@ const createMockOctokit = (listFilesData: any[] = []) => {
   return {
     rest: {
       pulls: {
-        listFiles: vi.fn().mockResolvedValue({ data: listFilesData }),
+        listFiles: vi.fn().mockResolvedValue({ data: listFilesData.map((file) => ({ status: 'modified', ...file })) }),
       },
       issues: {
         listComments: vi.fn().mockResolvedValue({ data: [] }),

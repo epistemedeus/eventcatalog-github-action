@@ -1,0 +1,7 @@
+# ROOT4590 early checkpoint
+
+Same original ROOT4410-A context and branch; predecessor 92681dee312e9d9b259ef7da5dcc1c2e54b34185 is preserved. Source acquisition now returns exact UTF-8 file bytes or throws a safe typed error retaining status/cause internally. Added-file metadata establishes explicit absent base without a fetch; renamed files bind previous path/base and current path/head. Removed and ambiguous changes fail without AI. Real empty files remain distinguishable and are explicitly unsupported as schemas. Source failures cannot reach the provider or become a scored comment. Publication failures retain a safe message and original cause.
+
+Received so far: baseline 40 red / 2 positive controls; 42 new source cases green; full 82-test Vitest suite green; TypeScript initially green; ncc production build green. Sampled owner-tree peak so far 1,117,856 KiB within total 2,097,152 KiB; no model children.
+
+This is a coherent early checkpoint, not final acceptance. Exact unmet conditions: expanded Node 20 shipped-action acquisition/adverse/add/rename/recovery corpus, final scoped formatting and TypeScript after self-review, final artifact identities and receiving notes. The original 18 bundle cases are being received. The same session continues under requiredUntil 2026-10-23T13:56:31.568Z; checkpointBy is 2026-10-23T11:53:13.567Z. All original evidence, including refused synthetic-token harness history and unknown total count, remains retained.

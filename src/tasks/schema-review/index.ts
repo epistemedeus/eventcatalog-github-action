@@ -3,7 +3,13 @@ import type { GitHub } from '@actions/github/lib/utils';
 import utils from '@eventcatalog/sdk';
 import path from 'path';
 
-import { getChangedFilesInCatalogDirectory, ReviewedFile, upsertComment } from '@/lib/github';
+import {
+  getChangedFileDetailsInCatalogDirectory,
+  getSchemaSourcePaths,
+  SchemaSourceError,
+  ReviewedFile,
+  upsertComment,
+} from '@/lib/github';
 import { Context } from '@actions/github/lib/context';
 import { getSchemasFromFilePaths } from '@/lib/eventcatalog';
 import { reviewSchema } from './review';
@@ -39,8 +45,10 @@ export const task = async ({ octokit, context, catalogDirectory }: TaskParams) =
     return;
   }
 
-  const changedEventCatalogFilesInPullRequest = await getChangedFilesInCatalogDirectory(octokit, context, catalogDirectory);
-  const changedSchemasInPullRequest = getSchemasFromFilePaths(changedEventCatalogFilesInPullRequest);
+  const changedEventCatalogFilesInPullRequest = await getChangedFileDetailsInCatalogDirectory(octokit, context, catalogDirectory);
+  const changedSchemasInPullRequest = changedEventCatalogFilesInPullRequest.filter(
+    (file) => getSchemasFromFilePaths([file.filename, file.previous_filename || '']).length > 0
+  );
 
   if (changedSchemasInPullRequest.length === 0) {
     core.info('No schemas have changed, skipping schema review');
@@ -50,13 +58,15 @@ export const task = async ({ octokit, context, catalogDirectory }: TaskParams) =
   const reviewedFiles: ReviewedFile[] = [];
 
   // Review all the schemas, the new schema vs the old one
-  for (const filePath of changedSchemasInPullRequest) {
+  for (const change of changedSchemasInPullRequest) {
+    const filePath = change.filename;
     try {
+      getSchemaSourcePaths(change);
       core.info(`Reviewing schema: ${filePath}`);
-      const message = await getMessageBySchemaPath(filePath);
+      const message = await getMessageBySchemaPath(path.relative(catalogDirectory || '.', filePath));
       const { consumers = [] } = await getProducersAndConsumersForMessage(message.id, message.version);
       core.info(`Message consumers: ${consumers.map((c) => `${c.name} (${c.version})`).join(', ')}`);
-      const schemaReviewResponse = await reviewSchema(octokit, context, filePath, consumers);
+      const schemaReviewResponse = await reviewSchema(octokit, context, filePath, consumers, change);
       reviewedFiles.push(schemaReviewResponse);
     } catch (error) {
       core.error(`Error reviewing schema: ${filePath}`);
@@ -64,7 +74,11 @@ export const task = async ({ octokit, context, catalogDirectory }: TaskParams) =
         filePath,
         oldFileContent: '',
         newFileContent: '',
-        aiError: 'Schema review could not be completed. Check the schema mapping in EventCatalog.',
+        aiError:
+          error instanceof SchemaSourceError
+            ? error.message
+            : 'Schema review could not be completed. Check the schema mapping in EventCatalog.',
+        ...(error instanceof SchemaSourceError && { sourceError: error }),
       });
     }
   }

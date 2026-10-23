@@ -1,12 +1,55 @@
 import * as core from '@actions/core';
 import { Buffer } from 'buffer'; // Needed for Buffer.from
 import path from 'path';
+import { TextDecoder } from 'util';
 import type { GitHub } from '@actions/github/lib/utils';
 import type { Context } from '@actions/github/lib/context';
 
 // Define a simple interface for the file object from Octokit
-interface OctokitFile {
+export interface ChangedFile {
   filename: string;
+  status?: string;
+  previous_filename?: string;
+}
+
+function getHttpStatus(cause: unknown): number | undefined {
+  const status = (cause as { status?: unknown } | null)?.status;
+  return typeof status === 'number' && Number.isInteger(status) && status >= 100 && status <= 599 ? status : undefined;
+}
+
+export class GitHubOperationError extends Error {
+  readonly cause?: unknown;
+  constructor(message: string, readonly status?: number, cause?: unknown) {
+    super(message);
+    this.name = 'GitHubOperationError';
+    Object.defineProperty(this, 'cause', { value: cause, enumerable: false });
+  }
+}
+
+export class SchemaSourceError extends GitHubOperationError {
+  constructor(message: string, readonly category: string, status?: number, cause?: unknown) {
+    super(message, status, cause);
+    this.name = 'SchemaSourceError';
+  }
+}
+
+export function getSchemaSourcePaths(change: ChangedFile): { base?: string; head: string } {
+  if (change.status === 'removed') {
+    throw new SchemaSourceError(
+      'Removed schema review is unsupported: the head catalog no longer defines this schema.',
+      'unsupported_change'
+    );
+  }
+  if (!['modified', 'added', 'renamed'].includes(change.status || '')) {
+    throw new SchemaSourceError('Schema review requires supported, unambiguous PR change metadata.', 'unsupported_change');
+  }
+  if (change.status === 'renamed' && (typeof change.previous_filename !== 'string' || !change.previous_filename)) {
+    throw new SchemaSourceError('Renamed schema review requires its previous filename.', 'unsupported_change');
+  }
+  return {
+    base: change.status === 'added' ? undefined : change.status === 'renamed' ? change.previous_filename : change.filename,
+    head: change.filename,
+  };
 }
 
 // Interface for AI Review data (matching the updated AiResponseSchema in ai.ts)
@@ -24,8 +67,9 @@ export interface AiReview {
 
 export interface ReviewedFile {
   filePath: string;
-  oldFileContent: string;
-  newFileContent: string;
+  oldFileContent: string | null;
+  newFileContent: string | null;
+  sourceError?: SchemaSourceError;
   aiReview?: AiReview;
   aiError?: string;
 }
@@ -41,31 +85,64 @@ function containsDirectory(targetPath: string, directoryName: string) {
   return segments.includes(directoryName);
 }
 
-// Helper function to get file content at a specific ref
-export async function getFileContentAtRef(octokit: any, context: Context, path: string, ref: string): Promise<string> {
-  const owner = context.repo.owner;
-  const repo = context.repo.repo;
-
+// A successful result is exact UTF-8 file content, including an empty string.
+// Absence is established separately by PR change metadata, never by a caught 404.
+export async function getFileContentAtRef(
+  octokit: InstanceType<typeof GitHub>,
+  context: Context,
+  filePath: string,
+  ref: string
+): Promise<string> {
+  let response: unknown;
   try {
-    const { data: contentResponse } = await octokit.rest.repos.getContent({
-      owner,
-      repo,
-      path,
+    const result = await octokit.rest.repos.getContent({
+      owner: context.repo.owner,
+      repo: context.repo.repo,
+      path: filePath,
       ref,
     });
-
-    if ('content' in contentResponse && contentResponse.content) {
-      if (contentResponse.encoding === 'base64') {
-        return Buffer.from(contentResponse.content, 'base64').toString('utf-8');
-      }
-      return contentResponse.content;
-    } else if (Array.isArray(contentResponse)) {
-      return 'This is a directory, content not displayed.';
-    }
-    return 'Could not retrieve content for this file.';
-  } catch (error: any) {
-    core.warning(`Failed to fetch content for ${path} at ref ${ref}: ${error.mreessage}`);
-    return `Could not retrieve content (Error: ${error.message})`;
+    response = result.data;
+  } catch (cause) {
+    const status = getHttpStatus(cause);
+    const timedOut = cause instanceof Error && ['TimeoutError', 'AbortError'].includes(cause.name);
+    throw new SchemaSourceError(
+      timedOut
+        ? 'Schema source retrieval timed out or was aborted.'
+        : `Schema source retrieval failed (${status ? `HTTP ${status}` : 'network error'}).`,
+      timedOut ? 'timeout' : 'request_failed',
+      status,
+      cause
+    );
+  }
+  if (!response || typeof response !== 'object' || Array.isArray(response)) {
+    throw new SchemaSourceError('Schema source response is not a file.', 'invalid_response');
+  }
+  const file = response as Record<string, unknown>;
+  if (
+    file.type !== 'file' ||
+    file.submodule_git_url ||
+    typeof file.content !== 'string' ||
+    !Number.isSafeInteger(file.size) ||
+    (file.size as number) < 0 ||
+    file.truncated === true
+  ) {
+    throw new SchemaSourceError('Schema source response has missing, unsupported or truncated file content.', 'invalid_response');
+  }
+  if (file.encoding !== 'base64') {
+    throw new SchemaSourceError(
+      'Schema source encoding is unsupported; complete base64 content is required.',
+      'unsupported_encoding'
+    );
+  }
+  const encoded = file.content.replace(/\s/g, '');
+  const bytes = Buffer.from(encoded, 'base64');
+  if (bytes.toString('base64') !== encoded || bytes.length !== file.size) {
+    throw new SchemaSourceError('Schema source content is malformed or incomplete.', 'invalid_content');
+  }
+  try {
+    return new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(bytes);
+  } catch (cause) {
+    throw new SchemaSourceError('Schema source is not valid UTF-8 text.', 'invalid_content', undefined, cause);
   }
 }
 
@@ -76,26 +153,32 @@ export async function getFileContentAtRef(octokit: any, context: Context, path: 
  * @param catalogDirectory - The catalog directory
  * @returns The changed files in the catalog directory
  */
-export async function getChangedFilesInCatalogDirectory(
+export async function getChangedFileDetailsInCatalogDirectory(
   octokit: InstanceType<typeof GitHub>,
   context: Context,
   catalogDirectory: string | undefined
-): Promise<string[]> {
+): Promise<ChangedFile[]> {
   const { data: files } = await octokit.rest.pulls.listFiles({
     owner: context.repo.owner,
     repo: context.repo.repo,
     pull_number: context.payload.pull_request!.number,
   });
+  if (!catalogDirectory) return files;
+  core.info(`Filtering changed files for directory: ${catalogDirectory}`);
+  return files.filter(
+    (file) =>
+      containsDirectory(file.filename, catalogDirectory) ||
+      Boolean(file.previous_filename && containsDirectory(file.previous_filename, catalogDirectory))
+  );
+}
 
-  let changedFiles = files.map((file: OctokitFile) => file.filename);
-
-  if (catalogDirectory) {
-    core.info(`Filtering changed files for directory: ${catalogDirectory}`);
-    // The path is inside the catalogDirectory somewhere
-    changedFiles = changedFiles.filter((file: string) => containsDirectory(file, catalogDirectory));
-  }
-
-  return changedFiles;
+// Preserve the string-list contract for the action entrypoint and existing callers.
+export async function getChangedFilesInCatalogDirectory(
+  octokit: InstanceType<typeof GitHub>,
+  context: Context,
+  catalogDirectory: string | undefined
+): Promise<string[]> {
+  return (await getChangedFileDetailsInCatalogDirectory(octokit, context, catalogDirectory)).map((file) => file.filename);
 }
 
 export async function upsertComment(
@@ -124,10 +207,11 @@ export async function upsertComment(
     }
   } catch (error) {
     core.warning(
-      `Failed to list comments: ${error instanceof Error ? error.message : String(error)}. Proceeding to create a new comment.`
+      `Failed to list comments (${getHttpStatus(error) ? `HTTP ${getHttpStatus(error)}` : 'request error'}). Proceeding to create a new comment.`
     );
   }
 
+  try {
   if (existingCommentId) {
     core.info(`Updating existing comment id: ${existingCommentId}`);
     const { data: updatedComment } = await octokit.rest.issues.updateComment({
@@ -146,5 +230,9 @@ export async function upsertComment(
       body: commentBody,
     });
     return newComment.id;
+  }
+  } catch (cause) {
+    const status = getHttpStatus(cause);
+    throw new GitHubOperationError(`Schema review comment publication failed (${status ? `HTTP ${status}` : 'request error'}).`, status, cause);
   }
 }

@@ -59,7 +59,7 @@ function reply(value: unknown) {
   );
 }
 async function run(files = [first]) {
-  octokit.rest.pulls.listFiles.mockResolvedValue({ data: files.map((filename) => ({ filename })) });
+  octokit.rest.pulls.listFiles.mockResolvedValue({ data: files.map((filename) => ({ filename, status: 'modified' })) });
   await task({ octokit, context, catalogDirectory: 'catalog' });
   return octokit.rest.issues.createComment.mock.calls[0]?.[0].body as string;
 }
@@ -84,7 +84,12 @@ beforeEach(() => {
       pulls: { listFiles: vi.fn() },
       repos: {
         getContent: vi.fn(async () => ({
-          data: { content: Buffer.from('{"synthetic-private-schema":true}').toString('base64'), encoding: 'base64' },
+          data: {
+            type: 'file',
+            size: Buffer.byteLength('{"synthetic-private-schema":true}'),
+            content: Buffer.from('{"synthetic-private-schema":true}').toString('base64'),
+            encoding: 'base64',
+          },
         })),
       },
       issues: {
@@ -260,7 +265,7 @@ describe('real schema review task and rendered outcome (offline boundaries)', ()
       expect(setFailed).toHaveBeenCalled();
       throw new Error('Synthetic GitHub failure');
     });
-    await expect(run()).rejects.toThrow('Synthetic GitHub failure');
+    await expect(run()).rejects.toThrow('Schema review comment publication failed');
   });
 
   it('preserves the original thrown error without dumping the SDK object', async () => {

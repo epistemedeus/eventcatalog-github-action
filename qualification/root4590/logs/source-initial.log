@@ -1,0 +1,9 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ✓ tests/tasks/schema-review/source-acquisition.spec.ts (42 tests) 50ms
+
+ Test Files  1 passed (1)
+      Tests  42 passed (42)
+   Start at  11:48:11
+   Duration  454ms (transform 99ms, setup 0ms, collect 240ms, tests 50ms, environment 0ms, prepare 45ms)

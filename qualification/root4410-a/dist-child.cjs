@@ -104,9 +104,9 @@ globalThis.fetch = async (url, init = {}) => {
   if (target.hostname === 'api.github.com') {
     record.githubCalls.push({ path: target.pathname, method: init.method || 'GET' });
     if (target.pathname.endsWith('/files'))
-      return json([{ filename: schemaFile }, ...(scenario === 'mixed' ? [{ filename: otherFile }] : [])]);
+      return json([{ filename: schemaFile, status: 'modified' }, ...(scenario === 'mixed' ? [{ filename: otherFile, status: 'modified' }] : [])]);
     if (target.pathname.includes('/contents/'))
-      return json({ content: Buffer.from('{"synthetic-private-schema":true}').toString('base64'), encoding: 'base64' });
+      return json({ type: 'file', size: Buffer.byteLength('{"synthetic-private-schema":true}'), content: Buffer.from('{"synthetic-private-schema":true}').toString('base64'), encoding: 'base64' });
     if (target.pathname.endsWith('/comments') && (!init.method || init.method === 'GET'))
       return json(
         scenario === 'recovery' ? [{ id: 123, body: '<!-- eventcatalog-schema-review-comment -->\nReview failed' }] : []
