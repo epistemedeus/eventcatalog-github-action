@@ -16,6 +16,7 @@ export interface AiReview {
     name: string;
     version: string;
     warning: string;
+    url: string;
   }[];
   score: number;
   schemaFormat: string;
