@@ -1,0 +1,148 @@
+qualification/root4590/baseline-source-cases.json 59ms
+qualification/root4590/case-matrix.json 21ms (unchanged)
+qualification/root4590/check-dist.cjs 26ms (unchanged)
+qualification/root4590/focused-final-cases.json 25ms
+qualification/root4590/full-final-cases.json 27ms
+qualification/root4590/full-state-final-cases.json 21ms
+qualification/root4590/identities.json 2ms (unchanged)
+qualification/root4590/logs/baseline-red.json 1ms (unchanged)
+qualification/root4590/logs/build-final.json 1ms
+qualification/root4590/logs/build-state-final.json 1ms
+qualification/root4590/logs/bundle-emulator-amended.json 1ms
+qualification/root4590/logs/bundle-initial.json 0ms
+qualification/root4590/logs/checkpoint-build.json 0ms
+qualification/root4590/logs/checkpoint-original-bundle.json 1ms
+qualification/root4590/logs/checkpoint-tests.json 1ms
+qualification/root4590/logs/focused-final.json 1ms (unchanged)
+qualification/root4590/logs/format-check.json 1ms (unchanged)
+qualification/root4590/logs/format-final-write.json 0ms (unchanged)
+qualification/root4590/logs/format-final.json 1ms (unchanged)
+qualification/root4590/logs/format-source.json 1ms (unchanged)
+qualification/root4590/logs/format-state-check.json 1ms (unchanged)
+qualification/root4590/logs/format-state-final.json 1ms (unchanged)
+qualification/root4590/logs/full-final.json 1ms (unchanged)
+qualification/root4590/logs/full-initial.json 0ms
+qualification/root4590/logs/full-state-final.json 1ms (unchanged)
+qualification/root4590/logs/original18-final.json 1ms
+qualification/root4590/logs/original18-state-final.json 1ms
+qualification/root4590/logs/predecessor-dist-final.json 1ms
+qualification/root4590/logs/predecessor-dist.json 1ms
+qualification/root4590/logs/predecessor-source-final.json 1ms
+qualification/root4590/logs/predecessor-source-state.json 1ms
+qualification/root4590/logs/shipped-final.json 1ms
+qualification/root4590/logs/shipped-state-final.json 1ms
+qualification/root4590/logs/source-initial.json 1ms (unchanged)
+qualification/root4590/logs/source-self-review.json 1ms (unchanged)
+qualification/root4590/logs/source-state-final.json 0ms (unchanged)
+qualification/root4590/logs/typecheck-final.json 0ms
+qualification/root4590/logs/typecheck-initial.json 1ms
+qualification/root4590/logs/typecheck-state-final.json 1ms
+qualification/root4590/original18-state-final/authentication.json 2ms
+qualification/root4590/original18-state-final/below.json 3ms
+qualification/root4590/original18-state-final/exact.json 3ms
+qualification/root4590/original18-state-final/healthy.json 4ms
+qualification/root4590/original18-state-final/invalid-json.json 2ms
+qualification/root4590/original18-state-final/invalid-license.json 1ms (unchanged)
+qualification/root4590/original18-state-final/invalid-schema.json 2ms
+qualification/root4590/original18-state-final/legacy.json 2ms
+qualification/root4590/original18-state-final/luna.json 1ms
+qualification/root4590/original18-state-final/missing-license.json 0ms (unchanged)
+qualification/root4590/original18-state-final/missing.json 2ms
+qualification/root4590/original18-state-final/mixed.json 2ms
+qualification/root4590/original18-state-final/network.json 2ms
+qualification/root4590/original18-state-final/recovery.json 2ms
+qualification/root4590/original18-state-final/sdk-rejection.json 2ms
+qualification/root4590/original18-state-final/timeout.json 2ms
+qualification/root4590/original18-state-final/zero-threshold.json 2ms
+qualification/root4590/original18-state-final/zero.json 1ms
+qualification/root4590/predecessor-shipped-final/source-added.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-401.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-403.json 1ms
+qualification/root4590/predecessor-shipped-final/source-base-404.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-503.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-base64.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-directory.json 3ms
+qualification/root4590/predecessor-shipped-final/source-base-empty.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-encoding.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-malformed.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-missing.json 3ms
+qualification/root4590/predecessor-shipped-final/source-base-network.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-timeout.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-truncated.json 2ms
+qualification/root4590/predecessor-shipped-final/source-base-utf8.json 2ms
+qualification/root4590/predecessor-shipped-final/source-commentwrite.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-401.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-403.json 3ms
+qualification/root4590/predecessor-shipped-final/source-head-404.json 1ms
+qualification/root4590/predecessor-shipped-final/source-head-503.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-base64.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-directory.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-empty.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-encoding.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-malformed.json 1ms
+qualification/root4590/predecessor-shipped-final/source-head-missing.json 1ms
+qualification/root4590/predecessor-shipped-final/source-head-network.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-timeout.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-truncated.json 2ms
+qualification/root4590/predecessor-shipped-final/source-head-utf8.json 2ms
+qualification/root4590/predecessor-shipped-final/source-mixed.json 2ms
+qualification/root4590/predecessor-shipped-final/source-modified.json 1ms
+qualification/root4590/predecessor-shipped-final/source-recovered.json 2ms
+qualification/root4590/predecessor-shipped-final/source-removed.json 1ms (unchanged)
+qualification/root4590/predecessor-shipped-final/source-rename-ambiguous.json 1ms
+qualification/root4590/predecessor-shipped-final/source-renamed-change.json 2ms
+qualification/root4590/predecessor-shipped-final/source-renamed-same.json 1ms
+qualification/root4590/predecessor-shipped-final/source-unknown.json 2ms
+qualification/root4590/predecessor-shipped-final/source-zero-threshold.json 1ms
+qualification/root4590/predecessor-shipped-final/source-zero.json 2ms
+qualification/root4590/predecessor-shipped/source-commentwrite.json 1ms
+qualification/root4590/predecessor-source-final.json 9ms
+qualification/root4590/predecessor-source-state.json 11ms
+qualification/root4590/shipped-initial/source-mixed.json 1ms (unchanged)
+qualification/root4590/shipped-initial/source-renamed-change.json 1ms (unchanged)
+qualification/root4590/shipped-initial/source-renamed-same.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-added.json 1ms
+qualification/root4590/shipped-state-final/source-base-401.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-403.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-404.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-503.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-base64.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-directory.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-empty.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-encoding.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-malformed.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-missing.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-network.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-timeout.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-truncated.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-base-utf8.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-commentwrite.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-401.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-403.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-404.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-503.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-base64.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-directory.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-empty.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-encoding.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-malformed.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-missing.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-network.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-timeout.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-truncated.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-head-utf8.json 2ms (unchanged)
+qualification/root4590/shipped-state-final/source-mixed.json 3ms
+qualification/root4590/shipped-state-final/source-modified.json 2ms
+qualification/root4590/shipped-state-final/source-recovered.json 2ms
+qualification/root4590/shipped-state-final/source-removed.json 2ms (unchanged)
+qualification/root4590/shipped-state-final/source-rename-ambiguous.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-renamed-change.json 2ms
+qualification/root4590/shipped-state-final/source-renamed-same.json 3ms
+qualification/root4590/shipped-state-final/source-unknown.json 1ms (unchanged)
+qualification/root4590/shipped-state-final/source-zero-threshold.json 2ms
+qualification/root4590/shipped-state-final/source-zero.json 1ms
+qualification/root4590/source-state-final-cases.json 6ms
+qualification/root4590/SOURCES.md 24ms (unchanged)
+qualification/root4590/WORKER-HANDBACK.md 21ms
+qualification/root4590/WORKER-RESULT.json 13ms
+qualification/root4410-a/PR.md 3ms (unchanged)

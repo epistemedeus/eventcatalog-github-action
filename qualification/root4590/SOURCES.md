@@ -1,0 +1,13 @@
+# ROOT4590 source boundary
+
+The product remains `epistemedeus/eventcatalog-github-action@d721c06b0142c55cd23c461734c1423bf95cedb2`, continuing the exact admitted predecessor `92681dee312e9d9b259ef7da5dcc1c2e54b34185`. The original model/request and failure repair is retained.
+
+The complete amendment, AGENTS, STATE and execution-plan inputs are separately frozen at `epistemedeus/pilot@38189420f751f11ec68346ede55181e5f92af50b`. The staged receipt SHA-256 is `be0d89304af9f941cef756df403024f2483de8c0b09ed05992d2df64cc75dd91`; all four members matched their receipt SHA-256 and Git blob IDs. The complete assignment was read before source work. Operating documents were read as the full diff against the already-read original pinned versions, retaining all unchanged text.
+
+The owning installed Octokit client and [GitHub Contents API](https://docs.github.com/en/rest/repos/contents#get-repository-content) support exact `ref`, file content/type/encoding/size, directory responses and the larger-file `encoding: none` boundary. The [PR files API](https://docs.github.com/en/rest/pulls/pulls#list-pull-requests-files) supplies change status and previous filename. Public documentation was retrieved October 23, 2026; no live product API or credential work was used to qualify these cases.
+
+The fix accepts complete base64 file payloads whose decoded byte count matches `size` and which decode as UTF-8. Empty bytes are returned faithfully by the shared helper, then rejected explicitly as an unsupported schema. Added-file metadata establishes a base absence; no arbitrary 404 does. Renames bind both actual paths and exact event refs. Removed files require manual review because the existing head-catalog metadata reader cannot reliably describe a deleted message; the action fails and requests no AI score.
+
+All new receiving uses the preserved Node 20 setup, existing locked dependencies, synthetic errors and local socket-guarded emulators. A score-100 stub is a negative control for the acquisition boundary, not evidence of model quality. Source timeout cases throw actual `TimeoutError` objects; shipped timeout cases return HTTP 504, while shipped network cases close the local socket. No elapsed provider timeout or live availability is claimed.
+
+Original `qualification/root4410-a/` histories remain, including the earlier refused synthetic-token GitHub attempts and unknown total count. Only its reusable bundle emulator and current PR intent draft were extended. Original result reports, fixtures, logs and identity records are unchanged. Intermediate passing amendment captures were reduced after retaining their command logs; final captures and every new harness failure are preserved.

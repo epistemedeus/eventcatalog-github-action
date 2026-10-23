@@ -1,0 +1,210 @@
+TAP version 13
+# Subtest: shipped source acquisition: source-base-401
+ok 1 - shipped source acquisition: source-base-401
+  ---
+  duration_ms: 336.148096
+  ...
+# Subtest: shipped source acquisition: source-base-403
+ok 2 - shipped source acquisition: source-base-403
+  ---
+  duration_ms: 338.460061
+  ...
+# Subtest: shipped source acquisition: source-base-404
+ok 3 - shipped source acquisition: source-base-404
+  ---
+  duration_ms: 337.390483
+  ...
+# Subtest: shipped source acquisition: source-base-503
+ok 4 - shipped source acquisition: source-base-503
+  ---
+  duration_ms: 337.409731
+  ...
+# Subtest: shipped source acquisition: source-base-network
+ok 5 - shipped source acquisition: source-base-network
+  ---
+  duration_ms: 334.282295
+  ...
+# Subtest: shipped source acquisition: source-base-timeout
+ok 6 - shipped source acquisition: source-base-timeout
+  ---
+  duration_ms: 337.148298
+  ...
+# Subtest: shipped source acquisition: source-base-directory
+ok 7 - shipped source acquisition: source-base-directory
+  ---
+  duration_ms: 342.671176
+  ...
+# Subtest: shipped source acquisition: source-base-missing
+ok 8 - shipped source acquisition: source-base-missing
+  ---
+  duration_ms: 348.476356
+  ...
+# Subtest: shipped source acquisition: source-base-encoding
+ok 9 - shipped source acquisition: source-base-encoding
+  ---
+  duration_ms: 414.454121
+  ...
+# Subtest: shipped source acquisition: source-base-truncated
+ok 10 - shipped source acquisition: source-base-truncated
+  ---
+  duration_ms: 347.393099
+  ...
+# Subtest: shipped source acquisition: source-base-malformed
+ok 11 - shipped source acquisition: source-base-malformed
+  ---
+  duration_ms: 337.24329
+  ...
+# Subtest: shipped source acquisition: source-base-base64
+ok 12 - shipped source acquisition: source-base-base64
+  ---
+  duration_ms: 349.486469
+  ...
+# Subtest: shipped source acquisition: source-base-utf8
+ok 13 - shipped source acquisition: source-base-utf8
+  ---
+  duration_ms: 362.669689
+  ...
+# Subtest: shipped source acquisition: source-base-empty
+ok 14 - shipped source acquisition: source-base-empty
+  ---
+  duration_ms: 342.006495
+  ...
+# Subtest: shipped source acquisition: source-head-401
+ok 15 - shipped source acquisition: source-head-401
+  ---
+  duration_ms: 335.268591
+  ...
+# Subtest: shipped source acquisition: source-head-403
+ok 16 - shipped source acquisition: source-head-403
+  ---
+  duration_ms: 351.197614
+  ...
+# Subtest: shipped source acquisition: source-head-404
+ok 17 - shipped source acquisition: source-head-404
+  ---
+  duration_ms: 359.09581
+  ...
+# Subtest: shipped source acquisition: source-head-503
+ok 18 - shipped source acquisition: source-head-503
+  ---
+  duration_ms: 338.790646
+  ...
+# Subtest: shipped source acquisition: source-head-network
+ok 19 - shipped source acquisition: source-head-network
+  ---
+  duration_ms: 337.834055
+  ...
+# Subtest: shipped source acquisition: source-head-timeout
+ok 20 - shipped source acquisition: source-head-timeout
+  ---
+  duration_ms: 351.634473
+  ...
+# Subtest: shipped source acquisition: source-head-directory
+ok 21 - shipped source acquisition: source-head-directory
+  ---
+  duration_ms: 335.254184
+  ...
+# Subtest: shipped source acquisition: source-head-missing
+ok 22 - shipped source acquisition: source-head-missing
+  ---
+  duration_ms: 354.948152
+  ...
+# Subtest: shipped source acquisition: source-head-encoding
+ok 23 - shipped source acquisition: source-head-encoding
+  ---
+  duration_ms: 337.714572
+  ...
+# Subtest: shipped source acquisition: source-head-truncated
+ok 24 - shipped source acquisition: source-head-truncated
+  ---
+  duration_ms: 350.580708
+  ...
+# Subtest: shipped source acquisition: source-head-malformed
+ok 25 - shipped source acquisition: source-head-malformed
+  ---
+  duration_ms: 349.609586
+  ...
+# Subtest: shipped source acquisition: source-head-base64
+ok 26 - shipped source acquisition: source-head-base64
+  ---
+  duration_ms: 364.773583
+  ...
+# Subtest: shipped source acquisition: source-head-utf8
+ok 27 - shipped source acquisition: source-head-utf8
+  ---
+  duration_ms: 365.348256
+  ...
+# Subtest: shipped source acquisition: source-head-empty
+ok 28 - shipped source acquisition: source-head-empty
+  ---
+  duration_ms: 363.172047
+  ...
+# Subtest: shipped source acquisition: source-modified
+ok 29 - shipped source acquisition: source-modified
+  ---
+  duration_ms: 357.144639
+  ...
+# Subtest: shipped source acquisition: source-added
+ok 30 - shipped source acquisition: source-added
+  ---
+  duration_ms: 352.993782
+  ...
+# Subtest: shipped source acquisition: source-removed
+ok 31 - shipped source acquisition: source-removed
+  ---
+  duration_ms: 329.919781
+  ...
+# Subtest: shipped source acquisition: source-renamed-change
+ok 32 - shipped source acquisition: source-renamed-change
+  ---
+  duration_ms: 373.267536
+  ...
+# Subtest: shipped source acquisition: source-renamed-same
+ok 33 - shipped source acquisition: source-renamed-same
+  ---
+  duration_ms: 368.636833
+  ...
+# Subtest: shipped source acquisition: source-rename-ambiguous
+ok 34 - shipped source acquisition: source-rename-ambiguous
+  ---
+  duration_ms: 335.067383
+  ...
+# Subtest: shipped source acquisition: source-unknown
+ok 35 - shipped source acquisition: source-unknown
+  ---
+  duration_ms: 350.47035
+  ...
+# Subtest: shipped source acquisition: source-mixed
+ok 36 - shipped source acquisition: source-mixed
+  ---
+  duration_ms: 371.207175
+  ...
+# Subtest: shipped source acquisition: source-commentwrite
+ok 37 - shipped source acquisition: source-commentwrite
+  ---
+  duration_ms: 352.342266
+  ...
+# Subtest: shipped source acquisition: source-recovered
+ok 38 - shipped source acquisition: source-recovered
+  ---
+  duration_ms: 363.310756
+  ...
+# Subtest: shipped source acquisition: source-zero
+ok 39 - shipped source acquisition: source-zero
+  ---
+  duration_ms: 356.301778
+  ...
+# Subtest: shipped source acquisition: source-zero-threshold
+ok 40 - shipped source acquisition: source-zero-threshold
+  ---
+  duration_ms: 356.139301
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14097.071889

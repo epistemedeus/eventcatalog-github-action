@@ -1,10 +1,5 @@
 {
-  "command": [
-    "pnpm",
-    "exec",
-    "tsc",
-    "--noEmit"
-  ],
+  "command": ["pnpm", "exec", "tsc", "--noEmit"],
   "started_utc": "2026-10-23T11:49:59.719845+00:00",
   "finished_utc": "2026-10-23T11:50:01.879882+00:00",
   "exit_code": 0,

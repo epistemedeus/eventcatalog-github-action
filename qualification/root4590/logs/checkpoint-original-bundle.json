@@ -1,9 +1,5 @@
 {
-  "command": [
-    "node",
-    "--test",
-    "qualification/root4410-a/check-dist.cjs"
-  ],
+  "command": ["node", "--test", "qualification/root4410-a/check-dist.cjs"],
   "started_utc": "2026-10-23T11:51:30.434699+00:00",
   "finished_utc": "2026-10-23T11:51:37.354527+00:00",
   "exit_code": 0,

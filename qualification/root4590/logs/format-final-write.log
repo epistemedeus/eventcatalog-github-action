@@ -1,0 +1,11 @@
+src/lib/github.ts 100ms
+src/tasks/schema-review/index.ts 21ms
+src/tasks/schema-review/review.ts 9ms (unchanged)
+src/tasks/schema-review/prompt.ts 8ms
+src/tasks/schema-review/github-comment.ts 12ms
+tests/lib/github.spec.ts 11ms
+tests/tasks/schema-review/source-acquisition.spec.ts 57ms
+tests/tasks/schema-review/outcomes.spec.ts 35ms (unchanged)
+tests/tasks/schema-review/schema-review.spec.ts 23ms (unchanged)
+qualification/root4410-a/dist-child.cjs 59ms
+qualification/root4590/check-dist.cjs 10ms

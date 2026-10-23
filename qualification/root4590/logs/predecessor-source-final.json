@@ -1,0 +1,13 @@
+{
+  "command": ["python3", "qualification/root4590/check-predecessor.py", "source"],
+  "started_utc": "2026-10-23T12:02:01.646172+00:00",
+  "finished_utc": "2026-10-23T12:02:03.109626+00:00",
+  "exit_code": 1,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 335464,
+  "peak_command_plus_native_owner_rss_kib": 597500,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

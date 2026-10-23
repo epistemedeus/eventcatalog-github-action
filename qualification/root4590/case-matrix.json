@@ -1,0 +1,741 @@
+{
+  "source": [
+    {
+      "case": "github getChangedFilesInCatalogDirectory only returns files that have changed the catalog directory",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "github getChangedFilesInCatalogDirectory if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "github getChangedFilesInCatalogDirectory if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "PR change metadata filtering retains a rename crossing the catalog boundary and its previous filename",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "PR change metadata filtering retains supported status for additions in a nested catalog",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 401 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 403 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 404 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 503 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base network cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base timeout cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base directory cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base symlink cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base submodule cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base truncated flag cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base missing size cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base no content cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base unsupported encoding cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base truncated cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base malformed cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base bad base64 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-base invalid UTF8 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 401 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 403 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 404 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 503 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head network cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head timeout cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head directory cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head symlink cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head submodule cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head truncated flag cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head missing size cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head no content cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head unsupported encoding cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head truncated cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head malformed cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head bad base64 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control exact-head invalid UTF8 cannot become a scored review",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control fails the action before comment publication even when publishing fails",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control retains a successful sibling without covering source failure",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reviews both exact revisions for a modified file",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reviews an addition with explicit base absence and no base request",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reports removal as unsupported without a head catalog lookup or provider score",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=true)",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=false)",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"renamed\"}",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"copied\"}",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {}",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-base and refuses an unreviewable schema",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-head and refuses an unreviewable schema",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control fails an addition if its required head is missing",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control fails a rename if the metadata-bound previous path cannot be read",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control does not silently skip a schema renamed to an unsupported extension",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reviews modified metadata through nested catalog filtering",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reviews renamed metadata through nested catalog filtering",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control reports a rename leaving the selected catalog instead of silently skipping it",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control retains the acquisition error and original cause on the real review result",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control keeps modified base evidence distinct from a failed head acquisition",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control keeps added base evidence distinct from a failed head acquisition",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control redacts failed comment-listing and comment-write messages while preserving publication cause",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control does not ban legitimate schema text resembling the old sentinel",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "source acquisition through the actual task with a score-100 negative control preserves score zero and recovers in a later healthy task",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "shared fetch contract returns exact UTF-8 file content \"\"",
+      "predecessor": "failed",
+      "repaired": "passed"
+    },
+    {
+      "case": "shared fetch contract returns exact UTF-8 file content \"\ufeff{\\\"title\\\":\\\"\u00c5\u96ea\\\"}\\n\"",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "shared fetch contract returns exact UTF-8 file content \"line1\\r\\nline2\\n\"",
+      "predecessor": "passed",
+      "repaired": "passed"
+    },
+    {
+      "case": "shared fetch contract throws a safe typed error retaining original status and cause",
+      "predecessor": "failed",
+      "repaired": "passed"
+    }
+  ],
+  "shipped": [
+    {
+      "case": "source-added",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-401",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-403",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-404",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-503",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-base64",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-directory",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-empty",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-encoding",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-malformed",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-missing",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-network",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-timeout",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-truncated",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-base-utf8",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-commentwrite",
+      "predecessor_action_exit": 1,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 0,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-401",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-403",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-404",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-503",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-base64",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-directory",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-empty",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-encoding",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-malformed",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-missing",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-network",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-timeout",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-truncated",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-head-utf8",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-mixed",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 2,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 2,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-modified",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-recovered",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-removed",
+      "predecessor_action_exit": 1,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 0,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 0,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-rename-ambiguous",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-renamed-change",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-renamed-same",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-unknown",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 0,
+      "predecessor_safe_labels": 1,
+      "repaired_failed_labels": 1,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-zero-threshold",
+      "predecessor_action_exit": 0,
+      "repaired_action_exit": 0,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 0,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    },
+    {
+      "case": "source-zero",
+      "predecessor_action_exit": 1,
+      "repaired_action_exit": 1,
+      "predecessor_provider_requests": 1,
+      "repaired_provider_requests": 1,
+      "predecessor_safe_labels": 0,
+      "repaired_failed_labels": 0,
+      "unexpected_network_routes": []
+    }
+  ]
+}

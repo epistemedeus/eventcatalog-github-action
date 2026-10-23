@@ -1,0 +1,17 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ✓ tests/tasks/schema-review/source-acquisition.spec.ts (62 tests) 73ms
+Filtering changed files for directory: catalog
+Filtering changed files for directory: catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+ ✓ tests/lib/github.spec.ts (5 tests) 4ms
+
+ Test Files  2 passed (2)
+      Tests  67 passed (67)
+   Start at  12:11:06
+   Duration  692ms (transform 114ms, setup 0ms, collect 315ms, tests 77ms, environment 0ms, prepare 88ms)
+
+JSON report written to /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/source-state-final-cases.json

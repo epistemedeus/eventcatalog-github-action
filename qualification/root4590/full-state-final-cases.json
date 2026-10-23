@@ -1,0 +1,1030 @@
+{
+  "numTotalTestSuites": 18,
+  "numPassedTestSuites": 18,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 104,
+  "numPassedTests": 104,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 2,
+    "total": 2,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792757525952,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "status": "passed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-terra",
+          "duration": 23.751854999999978,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "status": "passed",
+          "title": "uses strict schema output and supported temperature for explicit gpt-5.6-luna",
+          "duration": 1.963468999999975,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) migrates the action input and both empty-input fallbacks",
+          "status": "passed",
+          "title": "migrates the action input and both empty-input fallbacks",
+          "duration": 2.7315340000000106,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit o4-mini request",
+          "status": "passed",
+          "title": "preserves the explicit o4-mini request",
+          "duration": 1.2149410000000103,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves the explicit gpt-4o request",
+          "status": "passed",
+          "title": "preserves the explicit gpt-4o request",
+          "duration": 1.3494590000000244,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Anthropic structured tool output",
+          "status": "passed",
+          "title": "preserves Anthropic structured tool output",
+          "duration": 2.240394999999978,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["locked SDK compatibility (no provider requests)"],
+          "fullName": "locked SDK compatibility (no provider requests) preserves Google schema output",
+          "status": "passed",
+          "title": "preserves Google schema output",
+          "duration": 2.0850690000000327,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757527248,
+      "endTime": 1792757527283.085,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/ai-models/openai.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["eventcatalog", "getSchemasFromFilePaths"],
+          "fullName": "eventcatalog getSchemasFromFilePaths filters and returns only schema files that have changed in a list of file paths",
+          "status": "passed",
+          "title": "filters and returns only schema files that have changed in a list of file paths",
+          "duration": 1.1797960000000103,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757528003,
+      "endTime": 1792757528004.1797,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/lib/eventcatalog.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory only returns files that have changed the catalog directory",
+          "status": "passed",
+          "title": "only returns files that have changed the catalog directory",
+          "duration": 2.4085270000000207,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "status": "passed",
+          "title": "if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "duration": 0.3102350000000058,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "status": "passed",
+          "title": "if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "duration": 0.3195400000000177,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["PR change metadata filtering"],
+          "fullName": "PR change metadata filtering retains a rename crossing the catalog boundary and its previous filename",
+          "status": "passed",
+          "title": "retains a rename crossing the catalog boundary and its previous filename",
+          "duration": 0.4692009999999982,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["PR change metadata filtering"],
+          "fullName": "PR change metadata filtering retains supported status for additions in a nested catalog",
+          "status": "passed",
+          "title": "retains supported status for additions in a nested catalog",
+          "duration": 0.28140499999997814,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757526609,
+      "endTime": 1792757526613.4692,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/lib/github.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["generateGitHubCommentForSchemaReview"],
+          "fullName": "generateGitHubCommentForSchemaReview should generate a GitHubcomment body for a single reviewed file",
+          "status": "passed",
+          "title": "should generate a GitHubcomment body for a single reviewed file",
+          "duration": 14.033871999999974,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["generateGitHubCommentForSchemaReview"],
+          "fullName": "generateGitHubCommentForSchemaReview should return a message with no consumers for message if that schema has no consumers",
+          "status": "passed",
+          "title": "should return a message with no consumers for message if that schema has no consumers",
+          "duration": 2.0891129999999976,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757527545,
+      "endTime": 1792757527561.089,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/github-comment.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on SDK rejection without a fabricated score or leaking request data",
+          "duration": 44.92815200000001,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on authentication failure without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on authentication failure without a fabricated score or leaking request data",
+          "duration": 2.3569479999999885,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on timeout without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on timeout without a fabricated score or leaking request data",
+          "duration": 2.050341000000003,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on network error without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on network error without a fabricated score or leaking request data",
+          "duration": 1.3539240000000063,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on invalid JSON without a fabricated score or leaking request data",
+          "duration": 2.6402009999999905,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on invalid schema without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on invalid schema without a fabricated score or leaking request data",
+          "duration": 2.079501999999991,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails visibly on missing review without a fabricated score or leaking request data",
+          "status": "passed",
+          "title": "fails visibly on missing review without a fabricated score or leaking request data",
+          "duration": 1.871374000000003,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: undefined",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: undefined",
+          "duration": 1.1072269999999662,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"score\":100}",
+          "duration": 1.1412579999999934,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "status": "passed",
+          "title": "rejects an absent or invalid review at the review boundary: {\"executiveSummary\":\"Synthetic review\",\"score\":null,\"schemaFormat\":\"json\",\"effectedConsumers\":[]}",
+          "duration": 1.1794530000000236,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) fails if the task receives a file with no review result",
+          "status": "passed",
+          "title": "fails if the task receives a file with no review result",
+          "duration": 0.9962329999999611,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 85 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 85 against threshold 75 (fails=false)",
+          "duration": 2.1603529999999864,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 74 against threshold 75 (fails=true)",
+          "status": "passed",
+          "title": "uses the real score 74 against threshold 75 (fails=true)",
+          "duration": 1.9528490000000147,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 75 against threshold 75 (fails=false)",
+          "status": "passed",
+          "title": "uses the real score 75 against threshold 75 (fails=false)",
+          "duration": 2.0238239999999905,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) uses the real score 0 against threshold 75 (fails=true)",
+          "status": "passed",
+          "title": "uses the real score 0 against threshold 75 (fails=true)",
+          "duration": 1.9572599999999625,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) accepts real zero at threshold zero",
+          "status": "passed",
+          "title": "accepts real zero at threshold zero",
+          "duration": 2.007947999999999,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) retains failed siblings alongside successful ones and fails the action",
+          "status": "passed",
+          "title": "retains failed siblings alongside successful ones and fails the action",
+          "duration": 3.263744000000031,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) treats an error as a failure even if a score was also returned",
+          "status": "passed",
+          "title": "treats an error as a failure even if a score was also returned",
+          "duration": 0.9190639999999917,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) orders zero ahead of healthy scores",
+          "status": "passed",
+          "title": "orders zero ahead of healthy scores",
+          "duration": 3.3619620000000054,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) recovers on a later healthy task without stale failure state",
+          "status": "passed",
+          "title": "recovers on a later healthy task without stale failure state",
+          "duration": 3.0644810000000007,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) marks a failed review before attempting to publish its comment",
+          "status": "passed",
+          "title": "marks a failed review before attempting to publish its comment",
+          "duration": 2.864588000000026,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["real schema review task and rendered outcome (offline boundaries)"],
+          "fullName": "real schema review task and rendered outcome (offline boundaries) preserves the original thrown error without dumping the SDK object",
+          "status": "passed",
+          "title": "preserves the original thrown error without dumping the SDK object",
+          "duration": 0.8290750000000457,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757526893,
+      "endTime": 1792757526979.829,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/outcomes.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when no schemas have changed, the action does nothing and passes",
+          "status": "passed",
+          "title": "when no schemas have changed, the action does nothing and passes",
+          "duration": 4.292560000000037,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when no eventcatalog schemas have changed, but other files have, the action does nothing and passes",
+          "status": "passed",
+          "title": "when no eventcatalog schemas have changed, but other files have, the action does nothing and passes",
+          "duration": 0.9483519999999999,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review if eventcatalog schemas have changed, but the action fails to find the messages in the catalog, the action fails",
+          "status": "passed",
+          "title": "if eventcatalog schemas have changed, but the action fails to find the messages in the catalog, the action fails",
+          "duration": 2.6485570000000394,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when failureThreshold is set below 0, the action fails",
+          "status": "passed",
+          "title": "when failureThreshold is set below 0, the action fails",
+          "duration": 0.6356059999999957,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["schema-review"],
+          "fullName": "schema-review when failureThreshold is set above 100, the action fails",
+          "status": "passed",
+          "title": "when failureThreshold is set above 100, the action fails",
+          "duration": 0.5395869999999832,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757527856,
+      "endTime": 1792757527865.5396,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/schema-review.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 401 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base HTTP 401 cannot become a scored review",
+          "duration": 4.735810999999956,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 403 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base HTTP 403 cannot become a scored review",
+          "duration": 0.9506170000000225,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 404 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base HTTP 404 cannot become a scored review",
+          "duration": 0.6987169999999878,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 503 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base HTTP 503 cannot become a scored review",
+          "duration": 0.7377849999999739,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base network cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base network cannot become a scored review",
+          "duration": 0.7944740000000365,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base timeout cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base timeout cannot become a scored review",
+          "duration": 0.7190630000000056,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base directory cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base directory cannot become a scored review",
+          "duration": 0.7742259999999987,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base symlink cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base symlink cannot become a scored review",
+          "duration": 0.8040650000000369,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base submodule cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base submodule cannot become a scored review",
+          "duration": 0.9588320000000294,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base truncated flag cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base truncated flag cannot become a scored review",
+          "duration": 0.9806879999999865,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base missing size cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base missing size cannot become a scored review",
+          "duration": 2.675202000000013,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base no content cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base no content cannot become a scored review",
+          "duration": 0.7856679999999869,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base unsupported encoding cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base unsupported encoding cannot become a scored review",
+          "duration": 0.6228769999999599,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base truncated cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base truncated cannot become a scored review",
+          "duration": 0.8740359999999896,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base malformed cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base malformed cannot become a scored review",
+          "duration": 0.7253180000000157,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base bad base64 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base bad base64 cannot become a scored review",
+          "duration": 0.7695370000000139,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base invalid UTF8 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-base invalid UTF8 cannot become a scored review",
+          "duration": 0.7667020000000093,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 401 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head HTTP 401 cannot become a scored review",
+          "duration": 0.7622210000000109,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 403 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head HTTP 403 cannot become a scored review",
+          "duration": 0.8160670000000323,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 404 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head HTTP 404 cannot become a scored review",
+          "duration": 0.6850699999999961,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 503 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head HTTP 503 cannot become a scored review",
+          "duration": 0.7789900000000216,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head network cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head network cannot become a scored review",
+          "duration": 0.8202290000000403,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head timeout cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head timeout cannot become a scored review",
+          "duration": 0.753580999999997,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head directory cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head directory cannot become a scored review",
+          "duration": 0.6465119999999729,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head symlink cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head symlink cannot become a scored review",
+          "duration": 0.663252,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head submodule cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head submodule cannot become a scored review",
+          "duration": 0.6816749999999843,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head truncated flag cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head truncated flag cannot become a scored review",
+          "duration": 0.6940279999999461,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head missing size cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head missing size cannot become a scored review",
+          "duration": 0.706122999999991,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head no content cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head no content cannot become a scored review",
+          "duration": 0.6848489999999856,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head unsupported encoding cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head unsupported encoding cannot become a scored review",
+          "duration": 0.7287670000000048,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head truncated cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head truncated cannot become a scored review",
+          "duration": 3.2502400000000193,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head malformed cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head malformed cannot become a scored review",
+          "duration": 0.7427470000000085,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head bad base64 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head bad base64 cannot become a scored review",
+          "duration": 0.7750899999999774,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head invalid UTF8 cannot become a scored review",
+          "status": "passed",
+          "title": "exact-head invalid UTF8 cannot become a scored review",
+          "duration": 0.7004459999999995,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails the action before comment publication even when publishing fails",
+          "status": "passed",
+          "title": "fails the action before comment publication even when publishing fails",
+          "duration": 1.6043510000000083,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control retains a successful sibling without covering source failure",
+          "status": "passed",
+          "title": "retains a successful sibling without covering source failure",
+          "duration": 1.9303009999999858,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews both exact revisions for a modified file",
+          "status": "passed",
+          "title": "reviews both exact revisions for a modified file",
+          "duration": 1.456499000000008,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews an addition with explicit base absence and no base request",
+          "status": "passed",
+          "title": "reviews an addition with explicit base absence and no base request",
+          "duration": 1.4926399999999944,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reports removal as unsupported without a head catalog lookup or provider score",
+          "status": "passed",
+          "title": "reports removal as unsupported without a head catalog lookup or provider score",
+          "duration": 0.8949440000000095,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=true)",
+          "status": "passed",
+          "title": "binds previous path for a rename (changed bytes=true)",
+          "duration": 1.2628730000000132,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=false)",
+          "status": "passed",
+          "title": "binds previous path for a rename (changed bytes=false)",
+          "duration": 0.9710380000000214,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"renamed\"}",
+          "status": "passed",
+          "title": "refuses ambiguous/unsupported change {\"status\":\"renamed\"}",
+          "duration": 0.8498760000000516,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"copied\"}",
+          "status": "passed",
+          "title": "refuses ambiguous/unsupported change {\"status\":\"copied\"}",
+          "duration": 0.7750179999999887,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {}",
+          "status": "passed",
+          "title": "refuses ambiguous/unsupported change {}",
+          "duration": 0.7566509999999766,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-base and refuses an unreviewable schema",
+          "status": "passed",
+          "title": "distinguishes an empty file at exact-base and refuses an unreviewable schema",
+          "duration": 0.9218040000000087,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-head and refuses an unreviewable schema",
+          "status": "passed",
+          "title": "distinguishes an empty file at exact-head and refuses an unreviewable schema",
+          "duration": 0.8137020000000348,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails an addition if its required head is missing",
+          "status": "passed",
+          "title": "fails an addition if its required head is missing",
+          "duration": 0.9399239999999622,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails a rename if the metadata-bound previous path cannot be read",
+          "status": "passed",
+          "title": "fails a rename if the metadata-bound previous path cannot be read",
+          "duration": 0.995363999999995,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control does not silently skip a schema renamed to an unsupported extension",
+          "status": "passed",
+          "title": "does not silently skip a schema renamed to an unsupported extension",
+          "duration": 1.0928110000000402,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews modified metadata through nested catalog filtering",
+          "status": "passed",
+          "title": "reviews modified metadata through nested catalog filtering",
+          "duration": 1.3967670000000112,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews renamed metadata through nested catalog filtering",
+          "status": "passed",
+          "title": "reviews renamed metadata through nested catalog filtering",
+          "duration": 1.228478999999993,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reports a rename leaving the selected catalog instead of silently skipping it",
+          "status": "passed",
+          "title": "reports a rename leaving the selected catalog instead of silently skipping it",
+          "duration": 1.1673040000000015,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control retains the acquisition error and original cause on the real review result",
+          "status": "passed",
+          "title": "retains the acquisition error and original cause on the real review result",
+          "duration": 1.13194900000002,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control keeps modified base evidence distinct from a failed head acquisition",
+          "status": "passed",
+          "title": "keeps modified base evidence distinct from a failed head acquisition",
+          "duration": 1.1418859999999995,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control keeps added base evidence distinct from a failed head acquisition",
+          "status": "passed",
+          "title": "keeps added base evidence distinct from a failed head acquisition",
+          "duration": 1.1369720000000143,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control redacts failed comment-listing and comment-write messages while preserving publication cause",
+          "status": "passed",
+          "title": "redacts failed comment-listing and comment-write messages while preserving publication cause",
+          "duration": 1.3589779999999791,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control does not ban legitimate schema text resembling the old sentinel",
+          "status": "passed",
+          "title": "does not ban legitimate schema text resembling the old sentinel",
+          "duration": 1.30268099999995,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control preserves score zero and recovers in a later healthy task",
+          "status": "passed",
+          "title": "preserves score zero and recovers in a later healthy task",
+          "duration": 2.280340000000024,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"\"",
+          "status": "passed",
+          "title": "returns exact UTF-8 file content \"\"",
+          "duration": 0.9968549999999823,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"﻿{\\\"title\\\":\\\"Å雪\\\"}\\n\"",
+          "status": "passed",
+          "title": "returns exact UTF-8 file content \"﻿{\\\"title\\\":\\\"Å雪\\\"}\\n\"",
+          "duration": 0.9879819999999881,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"line1\\r\\nline2\\n\"",
+          "status": "passed",
+          "title": "returns exact UTF-8 file content \"line1\\r\\nline2\\n\"",
+          "duration": 1.0078410000000417,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract throws a safe typed error retaining original status and cause",
+          "status": "passed",
+          "title": "throws a safe typed error retaining original status and cause",
+          "duration": 1.1676009999999906,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757526323,
+      "endTime": 1792757526392.1675,
+      "status": "passed",
+      "message": "",
+      "name": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/source-acquisition.spec.ts"
+    }
+  ]
+}

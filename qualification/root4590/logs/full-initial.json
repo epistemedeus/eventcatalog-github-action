@@ -1,13 +1,5 @@
 {
-  "command": [
-    "pnpm",
-    "exec",
-    "vitest",
-    "run",
-    "--maxWorkers=1",
-    "--minWorkers=1",
-    "--no-file-parallelism"
-  ],
+  "command": ["pnpm", "exec", "vitest", "run", "--maxWorkers=1", "--minWorkers=1", "--no-file-parallelism"],
   "started_utc": "2026-10-23T11:49:56.635523+00:00",
   "finished_utc": "2026-10-23T11:49:59.665902+00:00",
   "exit_code": 0,

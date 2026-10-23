@@ -1,0 +1,130 @@
+{
+  "scenario": "source-head-network",
+  "node": "v20.20.2",
+  "comments": [
+    {
+      "method": "POST",
+      "body": "\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n| Schema Format | Risk Score |\n|---------------|------------|\n| json | 100/100 |\n\nSynthetic schema review\n\n### Potential Effected Consumers\n\nInventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n\n<sub>Using Model: gpt-5.6-terra | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"
+    }
+  ],
+  "commentAttempts": [
+    {
+      "method": "POST",
+      "body": "\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n| Schema Format | Risk Score |\n|---------------|------------|\n| json | 100/100 |\n\nSynthetic schema review\n\n### Potential Effected Consumers\n\nInventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n\n<sub>Using Model: gpt-5.6-terra | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.openai.com/v1/chat/completions",
+      "body": {
+        "model": "gpt-5.6-terra",
+        "temperature": 1,
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "executiveSummary": {
+                  "type": "string",
+                  "description": "A concise summary of key findings and overall impact, suitable for quick review by enterprise stakeholders."
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100,
+                  "description": "A score from 0 to 100, where 0 indicates a very problematic change and 100 indicates a perfectly safe change."
+                },
+                "schemaFormat": {
+                  "type": "string",
+                  "description": "The type of schema For example \"avro\", \"json\", \"yaml\", \"proto\", \"thrift\", \"xml\", \"avsc\". For example JSONDraft7, Avro, Protobuf, etc."
+                },
+                "effectedConsumers": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "The name of the consumer (service)."
+                      },
+                      "version": {
+                        "type": "string",
+                        "description": "The version of the consumer."
+                      },
+                      "url": {
+                        "type": "string",
+                        "description": "The URL of the consumer (service)."
+                      },
+                      "warning": {
+                        "type": "string",
+                        "description": "A warning message to the user about the consumer (service)."
+                      }
+                    },
+                    "required": ["name", "version", "url", "warning"],
+                    "additionalProperties": false
+                  },
+                  "description": "A list of consumers that MAY be affected by the changes to the schemas."
+                }
+              },
+              "required": ["executiveSummary", "score", "schemaFormat", "effectedConsumers"],
+              "additionalProperties": false,
+              "$schema": "http://json-schema.org/draft-07/schema#"
+            },
+            "strict": true,
+            "name": "response"
+          }
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "\nYou are an expert reviewer specializing in event-driven architectures (EDA).\nYour task is to analyze schema diffs and other architectural information based on the provided EDA rules:\n\n- All schema changes must be backward compatible.\n- Events should be designed to be idempotent.\n- Avoid using generic event types; be specific about the domain and action.\n- All events must have a version number.\n- Consider the impact on downstream consumers before making any changes.\n\n\nYour audience is enterprise development and architecture teams. Maintain a professional and clear tone.\n\nProvide a detailed assessment covering the following aspects:\n- Overall impact of the changes.\n- Specific breaking changes, if any.\n- Adherence to EDA best practices and the provided rules.\n- Potential risks and considerations for downstream systems.\n- If the changes are breaking, and if you have a list of consumers, provide a list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- If you have no list of consumers, do not return any consumer information.\n\nFormat your response as a JSON object with the following keys:\n- \"executiveSummary\": A concise (2-3 sentences) overview of the most critical findings and the overall risk/impact. This should be suitable for quick ingestion by stakeholders.\n- \"effectedConsumers\": A list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- \"score\": A numerical score from 0 to 100, where 0 indicates a very problematic change with high risk of breaking compatibility, and 100 indicates a perfectly safe and well-designed change."
+          },
+          {
+            "role": "user",
+            "content": "\n\nPlease analyze these changes for potential issues, especially breaking changes if this is a schema or configuration file. Provide your assessment.\n\nReview the following changes to the schema:\nPrevious schema:\n```\n{\"synthetic-private-schema\":true}\n```\nNew schema:\n```\nCould not retrieve content (Error: other side closed)\n```\n\nThe schema does not have any consumers mapped in EventCatalog. Do not return any consumer information.\n"
+          }
+        ]
+      }
+    }
+  ],
+  "licenseCalls": 1,
+  "githubCalls": [
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "encodedPath": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "encodedPath": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/contents/events/InventoryAdjusted/schema.json",
+      "encodedPath": "/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json",
+      "ref": "base",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/contents/events/InventoryAdjusted/schema.json",
+      "encodedPath": "/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json",
+      "ref": "head",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "encodedPath": "/repos/owner/repo/issues/1/comments",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "encodedPath": "/repos/owner/repo/issues/1/comments",
+      "method": "POST"
+    }
+  ],
+  "unexpectedNetwork": [],
+  "stdout": "Catalog path: /tmp/root4410-a-dist-CvZhUq\nReviewing schema: events/InventoryAdjusted/schema.json\nMessage consumers: \nPerforming schema review for file: events/InventoryAdjusted/schema.json\n::warning::Failed to fetch content for events/InventoryAdjusted/schema.json at ref head: undefined\nRequesting AI review for schema changes in events/InventoryAdjusted/schema.json...\n::add-mask::[redacted]\nSending prompt to model gpt-5.6-terra with provider openai\nAI review received for events/InventoryAdjusted/schema.json: Score 100\nCreating new comment\n\n::set-output name=comment-url::https://github.com/owner/repo/pull/1#issuecomment-123\n",
+  "stderr": "",
+  "exitCode": 0
+}

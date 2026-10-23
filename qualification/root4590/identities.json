@@ -1,0 +1,69 @@
+{
+  "initial_host_node": "v22.23.4",
+  "verification_node": "v20.20.2",
+  "pnpm": "10.33.4",
+  "python": "Python 3.12.3",
+  "package_sha256": "9ed7b0f0e95d1d6a8b770ce60919476238cc51b115c09c9c8bb1e4957105a48c",
+  "lock_sha256": "803e169a01427ebf8a945b704ce11a42fee2eac3dbb2d1a73658b317c380bdcc",
+  "resolved_packages": {
+    "ai": {
+      "version": "4.3.16",
+      "package_json_sha256": "52538ecaf2a09dfba3b34874413c2b6a1dfae69eac119589a9f8d4b6715d5cd0"
+    },
+    "@ai-sdk/openai": {
+      "version": "1.3.22",
+      "package_json_sha256": "cf0e1d0555675024c58bee53f16f1a967fddfb6b51f09bd95a788b5ea128dccc"
+    },
+    "@ai-sdk/anthropic": {
+      "version": "1.2.12",
+      "package_json_sha256": "0ed9cf84f76b32e004e85f4500e088baef787aa0486fc9e48f95a7bd0fd4cb84"
+    },
+    "@ai-sdk/google": {
+      "version": "1.2.18",
+      "package_json_sha256": "6b1d6b06cf00af4fc5d1ff86fc8811dd79645907ead3a6b06408063c4d8ce866"
+    },
+    "@eventcatalog/sdk": {
+      "version": "2.6.3",
+      "package_json_sha256": "1f6e0f48ab1bf365d1e4b7194a5a799ccb3109bd3859a9a6d7a174f5cb13bd91"
+    },
+    "zod": {
+      "version": "3.25.48",
+      "package_json_sha256": "4a14561a6e1b2fa92c07acbae6474eb75dcef3c76bd4f60a733b6e9ef7ecfd9b"
+    },
+    "@vercel/ncc": {
+      "version": "0.38.3",
+      "package_json_sha256": "18def2aedb64768209b33aa67106a1cbf5f1080aa578b58f76cb174f0372220d"
+    },
+    "typescript": {
+      "version": "5.8.3",
+      "package_json_sha256": "ebb0ce176c85ac13ce82f5be7e6f15114732ba0f064ccc893fd9051426d35d3a"
+    },
+    "vitest": {
+      "version": "3.2.0",
+      "package_json_sha256": "7799f79d488b70df756bb1a7b462afda2997845ee5c755f8ef5a25ac79dd1cc8"
+    }
+  },
+  "predecessor_generated_dist": {
+    "dist/886.index.js": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d",
+    "dist/886.index.js.map": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852",
+    "dist/index.js": "168d95ee138aeccd3b97ca89e3cf0776ac4924d2434b261f4338634b8a17aba9",
+    "dist/index.js.map": "4a1022793fa07a19a712088d7c53c07814a1cb34c9178752dd999addf10bb69c",
+    "dist/licenses.txt": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea",
+    "dist/sourcemap-register.js": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+  },
+  "generated_dist": {
+    "dist/886.index.js": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d",
+    "dist/886.index.js.map": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852",
+    "dist/index.js": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788",
+    "dist/index.js.map": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88",
+    "dist/licenses.txt": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea",
+    "dist/sourcemap-register.js": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+  },
+  "source_files": {
+    "src/lib/github.ts": "2bc8008276e650781495913c05bbb182e2775350ad08ae78bed1fae787b2505e",
+    "src/tasks/schema-review/github-comment.ts": "eb7776dba4dc947488ee3287ec94c20b005715a1f1bd5c157493a10b4013afde",
+    "src/tasks/schema-review/index.ts": "814eb2147aa7f730228bff2e51e52278fe26e4bdb0604efa249105e775d73218",
+    "src/tasks/schema-review/prompt.ts": "05b241a02dfb011101e52a81949d080334800dacc92a73db32ed86b2e0e46c9b",
+    "src/tasks/schema-review/review.ts": "75cee88548e7fc5af3db49072473613a52c23fbcbf3975750ff8b5db67433fb9"
+  }
+}

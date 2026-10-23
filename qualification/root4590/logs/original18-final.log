@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: generated action: healthy
+ok 1 - generated action: healthy
+  ---
+  duration_ms: 412.542028
+  ...
+# Subtest: generated action: luna
+ok 2 - generated action: luna
+  ---
+  duration_ms: 369.760925
+  ...
+# Subtest: generated action: legacy
+ok 3 - generated action: legacy
+  ---
+  duration_ms: 356.403488
+  ...
+# Subtest: generated action: zero
+ok 4 - generated action: zero
+  ---
+  duration_ms: 367.170282
+  ...
+# Subtest: generated action: zero-threshold
+ok 5 - generated action: zero-threshold
+  ---
+  duration_ms: 368.568947
+  ...
+# Subtest: generated action: below
+ok 6 - generated action: below
+  ---
+  duration_ms: 356.517726
+  ...
+# Subtest: generated action: exact
+ok 7 - generated action: exact
+  ---
+  duration_ms: 345.820307
+  ...
+# Subtest: generated action: sdk-rejection
+ok 8 - generated action: sdk-rejection
+  ---
+  duration_ms: 353.379473
+  ...
+# Subtest: generated action: authentication
+ok 9 - generated action: authentication
+  ---
+  duration_ms: 349.763465
+  ...
+# Subtest: generated action: timeout
+ok 10 - generated action: timeout
+  ---
+  duration_ms: 337.072416
+  ...
+# Subtest: generated action: network
+ok 11 - generated action: network
+  ---
+  duration_ms: 347.030255
+  ...
+# Subtest: generated action: invalid-json
+ok 12 - generated action: invalid-json
+  ---
+  duration_ms: 349.804307
+  ...
+# Subtest: generated action: invalid-schema
+ok 13 - generated action: invalid-schema
+  ---
+  duration_ms: 348.469456
+  ...
+# Subtest: generated action: missing
+ok 14 - generated action: missing
+  ---
+  duration_ms: 359.011452
+  ...
+# Subtest: generated action: mixed
+ok 15 - generated action: mixed
+  ---
+  duration_ms: 365.85323
+  ...
+# Subtest: generated action: recovery
+ok 16 - generated action: recovery
+  ---
+  duration_ms: 361.440573
+  ...
+# Subtest: generated action: missing-license
+ok 17 - generated action: missing-license
+  ---
+  duration_ms: 349.323911
+  ...
+# Subtest: generated action: invalid-license
+ok 18 - generated action: invalid-license
+  ---
+  duration_ms: 354.298541
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6516.059822

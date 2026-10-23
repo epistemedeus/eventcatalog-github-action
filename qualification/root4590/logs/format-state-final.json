@@ -1,0 +1,24 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "prettier",
+    "--config",
+    ".prettierrc",
+    "--write",
+    "src/lib/github.ts",
+    "src/tasks/schema-review/index.ts",
+    "src/tasks/schema-review/review.ts",
+    "tests/tasks/schema-review/source-acquisition.spec.ts"
+  ],
+  "started_utc": "2026-10-23T12:12:10.062550+00:00",
+  "finished_utc": "2026-10-23T12:12:10.637653+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 195508,
+  "peak_command_plus_native_owner_rss_kib": 456788,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

@@ -1,0 +1,772 @@
+{
+  "numTotalTestSuites": 7,
+  "numPassedTestSuites": 2,
+  "numFailedTestSuites": 5,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 67,
+  "numPassedTests": 7,
+  "numFailedTests": 60,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1792757524566,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory only returns files that have changed the catalog directory",
+          "status": "passed",
+          "title": "only returns files that have changed the catalog directory",
+          "duration": 2.260089999999991,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "status": "passed",
+          "title": "if the catalogDirectory is not specified, it returns all changed files, as it assumes the catalog directory is the root",
+          "duration": 0.3077310000000182,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["github", "getChangedFilesInCatalogDirectory"],
+          "fullName": "github getChangedFilesInCatalogDirectory if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "status": "passed",
+          "title": "if the catalogDirectory is specified, it returns an empty array if no files match the catalogDirectory",
+          "duration": 0.269882999999993,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["PR change metadata filtering"],
+          "fullName": "PR change metadata filtering retains a rename crossing the catalog boundary and its previous filename",
+          "status": "failed",
+          "title": "retains a rename crossing the catalog boundary and its previous filename",
+          "duration": 2.3626409999999964,
+          "failureMessages": [
+            "TypeError: getChangedFileDetailsInCatalogDirectory is not a function\n    at /tmp/root4590-predecessor-jmns0nyp/tests/lib/github.spec.ts:104:18\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["PR change metadata filtering"],
+          "fullName": "PR change metadata filtering retains supported status for additions in a nested catalog",
+          "status": "failed",
+          "title": "retains supported status for additions in a nested catalog",
+          "duration": 0.2922370000000001,
+          "failureMessages": [
+            "TypeError: getChangedFileDetailsInCatalogDirectory is not a function\n    at /tmp/root4590-predecessor-jmns0nyp/tests/lib/github.spec.ts:111:18\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757525249,
+      "endTime": 1792757525255.2922,
+      "status": "failed",
+      "message": "",
+      "name": "/tmp/root4590-predecessor-jmns0nyp/tests/lib/github.spec.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 401 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base HTTP 401 cannot become a scored review",
+          "duration": 9.979857999999979,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 403 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base HTTP 403 cannot become a scored review",
+          "duration": 1.2974609999999984,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 404 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base HTTP 404 cannot become a scored review",
+          "duration": 0.8841070000000286,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base HTTP 503 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base HTTP 503 cannot become a scored review",
+          "duration": 0.9566070000000195,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base network cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base network cannot become a scored review",
+          "duration": 1.02489700000001,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base timeout cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base timeout cannot become a scored review",
+          "duration": 1.1276660000000334,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base directory cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base directory cannot become a scored review",
+          "duration": 1.124968000000024,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base symlink cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base symlink cannot become a scored review",
+          "duration": 2.9711340000000064,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base submodule cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base submodule cannot become a scored review",
+          "duration": 1.0530480000000466,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base truncated flag cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base truncated flag cannot become a scored review",
+          "duration": 0.9786199999999781,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base missing size cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base missing size cannot become a scored review",
+          "duration": 0.9898210000000063,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base no content cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base no content cannot become a scored review",
+          "duration": 0.874147999999991,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base unsupported encoding cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base unsupported encoding cannot become a scored review",
+          "duration": 0.7601779999999962,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base truncated cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base truncated cannot become a scored review",
+          "duration": 0.8847559999999817,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base malformed cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base malformed cannot become a scored review",
+          "duration": 0.8726480000000265,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base bad base64 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base bad base64 cannot become a scored review",
+          "duration": 0.8585360000000151,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-base invalid UTF8 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-base invalid UTF8 cannot become a scored review",
+          "duration": 0.8735389999999938,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 401 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head HTTP 401 cannot become a scored review",
+          "duration": 0.8391510000000153,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 403 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head HTTP 403 cannot become a scored review",
+          "duration": 0.7874830000000088,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 404 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head HTTP 404 cannot become a scored review",
+          "duration": 0.7485249999999724,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head HTTP 503 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head HTTP 503 cannot become a scored review",
+          "duration": 0.7953769999999736,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head network cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head network cannot become a scored review",
+          "duration": 0.9846670000000017,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head timeout cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head timeout cannot become a scored review",
+          "duration": 1.152544999999975,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head directory cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head directory cannot become a scored review",
+          "duration": 3.4956429999999727,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head symlink cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head symlink cannot become a scored review",
+          "duration": 0.7595620000000167,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head submodule cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head submodule cannot become a scored review",
+          "duration": 0.6964110000000119,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head truncated flag cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head truncated flag cannot become a scored review",
+          "duration": 0.7530819999999494,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head missing size cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head missing size cannot become a scored review",
+          "duration": 0.6860640000000444,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head no content cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head no content cannot become a scored review",
+          "duration": 0.7463450000000194,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head unsupported encoding cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head unsupported encoding cannot become a scored review",
+          "duration": 0.7678910000000201,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head truncated cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head truncated cannot become a scored review",
+          "duration": 0.808114000000046,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head malformed cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head malformed cannot become a scored review",
+          "duration": 0.7455699999999865,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head bad base64 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head bad base64 cannot become a scored review",
+          "duration": 0.7201200000000085,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control exact-head invalid UTF8 cannot become a scored review",
+          "status": "failed",
+          "title": "exact-head invalid UTF8 cannot become a scored review",
+          "duration": 0.8796090000000163,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:125:7\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails the action before comment publication even when publishing fails",
+          "status": "failed",
+          "title": "fails the action before comment publication even when publishing fails",
+          "duration": 4.025308999999993,
+          "failureMessages": [
+            "AssertionError: expected [Function] to throw error including 'Schema review comment publication fai…' but got 'expected \"setFailed\" to be called at …'\n    at Assertion.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1411:16)\n    at Assertion.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Assertion.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1630:20\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:136:5\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control retains a successful sibling without covering source failure",
+          "status": "failed",
+          "title": "retains a successful sibling without covering source failure",
+          "duration": 1.1610069999999837,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:145:20\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews both exact revisions for a modified file",
+          "status": "passed",
+          "title": "reviews both exact revisions for a modified file",
+          "duration": 1.3439789999999903,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews an addition with explicit base absence and no base request",
+          "status": "failed",
+          "title": "reviews an addition with explicit base absence and no base request",
+          "duration": 1.2743369999999459,
+          "failureMessages": [
+            "AssertionError: expected \"spy\" to be called 1 times, but got 2 times\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:169:43\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reports removal as unsupported without a head catalog lookup or provider score",
+          "status": "failed",
+          "title": "reports removal as unsupported without a head catalog lookup or provider score",
+          "duration": 0.8951129999999807,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:175:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=true)",
+          "status": "failed",
+          "title": "binds previous path for a rename (changed bytes=true)",
+          "duration": 2.8231569999999806,
+          "failureMessages": [
+            "AssertionError: expected [ [ …(2) ], [ …(2) ] ] to deeply equal [ …(2) ]\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:187:107\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control binds previous path for a rename (changed bytes=false)",
+          "status": "failed",
+          "title": "binds previous path for a rename (changed bytes=false)",
+          "duration": 1.7445369999999798,
+          "failureMessages": [
+            "AssertionError: expected [ [ …(2) ], [ …(2) ] ] to deeply equal [ …(2) ]\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:187:107\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"renamed\"}",
+          "status": "failed",
+          "title": "refuses ambiguous/unsupported change {\"status\":\"renamed\"}",
+          "duration": 1.298368000000039,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:195:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {\"status\":\"copied\"}",
+          "status": "failed",
+          "title": "refuses ambiguous/unsupported change {\"status\":\"copied\"}",
+          "duration": 1.2468670000000088,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:195:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control refuses ambiguous/unsupported change {}",
+          "status": "failed",
+          "title": "refuses ambiguous/unsupported change {}",
+          "duration": 1.0920580000000086,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:195:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-base and refuses an unreviewable schema",
+          "status": "failed",
+          "title": "distinguishes an empty file at exact-base and refuses an unreviewable schema",
+          "duration": 1.36549100000002,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:200:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control distinguishes an empty file at exact-head and refuses an unreviewable schema",
+          "status": "failed",
+          "title": "distinguishes an empty file at exact-head and refuses an unreviewable schema",
+          "duration": 1.3355720000000133,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:200:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails an addition if its required head is missing",
+          "status": "failed",
+          "title": "fails an addition if its required head is missing",
+          "duration": 1.4576279999999997,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:207:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control fails a rename if the metadata-bound previous path cannot be read",
+          "status": "failed",
+          "title": "fails a rename if the metadata-bound previous path cannot be read",
+          "duration": 1.291858999999988,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:219:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control does not silently skip a schema renamed to an unsupported extension",
+          "status": "failed",
+          "title": "does not silently skip a schema renamed to an unsupported extension",
+          "duration": 1.2510460000000307,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:223:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews modified metadata through nested catalog filtering",
+          "status": "failed",
+          "title": "reviews modified metadata through nested catalog filtering",
+          "duration": 1.5573180000000093,
+          "failureMessages": [
+            "AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1182:15)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:233:25\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reviews renamed metadata through nested catalog filtering",
+          "status": "failed",
+          "title": "reviews renamed metadata through nested catalog filtering",
+          "duration": 1.2136789999999564,
+          "failureMessages": [
+            "AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1182:15)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:233:25\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control reports a rename leaving the selected catalog instead of silently skipping it",
+          "status": "failed",
+          "title": "reports a rename leaving the selected catalog instead of silently skipping it",
+          "duration": 1.4329389999999762,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:247:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control retains the acquisition error and original cause on the real review result",
+          "status": "failed",
+          "title": "retains the acquisition error and original cause on the real review result",
+          "duration": 2.44089699999995,
+          "failureMessages": [
+            "AssertionError: expected undefined to be Error: SECRET_SOURCE_FIXTURE { …(2) } // Object.is equality\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:255:39\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control keeps modified base evidence distinct from a failed head acquisition",
+          "status": "failed",
+          "title": "keeps modified base evidence distinct from a failed head acquisition",
+          "duration": 1.4814609999999675,
+          "failureMessages": [
+            "AssertionError: expected 'Could not retrieve content (Error: SE…' to be undefined\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:267:35\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control keeps added base evidence distinct from a failed head acquisition",
+          "status": "failed",
+          "title": "keeps added base evidence distinct from a failed head acquisition",
+          "duration": 1.5980039999999462,
+          "failureMessages": [
+            "AssertionError: expected '{\"type\":\"object\"}' to be null // Object.is equality\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:266:35\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control redacts failed comment-listing and comment-write messages while preserving publication cause",
+          "status": "failed",
+          "title": "redacts failed comment-listing and comment-write messages while preserving publication cause",
+          "duration": 2.0520500000000084,
+          "failureMessages": [
+            "AssertionError: expected undefined to be Error: SECRET_SOURCE_FIXTURE { …(2) } // Object.is equality\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:280:25\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control does not ban legitimate schema text resembling the old sentinel",
+          "status": "passed",
+          "title": "does not ban legitimate schema text resembling the old sentinel",
+          "duration": 1.665461999999991,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["source acquisition through the actual task with a score-100 negative control"],
+          "fullName": "source acquisition through the actual task with a score-100 negative control preserves score zero and recovers in a later healthy task",
+          "status": "failed",
+          "title": "preserves score zero and recovers in a later healthy task",
+          "duration": 2.94495500000005,
+          "failureMessages": [
+            "AssertionError: expected \"setFailed\" to be called at least once\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1326:10)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at assertRefusal (/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:114:18)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:296:5\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"\"",
+          "status": "failed",
+          "title": "returns exact UTF-8 file content \"\"",
+          "duration": 1.0648769999999672,
+          "failureMessages": [
+            "AssertionError: expected 'Could not retrieve content for this f…' to be '' // Object.is equality\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:316:88\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"﻿{\\\"title\\\":\\\"Å雪\\\"}\\n\"",
+          "status": "passed",
+          "title": "returns exact UTF-8 file content \"﻿{\\\"title\\\":\\\"Å雪\\\"}\\n\"",
+          "duration": 0.770419000000004,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract returns exact UTF-8 file content \"line1\\r\\nline2\\n\"",
+          "status": "passed",
+          "title": "returns exact UTF-8 file content \"line1\\r\\nline2\\n\"",
+          "duration": 0.7435839999999985,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": ["shared fetch contract"],
+          "fullName": "shared fetch contract throws a safe typed error retaining original status and cause",
+          "status": "failed",
+          "title": "throws a safe typed error retaining original status and cause",
+          "duration": 1.0713210000000117,
+          "failureMessages": [
+            "AssertionError: expected 'Could not retrieve content (Error: SE…' to be an instance of Error\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1245:15)\n    at Proxy.<anonymous> (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+expect@3.2.0/node_modules/@vitest/expect/dist/index.js:1022:14)\n    at Proxy.methodWrapper (file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/chai@5.2.0/node_modules/chai/chai.js:1618:25)\n    at /tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts:322:19\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at file:///home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vitest+runner@3.2.0/node_modules/@vitest/runner/dist/chunk-hooks.js:751:20"
+          ],
+          "meta": {}
+        }
+      ],
+      "startTime": 1792757524947,
+      "endTime": 1792757525036.0713,
+      "status": "failed",
+      "message": "",
+      "name": "/tmp/root4590-predecessor-jmns0nyp/tests/tasks/schema-review/source-acquisition.spec.ts"
+    }
+  ]
+}

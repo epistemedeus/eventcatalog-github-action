@@ -1,0 +1,41 @@
+
+ RUN  v3.2.0 /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023
+
+ ✓ tests/tasks/schema-review/source-acquisition.spec.ts (62 tests) 69ms
+Filtering changed files for directory: catalog
+Filtering changed files for directory: catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+ ✓ tests/lib/github.spec.ts (5 tests) 5ms
+ ✓ tests/tasks/schema-review/outcomes.spec.ts (22 tests) 87ms
+Sending prompt to model gpt-5.6-terra with provider openai
+::add-mask::synthetic-key
+Sending prompt to model claude-3-7-sonnet-20250219 with provider anthropic
+::add-mask::synthetic-key
+Sending prompt to model gemini-1.5-flash with provider google
+ ✓ tests/ai-models/openai.spec.ts (7 tests) 36ms
+ ✓ tests/tasks/schema-review/github-comment.spec.ts (2 tests) 17ms
+Catalog path: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/test-catalog
+Filtering changed files for directory: test-catalog
+No schemas have changed, skipping schema review
+Catalog path: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/eventcatalog
+Filtering changed files for directory: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/tests/tasks/schema-review/eventcatalog
+No schemas have changed, skipping schema review
+Catalog path: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/eventcatalog
+Filtering changed files for directory: eventcatalog
+::error::Error reviewing schema: my-awesome-project/eventcatalog/events/RandomEventThatDoesNotExist/schema.json
+Creating new comment
+
+::set-output name=comment-url::https://github.com/test-owner/test-repo/pull/123#issuecomment-123
+Catalog path: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/test-catalog
+Catalog path: /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/test-catalog
+ ✓ tests/tasks/schema-review/schema-review.spec.ts (5 tests) 10ms
+ ✓ tests/lib/eventcatalog.spec.ts (1 test) 2ms
+
+ Test Files  7 passed (7)
+      Tests  104 passed (104)
+   Start at  12:12:05
+   Duration  2.06s (transform 138ms, setup 0ms, collect 874ms, tests 226ms, environment 1ms, prepare 306ms)
+
+JSON report written to /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/full-state-final-cases.json

@@ -1,0 +1,5 @@
+Exact predecessor: 92681dee312e9d9b259ef7da5dcc1c2e54b34185
+Command: pnpm exec vitest run tests/tasks/schema-review/source-acquisition.spec.ts tests/lib/github.spec.ts --maxWorkers=1 --minWorkers=1 --no-file-parallelism --reporter=json --outputFile=/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/predecessor-source-final.json
+Filtering changed files for directory: catalog
+Filtering changed files for directory: catalog
+JSON report written to /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/predecessor-source-final.json

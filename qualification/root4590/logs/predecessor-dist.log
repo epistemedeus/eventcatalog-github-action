@@ -1,0 +1,913 @@
+Exact predecessor: 92681dee312e9d9b259ef7da5dcc1c2e54b34185
+Command: node --test /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs
+TAP version 13
+# Subtest: shipped source acquisition: source-base-401
+not ok 1 - shipped source acquisition: source-base-401
+  ---
+  duration_ms: 357.992312
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    node:internal/test_runner/harness:255:12
+    node:internal/process/task_queues:140:7
+    AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+  ...
+# Subtest: shipped source acquisition: source-base-403
+not ok 2 - shipped source acquisition: source-base-403
+  ---
+  duration_ms: 350.786376
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-404
+not ok 3 - shipped source acquisition: source-base-404
+  ---
+  duration_ms: 354.253599
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-503
+not ok 4 - shipped source acquisition: source-base-503
+  ---
+  duration_ms: 341.879097
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-network
+not ok 5 - shipped source acquisition: source-base-network
+  ---
+  duration_ms: 342.066801
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-timeout
+not ok 6 - shipped source acquisition: source-base-timeout
+  ---
+  duration_ms: 337.244389
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-directory
+not ok 7 - shipped source acquisition: source-base-directory
+  ---
+  duration_ms: 342.787227
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-missing
+not ok 8 - shipped source acquisition: source-base-missing
+  ---
+  duration_ms: 349.377669
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-encoding
+not ok 9 - shipped source acquisition: source-base-encoding
+  ---
+  duration_ms: 372.666819
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-truncated
+not ok 10 - shipped source acquisition: source-base-truncated
+  ---
+  duration_ms: 347.997804
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-malformed
+not ok 11 - shipped source acquisition: source-base-malformed
+  ---
+  duration_ms: 346.389284
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-base64
+not ok 12 - shipped source acquisition: source-base-base64
+  ---
+  duration_ms: 339.937222
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-utf8
+not ok 13 - shipped source acquisition: source-base-utf8
+  ---
+  duration_ms: 343.109224
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-base-empty
+not ok 14 - shipped source acquisition: source-base-empty
+  ---
+  duration_ms: 338.122176
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-401
+not ok 15 - shipped source acquisition: source-head-401
+  ---
+  duration_ms: 344.049356
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-403
+not ok 16 - shipped source acquisition: source-head-403
+  ---
+  duration_ms: 345.952249
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-404
+not ok 17 - shipped source acquisition: source-head-404
+  ---
+  duration_ms: 342.689841
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-503
+not ok 18 - shipped source acquisition: source-head-503
+  ---
+  duration_ms: 342.469668
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-network
+not ok 19 - shipped source acquisition: source-head-network
+  ---
+  duration_ms: 335.373188
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-timeout
+not ok 20 - shipped source acquisition: source-head-timeout
+  ---
+  duration_ms: 338.029091
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-directory
+not ok 21 - shipped source acquisition: source-head-directory
+  ---
+  duration_ms: 345.171475
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-missing
+not ok 22 - shipped source acquisition: source-head-missing
+  ---
+  duration_ms: 347.372964
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-encoding
+not ok 23 - shipped source acquisition: source-head-encoding
+  ---
+  duration_ms: 350.843765
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-truncated
+not ok 24 - shipped source acquisition: source-head-truncated
+  ---
+  duration_ms: 347.442535
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-malformed
+not ok 25 - shipped source acquisition: source-head-malformed
+  ---
+  duration_ms: 348.4083
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-base64
+not ok 26 - shipped source acquisition: source-head-base64
+  ---
+  duration_ms: 349.732718
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-utf8
+not ok 27 - shipped source acquisition: source-head-utf8
+  ---
+  duration_ms: 356.203871
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-head-empty
+not ok 28 - shipped source acquisition: source-head-empty
+  ---
+  duration_ms: 416.036215
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-modified
+ok 29 - shipped source acquisition: source-modified
+  ---
+  duration_ms: 348.233039
+  ...
+# Subtest: shipped source acquisition: source-added
+not ok 30 - shipped source acquisition: source-added
+  ---
+  duration_ms: 353.488583
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    2 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 2
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:52:49)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-removed
+ok 31 - shipped source acquisition: source-removed
+  ---
+  duration_ms: 318.014321
+  ...
+# Subtest: shipped source acquisition: source-renamed-change
+not ok 32 - shipped source acquisition: source-renamed-change
+  ---
+  duration_ms: 345.024614
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /events\/OldEvent\/schema.json$/. Input:
+
+    '/repos/owner/repo/contents/events/InventoryAdjusted/schema.json'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: '/repos/owner/repo/contents/events/InventoryAdjusted/schema.json'
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:55:16)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-renamed-same
+not ok 33 - shipped source acquisition: source-renamed-same
+  ---
+  duration_ms: 358.86007
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /events\/OldEvent\/schema.json$/. Input:
+
+    '/repos/owner/repo/contents/events/InventoryAdjusted/schema.json'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: '/repos/owner/repo/contents/events/InventoryAdjusted/schema.json'
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:55:16)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-rename-ambiguous
+not ok 34 - shipped source acquisition: source-rename-ambiguous
+  ---
+  duration_ms: 352.655703
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-unknown
+not ok 35 - shipped source acquisition: source-unknown
+  ---
+  duration_ms: 347.012344
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-mixed
+not ok 36 - shipped source acquisition: source-mixed
+  ---
+  duration_ms: 356.7017
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    0 !== 1
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:24:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-commentwrite
+not ok 37 - shipped source acquisition: source-commentwrite
+  ---
+  duration_ms: 15061.344975
+  location: '/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:12:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"scenario":"source-commentwrite","node":"v20.20.2","comments":[],"commentAttempts":[{"method":"POST","body":"\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (✅ Safe)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n| Schema Format | Risk Score |\n|---------------|------------|\n| json | 100/100 |\n\nSynthetic schema review\n\n### Potential Effected Consumers\n\nInventory adjusted (1.0.1) has no consumers mapped in EventCatalog.\n\n<sub>Using Model: gpt-5.6-terra | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"}],"requests":[{"url":"https://api.openai.com/v1/chat/completions","body":{"model":"gpt-5.6-terra","temperature":1,"response_format":{"type":"json_schema","json_schema":{"schema":{"type":"object","properties":{"executiveSummary":{"type":"string","description":"A concise summary of key findings and overall impact, suitable for quick review by enterprise stakeholders."},"score":{"type":"number","minimum":0,"maximum":100,"description":"A score from 0 to 100, where 0 indicates a very problematic change and 100 indicates a perfectly safe change."},"schemaFormat":{"type":"string","description":"The type of schema For example \"avro\", \"json\", \"yaml\", \"proto\", \"thrift\", \"xml\", \"avsc\". For example JSONDraft7, Avro, Protobuf, etc."},"effectedConsumers":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the consumer (service)."},"version":{"type":"string","description":"The version of the consumer."},"url":{"type":"string","description":"The URL of the consumer (service)."},"warning":{"type":"string","description":"A warning message to the user about the consumer (service)."}},"required":["name","version","url","warning"],"additionalProperties":false},"description":"A list of consumers that MAY be affected by the changes to the schemas."}},"required":["executiveSummary","score","schemaFormat","effectedConsumers"],"additionalProperties":false,"$schema":"http://json-schema.org/draft-07/schema#"},"strict":true,"name":"response"}},"messages":[{"role":"system","content":"\nYou are an expert reviewer specializing in event-driven architectures (EDA).\nYour task is to analyze schema diffs and other architectural information based on the provided EDA rules:\n\n- All schema changes must be backward compatible.\n- Events should be designed to be idempotent.\n- Avoid using generic event types; be specific about the domain and action.\n- All events must have a version number.\n- Consider the impact on downstream consumers before making any changes.\n\n\nYour audience is enterprise development and architecture teams. Maintain a professional and clear tone.\n\nProvide a detailed assessment covering the following aspects:\n- Overall impact of the changes.\n- Specific breaking changes, if any.\n- Adherence to EDA best practices and the provided rules.\n- Potential risks and considerations for downstream systems.\n- If the changes are breaking, and if you have a list of consumers, provide a list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- If you have no list of consumers, do not return any consumer information.\n\nFormat your response as a JSON object with the following keys:\n- \"executiveSummary\": A concise (2-3 sentences) overview of the most critical findings and the overall risk/impact. This should be suitable for quick ingestion by stakeholders.\n- \"effectedConsumers\": A list of consumers that MAY be affected by the changes with a warning message to the team about the consumer (service). And how this can effect them.\n- \"score\": A numerical score from 0 to 100, where 0 indicates a very problematic change with high risk of breaking compatibility, and 100 indicates a perfectly safe and well-designed change."},{"role":"user","content":"\n\nPlease analyze these changes for potential issues, especially breaking changes if this is a schema or configuration file. Provide your assessment.\n\nReview the following changes to the schema:\nPrevious schema:\n```\n{\"synthetic-private-schema\":true}\n```\nNew schema:\n```\nCould not retrieve content (Error: SECRET_SOURCE_FIXTURE)\n```\n\nThe schema does not have any consumers mapped in EventCatalog. Do not return any consumer information.\n"}]}}],"licenseCalls":1,"githubCalls":[{"path":"/repos/owner/repo/pulls/1/files","encodedPath":"/repos/owner/repo/pulls/1/files","method":"GET"},{"path":"/repos/owner/repo/pulls/1/files","encodedPath":"/repos/owner/repo/pulls/1/files","method":"GET"},{"path":"/repos/owner/repo/contents/events/InventoryAdjusted/schema.json","encodedPath":"/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json","ref":"base","method":"GET"},{"path":"/repos/owner/repo/contents/events/InventoryAdjusted/schema.json","encodedPath":"/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json","ref":"head","method":"GET"},{"path":"/repos/owner/repo/issues/1/comments","encodedPath":"/repos/owner/repo/issues/1/comments","method":"GET"},{"path":"/repos/owner/repo/issues/1/comments","encodedPath":"/repos/owner/repo/issues/1/comments","method":"POST"}],"unexpectedNetwork":[],"stdout":"Catalog path: /tmp/root4410-a-dist-gEWLDL\nReviewing schema: events/InventoryAdjusted/schema.json\nMessage consumers: \nPerforming schema review for file: events/InventoryAdjusted/schema.json\n::warning::Failed to fetch content for events/InventoryAdjusted/schema.json at ref head: undefined\nRequesting AI review for schema changes in events/InventoryAdjusted/schema.json...\n::add-mask::[redacted]\nSending prompt to model gpt-5.6-terra with provider openai\nAI review received for events/InventoryAdjusted/schema.json: Score 100\nCreating new comment\n::error::SECRET_SOURCE_FIXTURE\n","stderr":"","harnessError":"Action did not reach its terminal output in 15 seconds","exitCode":2}
+    + actual - expected
+
+    + 'Action did not reach its terminal output in 15 seconds'
+    - undefined
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  actual: 'Action did not reach its terminal output in 15 seconds'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4590/check-dist.cjs:20:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: shipped source acquisition: source-recovered
+ok 38 - shipped source acquisition: source-recovered
+  ---
+  duration_ms: 353.505278
+  ...
+# Subtest: shipped source acquisition: source-zero
+ok 39 - shipped source acquisition: source-zero
+  ---
+  duration_ms: 354.187346
+  ...
+# Subtest: shipped source acquisition: source-zero-threshold
+ok 40 - shipped source acquisition: source-zero-threshold
+  ---
+  duration_ms: 402.468654
+  ...
+1..40
+# tests 40
+# suites 0
+# pass 5
+# fail 35
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 28799.693224

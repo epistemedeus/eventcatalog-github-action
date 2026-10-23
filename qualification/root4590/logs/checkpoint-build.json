@@ -1,8 +1,5 @@
 {
-  "command": [
-    "pnpm",
-    "build"
-  ],
+  "command": ["pnpm", "build"],
   "started_utc": "2026-10-23T11:51:00.419920+00:00",
   "finished_utc": "2026-10-23T11:51:06.549304+00:00",
   "exit_code": 0,
