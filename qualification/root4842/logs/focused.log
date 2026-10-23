@@ -1,0 +1,24 @@
+
+ RUN  v3.2.0 /home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection
+
+ ✓ tests/tasks/schema-review/outcomes.spec.ts (22 tests) 96ms
+ ✓ tests/tasks/schema-review/source-acquisition.spec.ts (62 tests) 71ms
+Sending prompt to model gpt-5.6-terra with provider openai
+::add-mask::synthetic-key
+Sending prompt to model claude-3-7-sonnet-20250219 with provider anthropic
+::add-mask::synthetic-key
+Sending prompt to model gemini-1.5-flash with provider google
+ ✓ tests/ai-models/openai.spec.ts (7 tests) 37ms
+Filtering changed files for directory: catalog
+Filtering changed files for directory: catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+Filtering changed files for directory: docs/catalog
+ ✓ tests/lib/github.spec.ts (5 tests) 4ms
+
+ Test Files  4 passed (4)
+      Tests  96 passed (96)
+   Start at  14:16:24
+   Duration  1.37s (transform 128ms, setup 0ms, collect 576ms, tests 207ms, environment 0ms, prepare 178ms)
+
+JSON report written to /home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4842/focused-cases.json

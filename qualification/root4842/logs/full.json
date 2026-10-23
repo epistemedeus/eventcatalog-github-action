@@ -1,0 +1,25 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "--maxWorkers=1",
+    "--minWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4842/full-cases.json"
+  ],
+  "cwd": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection",
+  "started_utc": "2026-10-23T14:17:35.199825+00:00",
+  "finished_utc": "2026-10-23T14:17:38.067712+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 327912,
+  "peak_command_plus_native_owner_rss_kib": 581004,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

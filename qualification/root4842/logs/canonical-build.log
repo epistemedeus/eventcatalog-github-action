@@ -1,0 +1,11 @@
+ncc: Version 0.38.3
+ncc: Compiling file index.js into CJS
+ncc: Using typescript@5.8.3 (local user-provided)
+   1kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/licenses.txt
+  10kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/886.index.js
+  13kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/886.index.js.map
+  40kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/sourcemap-register.js
+3001kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/index.js
+3527kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/index.js.map
+3527kB  ../../root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist/index.js.map
+6592kB  [5000ms] - ncc 0.38.3

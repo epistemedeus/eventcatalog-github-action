@@ -1,0 +1,7 @@
+2026-10-23T14:16:24Z initial inline proof used projection cwd instead of explicit canonical path.
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection/qualification/root4842/PROJECTIONS.json'
+Python proof exit 1; the outer shell continued to focused receiving (96 passed, exit 0). No product assertion failed. The corrected explicit-canonical script and separate recorded retry passed before production build.

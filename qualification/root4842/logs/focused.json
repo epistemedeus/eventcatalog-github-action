@@ -1,0 +1,29 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "vitest",
+    "run",
+    "tests/ai-models/openai.spec.ts",
+    "tests/tasks/schema-review/outcomes.spec.ts",
+    "tests/tasks/schema-review/source-acquisition.spec.ts",
+    "tests/lib/github.spec.ts",
+    "--maxWorkers=1",
+    "--minWorkers=1",
+    "--no-file-parallelism",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/qualification/root4842/focused-cases.json"
+  ],
+  "cwd": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection",
+  "started_utc": "2026-10-23T14:16:24.426878+00:00",
+  "finished_utc": "2026-10-23T14:16:26.410427+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 320480,
+  "peak_command_plus_native_owner_rss_kib": 576940,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

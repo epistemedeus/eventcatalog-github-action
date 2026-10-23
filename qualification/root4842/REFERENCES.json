@@ -1,0 +1,62 @@
+[
+  {
+    "path": "qualification/root4410-a/RESULT.md",
+    "sha256": "6184b56a21e1bd7dfc9e867fc321e41ff9e1f87a0cf010d11c16c30e962b2340",
+    "bytes": 11392
+  },
+  {
+    "path": "qualification/root4410-a/WORKER-RESULT.json",
+    "sha256": "ab8394a4f9ac5175dc067668ae9b1d9bd4d0bb3b01d257afe4895b6dbba6339c",
+    "bytes": 20177
+  },
+  {
+    "path": "qualification/root4410-a/PR.md",
+    "sha256": "346b3abd0a6218f0fbac96dd232a874e174a78b1c4f0107d5934487e261b71cf",
+    "bytes": 1679
+  },
+  {
+    "path": "qualification/root4590/WORKER-HANDBACK.md",
+    "sha256": "34b1078b311a420f54217296251f3461c40b0dbb1586e7bfdba7a20744401425",
+    "bytes": 12299
+  },
+  {
+    "path": "qualification/root4590/WORKER-RESULT.json",
+    "sha256": "98b2eb0180737b0d9d374c77ebefa3467287a7bf4859389438727b1cda97e354",
+    "bytes": 46198
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4778-eventcatalog-dist-independent-20261023/RESULT.json",
+    "sha256": "7121c839dae31867ad2b969b3af97c423764c53c82a0a0198a0baa80a87bdf38",
+    "bytes": 11004
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4778-eventcatalog-dist-independent-20261023/DIST-COMPARISON.json",
+    "sha256": "175da30a9a38868b10fe774bd52b59c8efb20d1a87194c7f6749da90f486826c",
+    "bytes": 3148
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4778-eventcatalog-dist-independent-20261023/CHECKS.json",
+    "sha256": "f0cde7332b9e1313ceea7410c6dd69dd903cee06985bbf56a655ad2cc58513f7",
+    "bytes": 5632
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4778-eventcatalog-dist-independent-20261023/canonical-cwd-ncc-fresh-output.log",
+    "sha256": "18d7c59fd750b2dc4ef7f6d4c50963a97b418b6a98e1cf7b3c0452d08263a16f",
+    "bytes": 861
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4778-eventcatalog-dist-independent-20261023/loopback-only.cjs",
+    "sha256": "184a49fbaa1254b8eabd1f8dd58e5354cc8b217dfe6c4013a8ea0d1913842bce",
+    "bytes": 1018
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4748-eventcatalog-independent-20261023/FAILURE.json",
+    "sha256": "32e2040af80926c130f56a6a05bde0d70b4e0a245e0be14d8f74edc53003d1e4",
+    "bytes": 6506
+  },
+  {
+    "path": "/home/ubuntu/root-sol-window100337/root4748-eventcatalog-independent-20261023/ncc-build.log",
+    "sha256": "d2bb82f82adaa8f376c5b035f2dbe30b575acde71235f87f5224d504dfb3b00b",
+    "bytes": 529
+  }
+]

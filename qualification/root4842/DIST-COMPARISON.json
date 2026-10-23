@@ -1,0 +1,107 @@
+{
+  "head": "f46aaa3d9b62ea83659514fc2c791192e22cd2ec",
+  "tree": "64e9216af767db7cd2431090920a49d5d076472d",
+  "canonical_cwd": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023",
+  "fresh_external_output": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/dist",
+  "full_inventory": true,
+  "normalization": false,
+  "raw_equal": true,
+  "members": [
+    {
+      "path": "886.index.js",
+      "canonical": {
+        "bytes": 10274,
+        "sha256": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d"
+      },
+      "rebuilt": {
+        "bytes": 10274,
+        "sha256": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d"
+      },
+      "projected": {
+        "bytes": 10274,
+        "sha256": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d"
+      },
+      "raw_equal": true
+    },
+    {
+      "path": "886.index.js.map",
+      "canonical": {
+        "bytes": 13764,
+        "sha256": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852"
+      },
+      "rebuilt": {
+        "bytes": 13764,
+        "sha256": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852"
+      },
+      "projected": {
+        "bytes": 13764,
+        "sha256": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852"
+      },
+      "raw_equal": true
+    },
+    {
+      "path": "index.js",
+      "canonical": {
+        "bytes": 3072740,
+        "sha256": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788"
+      },
+      "rebuilt": {
+        "bytes": 3072740,
+        "sha256": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788"
+      },
+      "projected": {
+        "bytes": 3072740,
+        "sha256": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788"
+      },
+      "raw_equal": true
+    },
+    {
+      "path": "index.js.map",
+      "canonical": {
+        "bytes": 3612063,
+        "sha256": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88"
+      },
+      "rebuilt": {
+        "bytes": 3612063,
+        "sha256": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88"
+      },
+      "projected": {
+        "bytes": 3612063,
+        "sha256": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88"
+      },
+      "raw_equal": true
+    },
+    {
+      "path": "licenses.txt",
+      "canonical": {
+        "bytes": 1104,
+        "sha256": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea"
+      },
+      "rebuilt": {
+        "bytes": 1104,
+        "sha256": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea"
+      },
+      "projected": {
+        "bytes": 1104,
+        "sha256": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea"
+      },
+      "raw_equal": true
+    },
+    {
+      "path": "sourcemap-register.js",
+      "canonical": {
+        "bytes": 41053,
+        "sha256": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+      },
+      "rebuilt": {
+        "bytes": 41053,
+        "sha256": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+      },
+      "projected": {
+        "bytes": 41053,
+        "sha256": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+      },
+      "raw_equal": true
+    }
+  ]
+}

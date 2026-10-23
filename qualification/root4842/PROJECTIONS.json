@@ -1,0 +1,156 @@
+{
+  "grouping": "one causally coherent candidate",
+  "ordering": "single commit directly on pinned upstream; no stack",
+  "base": "d721c06b0142c55cd23c461734c1423bf95cedb2",
+  "received": "8d7414c04abccebf4a3d36dc94aad074b0b0c93d",
+  "head": "f46aaa3d9b62ea83659514fc2c791192e22cd2ec",
+  "tree": "64e9216af767db7cd2431090920a49d5d076472d",
+  "ref": "refs/heads/codex/root4842-eventcatalog-compatibility-20261023",
+  "projection_directory": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection",
+  "members": [
+    {
+      "path": "README.md",
+      "blob": "db86c9b9a02724ad29ec65d27e216bbd0484e639",
+      "bytes": 3112,
+      "sha256": "567d2aa641fa68e8e60c9dbc50f41af61a879e7bb96379855e1097692961f659"
+    },
+    {
+      "path": "action.yml",
+      "blob": "dd9b8ca1b0dba96884cc20059dd82f22d5ceb753",
+      "bytes": 1431,
+      "sha256": "e02e6986160799505e20c5b9ac01ed76bc2e59b5a963b617557d519e67a9311f"
+    },
+    {
+      "path": "dist/index.js",
+      "blob": "b47cb96cae8c38fc1ba9d73e97765bf79f0fd506",
+      "bytes": 3072740,
+      "sha256": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788"
+    },
+    {
+      "path": "dist/index.js.map",
+      "blob": "055745ed976d22be433ee7b33242629050216069",
+      "bytes": 3612063,
+      "sha256": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88"
+    },
+    {
+      "path": "src/ai-models/ai-provider.ts",
+      "blob": "71ead47dfaf49ed6fb5b472614b1bff2da6d63f0",
+      "bytes": 2479,
+      "sha256": "ec1b7b1e3c3752e7ffdda0722db271e00bae8b618b81600575abda9fd11e16d6"
+    },
+    {
+      "path": "src/ai-models/openai.ts",
+      "blob": "643e8c143aca96912422b8789c78faf2e13fd38f",
+      "bytes": 2140,
+      "sha256": "aa92b2edeab2cbe32c652f70b4b15b06b2ea2ed3705ccda9eb7f7be388c89ba7"
+    },
+    {
+      "path": "src/lib/ai.ts",
+      "blob": "1aa955b0691613abebc88b79d9cc7a15bd0065a3",
+      "bytes": 2356,
+      "sha256": "fce2107c5d144df606a6d32ea3ec61dd3b801eeddd3119db0047eaf6587edfce"
+    },
+    {
+      "path": "src/lib/github.ts",
+      "blob": "0a433d6da9c86bdd0294417c8da9fd73c9da1532",
+      "bytes": 8725,
+      "sha256": "2bc8008276e650781495913c05bbb182e2775350ad08ae78bed1fae787b2505e"
+    },
+    {
+      "path": "src/tasks/schema-review/github-comment.ts",
+      "blob": "49360a522cae5817cae011fa54c485aef6eb0016",
+      "bytes": 3162,
+      "sha256": "eb7776dba4dc947488ee3287ec94c20b005715a1f1bd5c157493a10b4013afde"
+    },
+    {
+      "path": "src/tasks/schema-review/index.ts",
+      "blob": "0d9469919a098fc479eb63f91dec9ba726b83a34",
+      "bytes": 5375,
+      "sha256": "814eb2147aa7f730228bff2e51e52278fe26e4bdb0604efa249105e775d73218"
+    },
+    {
+      "path": "src/tasks/schema-review/prompt.ts",
+      "blob": "a9184b01fd99498f975c7005655ac29f88efb61b",
+      "bytes": 3873,
+      "sha256": "05b241a02dfb011101e52a81949d080334800dacc92a73db32ed86b2e0e46c9b"
+    },
+    {
+      "path": "src/tasks/schema-review/review.ts",
+      "blob": "0143fe51063e1b9ece3ba55b2cef19ab6fb7b040",
+      "bytes": 2436,
+      "sha256": "75cee88548e7fc5af3db49072473613a52c23fbcbf3975750ff8b5db67433fb9"
+    },
+    {
+      "path": "tests/action/README.md",
+      "blob": "8eea30724ccf00a3297718013bf766bfab086fd1",
+      "bytes": 1306,
+      "sha256": "f5bbafd5473c595c52412b504104ea1cd5871b4df303b222cac48e6000c37b88"
+    },
+    {
+      "path": "tests/action/fixtures/action-child.cjs",
+      "blob": "57480461d3adb6809f02fbf8c59e2ca15618ff73",
+      "bytes": 14902,
+      "sha256": "0714dffbb962db4abdd13e59be70d1931adb0145575778173c2a0621435352b6"
+    },
+    {
+      "path": "tests/action/review-outcomes.cjs",
+      "blob": "5397b48aa3fb3e5d3a6a3adcfdb601e7a3b8db7b",
+      "bytes": 4086,
+      "sha256": "2d5b36adf72a80e4af02a69ad651a2c0ca4de5d9fac9545e9fab31a79e02adf8"
+    },
+    {
+      "path": "tests/action/source-acquisition.cjs",
+      "blob": "79f363cf18629f122d1d3fbe3d45230958c104b9",
+      "bytes": 4538,
+      "sha256": "ddd744d3d1decd4a7c9af942624d12cfdfff6cd533f17029a3fd47f9547d185c"
+    },
+    {
+      "path": "tests/ai-models/__snapshots__/openai.spec.ts.snap",
+      "blob": "ac1280f32d47b99789dc77e99b40b21027723111",
+      "bytes": 5694,
+      "sha256": "3f48be2796ec36a701a24f3b2e2b51d0f4364675b7aed729e6fb4f314cac3be2"
+    },
+    {
+      "path": "tests/ai-models/openai.spec.ts",
+      "blob": "c14447894e284f9ce28de63cbc77f3082d8c9943",
+      "bytes": 7174,
+      "sha256": "46f08fb3ce765c65f2f22f38cca7d5a8e201065e1016383be0daf469b128eef1"
+    },
+    {
+      "path": "tests/lib/github.spec.ts",
+      "blob": "18cb3f1bcf9729ff518135a54da3a93da2433113",
+      "bytes": 4264,
+      "sha256": "164d2eaea114b4c93fe761e35babc7466a7a380613a2ef1903ff900488913d16"
+    },
+    {
+      "path": "tests/tasks/schema-review/github-comment.spec.ts",
+      "blob": "e3efc8da2c528434fe5f9d806c10edd0301bb209",
+      "bytes": 3506,
+      "sha256": "6f6601baecf0feef6278e99d398996f82b1c7f17164be46880b627024fc448b0"
+    },
+    {
+      "path": "tests/tasks/schema-review/outcomes.spec.ts",
+      "blob": "dc949dac04fa7d381a1b586dba81330c226908a4",
+      "bytes": 10729,
+      "sha256": "07e070c1e82dc560405b9102032864d3f6ed8134ffe9b1bdd4b2f5f4233b6ff8"
+    },
+    {
+      "path": "tests/tasks/schema-review/schema-review.spec.ts",
+      "blob": "d1bb17316d30102f54a96eccf6f0be2b36403c2c",
+      "bytes": 4542,
+      "sha256": "de13241723ac7c38bc5fa9414dcf50e6f84cdbb6558a5a2982ea42e864839306"
+    },
+    {
+      "path": "tests/tasks/schema-review/source-acquisition.spec.ts",
+      "blob": "71b480841f0c3cd55606d0f448c2b9397bbc3c81",
+      "bytes": 14596,
+      "sha256": "8bb7fb7ce64b8c47b4ae1484389a29ca2f3eda150af49070ef63925b0d379101"
+    }
+  ],
+  "relocations": {
+    "qualification/root4410-a/check-dist.cjs": "tests/action/review-outcomes.cjs",
+    "qualification/root4590/check-dist.cjs": "tests/action/source-acquisition.cjs",
+    "qualification/root4410-a/dist-child.cjs": "tests/action/fixtures/action-child.cjs"
+  },
+  "excluded": "all historical qualification and internal orchestration metadata"
+}

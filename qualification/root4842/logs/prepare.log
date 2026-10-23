@@ -1,0 +1,6 @@
+tests/action/review-outcomes.cjs 59ms (unchanged)
+tests/action/source-acquisition.cjs 21ms
+tests/action/fixtures/action-child.cjs 47ms (unchanged)
+tests/action/README.md 18ms (unchanged)
+{"grouping": "one causally coherent candidate", "ordering": "single commit directly on pinned upstream; no stack", "base": "d721c06b0142c55cd23c461734c1423bf95cedb2", "received": "8d7414c04abccebf4a3d36dc94aad074b0b0c93d", "head": "f46aaa3d9b62ea83659514fc2c791192e22cd2ec", "tree": "64e9216af767db7cd2431090920a49d5d076472d", "ref": "refs/heads/codex/root4842-eventcatalog-compatibility-20261023", "projection_directory": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection", "excluded": "all historical qualification and internal orchestration metadata"}
+Changed paths: 23

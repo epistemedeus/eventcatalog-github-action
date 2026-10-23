@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python3",
+    "qualification/root4842/prove-projection.py",
+    "--dist"
+  ],
+  "cwd": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023",
+  "started_utc": "2026-10-23T14:17:58.526342+00:00",
+  "finished_utc": "2026-10-23T14:17:59.210095+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 23684,
+  "peak_command_plus_native_owner_rss_kib": 276472,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

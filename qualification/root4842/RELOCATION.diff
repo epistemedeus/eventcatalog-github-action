@@ -1,0 +1,98 @@
+--- qualification/root4410-a/check-dist.cjs
++++ tests/action/review-outcomes.cjs
+@@ -4,8 +4,8 @@
+ const fs = require('node:fs');
+ const path = require('node:path');
+ const repository = path.resolve(__dirname, '../..');
+-const bundle = process.env.ROOT4410_BUNDLE || path.join(repository, 'dist/index.js');
+-const evidence = process.env.ROOT4410_DIST_EVIDENCE;
++const bundle = process.env.ACTION_BUNDLE || path.join(repository, 'dist/index.js');
++const evidence = process.env.ACTION_EVIDENCE_DIRECTORY;
+ const cases = [
+   'healthy',
+   'luna',
+@@ -29,7 +29,7 @@
+ for (const scenario of cases) {
+   test(`generated action: ${scenario}`, { concurrency: false }, () => {
+     // Never inherit real provider keys, GitHub tokens, proxies or action inputs.
+-    const child = spawnSync(process.execPath, [path.join(__dirname, 'dist-child.cjs'), bundle, scenario], {
++    const child = spawnSync(process.execPath, [path.join(__dirname, 'fixtures/action-child.cjs'), bundle, scenario], {
+       cwd: repository,
+       encoding: 'utf8',
+       timeout: 20000,
+--- qualification/root4590/check-dist.cjs
++++ tests/action/source-acquisition.cjs
+@@ -4,7 +4,7 @@
+ const fs = require('node:fs');
+ const path = require('node:path');
+ const repository = path.resolve(__dirname, '../..');
+-const bundle = process.env.ROOT4590_BUNDLE || path.join(repository, 'dist/index.js');
++const bundle = process.env.ACTION_BUNDLE || path.join(repository, 'dist/index.js');
+ const cases = [];
+ for (const ref of ['base', 'head'])
+   for (const fault of [
+@@ -40,21 +40,20 @@
+ );
+ for (const scenario of cases) {
+   test(`shipped source acquisition: ${scenario}`, { concurrency: false }, () => {
+-    const child = spawnSync(
+-      process.execPath,
+-      [path.join(repository, 'qualification/root4410-a/dist-child.cjs'), bundle, scenario],
+-      {
+-        cwd: repository,
+-        encoding: 'utf8',
+-        timeout: 20000,
+-        env: { PATH: process.env.PATH, NODE_OPTIONS: '--max-old-space-size=1024', TZ: 'UTC' },
+-      }
+-    );
++    const child = spawnSync(process.execPath, [path.join(__dirname, 'fixtures/action-child.cjs'), bundle, scenario], {
++      cwd: repository,
++      encoding: 'utf8',
++      timeout: 20000,
++      env: { PATH: process.env.PATH, NODE_OPTIONS: '--max-old-space-size=1024', TZ: 'UTC' },
++    });
+     assert.ifError(child.error);
+     const result = JSON.parse(child.stdout);
+-    if (process.env.ROOT4590_EVIDENCE) {
+-      fs.mkdirSync(process.env.ROOT4590_EVIDENCE, { recursive: true });
+-      fs.writeFileSync(path.join(process.env.ROOT4590_EVIDENCE, scenario + '.json'), JSON.stringify(result, null, 2) + '\n');
++    if (process.env.ACTION_EVIDENCE_DIRECTORY) {
++      fs.mkdirSync(process.env.ACTION_EVIDENCE_DIRECTORY, { recursive: true });
++      fs.writeFileSync(
++        path.join(process.env.ACTION_EVIDENCE_DIRECTORY, scenario + '.json'),
++        JSON.stringify(result, null, 2) + '\n'
++      );
+     }
+     assert.equal(result.harnessError, undefined, JSON.stringify(result));
+     assert.deepEqual(result.unexpectedNetwork, []);
+--- qualification/root4410-a/dist-child.cjs
++++ tests/action/fixtures/action-child.cjs
+@@ -9,8 +9,8 @@
+ const { once } = require('node:events');
+ 
+ const [bundle, scenario] = process.argv.slice(2);
+-const repository = path.resolve(__dirname, '../..');
+-const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'root4410-a-dist-'));
++const repository = path.resolve(__dirname, '../../..');
++const workspace = fs.mkdtempSync(path.join(os.tmpdir(), 'eventcatalog-action-'));
+ fs.cpSync(path.join(repository, 'tests/tasks/eventcatalog'), workspace, { recursive: true });
+ const secondDirectory = path.join(workspace, 'events/SecondEvent');
+ fs.cpSync(path.join(workspace, 'events/InventoryAdjusted'), secondDirectory, { recursive: true });
+@@ -226,7 +226,7 @@
+     return responseFor(body, goodReview(score));
+   }
+   record.unexpectedNetwork.push(target.origin + decodedPath);
+-  throw new Error('External network is disabled by qualification');
++  throw new Error('External network is disabled by the action test harness');
+ };
+ 
+ (async () => {
+@@ -268,7 +268,7 @@
+   const originalHttpRequest = http.request;
+   const deny = (target) => {
+     record.unexpectedNetwork.push(String(target));
+-    throw new Error('External network is disabled by qualification');
++    throw new Error('External network is disabled by the action test harness');
+   };
+   https.request = (input, options, callback) => {
+     const target =

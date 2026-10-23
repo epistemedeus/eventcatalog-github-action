@@ -1,0 +1,50 @@
+{
+  "scenario": "source-base-network",
+  "node": "v20.20.2",
+  "comments": [
+    {
+      "method": "POST",
+      "body": "\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (❌ Review failed)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n**Review failed:** Schema source retrieval failed (HTTP 500).\n\nNo risk score is available for this schema. Resolve the failure and rerun the action.\n\n<sub>Using Model: gpt-5.6-terra | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"
+    }
+  ],
+  "commentAttempts": [
+    {
+      "method": "POST",
+      "body": "\n# EventCatalog: Schema Review\n\nThe following schemas were modified in this pull request:\n\n## [Inventory adjusted (1.0.1) (❌ Review failed)](https://github.com/owner/repo/pull/1/files#events%2FInventoryAdjusted%2Fschema.json)\n\n**Review failed:** Schema source retrieval failed (HTTP 500).\n\nNo risk score is available for this schema. Resolve the failure and rerun the action.\n\n<sub>Using Model: gpt-5.6-terra | Provider: openai</sub>\n<!-- eventcatalog-schema-review-comment -->"
+    }
+  ],
+  "requests": [],
+  "licenseCalls": 1,
+  "githubCalls": [
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "encodedPath": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/pulls/1/files",
+      "encodedPath": "/repos/owner/repo/pulls/1/files",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/contents/events/InventoryAdjusted/schema.json",
+      "encodedPath": "/repos/owner/repo/contents/events%2FInventoryAdjusted%2Fschema.json",
+      "ref": "base",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "encodedPath": "/repos/owner/repo/issues/1/comments",
+      "method": "GET"
+    },
+    {
+      "path": "/repos/owner/repo/issues/1/comments",
+      "encodedPath": "/repos/owner/repo/issues/1/comments",
+      "method": "POST"
+    }
+  ],
+  "unexpectedNetwork": [],
+  "stdout": "Catalog path: /tmp/eventcatalog-action-z3hmOe\nReviewing schema: events/InventoryAdjusted/schema.json\nMessage consumers: \nPerforming schema review for file: events/InventoryAdjusted/schema.json\n::error::Schema review failed for events/InventoryAdjusted/schema.json: Schema source retrieval failed (HTTP 500).\n::error::1 schema review(s) could not be completed. See the review comment for details.\nCreating new comment\n\n::set-output name=comment-url::https://github.com/owner/repo/pull/1#issuecomment-123\n",
+  "stderr": "",
+  "exitCode": 1
+}

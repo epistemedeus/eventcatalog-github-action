@@ -1,0 +1,19 @@
+{
+  "command": [
+    "node",
+    "--test",
+    "--test-concurrency=1",
+    "tests/action/review-outcomes.cjs"
+  ],
+  "cwd": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection",
+  "started_utc": "2026-10-23T14:17:59.399973+00:00",
+  "finished_utc": "2026-10-23T14:18:05.756538+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 225036,
+  "peak_command_plus_native_owner_rss_kib": 477384,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

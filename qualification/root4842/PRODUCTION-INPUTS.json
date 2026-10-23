@@ -1,0 +1,308 @@
+{
+  "head": "f46aaa3d9b62ea83659514fc2c791192e22cd2ec",
+  "tree": "64e9216af767db7cd2431090920a49d5d076472d",
+  "canonical_cwd": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023",
+  "projection": "/home/ubuntu/root-sol-window100337/root4842-eventcatalog-upstream-packaging-20261023/projection",
+  "all_frozen_projected_files_equal": true,
+  "all_original_received_files_unchanged": true,
+  "all_non_test_non_dist_tracked_inputs_equal": true,
+  "members": [
+    {
+      "path": ".changeset/README.md",
+      "blob": "e5b6d8d6a67ad0dca8f20117fbfc72e076882d00",
+      "bytes": 510,
+      "sha256": "bf33c79d7e0477dcad0e0b98c8d364db6fdb794d62ef68b6153d61e868b3bdf0"
+    },
+    {
+      "path": ".changeset/config.json",
+      "blob": "8639ae567055734ae20b953b13a99686b4c3e687",
+      "bytes": 275,
+      "sha256": "e9077c61fd0f751b0cea55bac71958bd96b0b981431fa931ed19a2e7845071e7"
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "blob": "c228cdca323b9072879df83edd2393cb3ae4a29a",
+      "bytes": 67,
+      "sha256": "891ce00b78ad4f710d2570563e1a13cabd56990715ca4f673ecd2f07abd524bf"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.yml",
+      "blob": "0ccbca92f3054f83c0a7e37d55e3091bc821850a",
+      "bytes": 2144,
+      "sha256": "68835b4013ad530943dfce3d48efb180e87eb403cbefc7fee60be2d1351c86b1"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "blob": "cf9e57c66cf141c83a13d2b9d1526a289c714cf8",
+      "bytes": 172,
+      "sha256": "2b2e333023dc87c8444ffe8ad86313ed0980248cba9fbc85300d6cd279bb18eb"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature.yml",
+      "blob": "ccdee724dd7866916dc7042be031773d39cc4639",
+      "bytes": 1855,
+      "sha256": "4430f2b76e82fc9022cac16764b7a3b8e2b967e74b67a2bc60fcab1be2d5a188"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "blob": "9d0ed10e91870b68b40de6ef6d2cccd292195caa",
+      "bytes": 373,
+      "sha256": "85a21abfc8a4e695808333249a9c97384585be8d7f4a291f659d090d438288be"
+    },
+    {
+      "path": ".github/funding.yml",
+      "blob": "6e3bb865036895b8a9a82ce872be38c9b0ff226b",
+      "bytes": 23,
+      "sha256": "cf9c2a2e4dddce972d4d983102d6925682176adff52441c924572e08e43bd0e4"
+    },
+    {
+      "path": ".github/workflows/lint.yml",
+      "blob": "dcb6fc853510adb2ba12761195ed4935f1a5bd7a",
+      "bytes": 534,
+      "sha256": "e635bf5a6cbf1051a16a9a80dd2153d45eceeae63dfbd6ffcf273c9ca718313a"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "blob": "fc93c3c2e6c8ed80eeeb2e741b811dab862cf672",
+      "bytes": 879,
+      "sha256": "b2c91e4164a2de644296d0917c01ccd05dda8a91ba79dcc3bae814196e350ccb"
+    },
+    {
+      "path": ".github/workflows/verify-build.yml",
+      "blob": "1da5da983089ff8853978eed60bad8442c8e72de",
+      "bytes": 670,
+      "sha256": "692505d7ae557c9a9de71165fd510dda28c3b56a4d8510f6142c1a139b67f9ef"
+    },
+    {
+      "path": ".gitignore",
+      "blob": "b7ffa1a6975c5143667deb3788f7a4516db29100",
+      "bytes": 216,
+      "sha256": "086bd3263d0b9ee6b7c730febd1e26052b971b244d888236c3b4f489f2ba31ac"
+    },
+    {
+      "path": ".prettierignore",
+      "blob": "5c612a4c7359547a0957482824d44e476814a0b3",
+      "bytes": 112,
+      "sha256": "1344d9c9001574fe045014be5d5ee18ee888673fb8c47333230a5d83127406bc"
+    },
+    {
+      "path": ".prettierrc",
+      "blob": "2fbe55cde77eee92d5d9ef36737d17e4e8c4ff92",
+      "bytes": 152,
+      "sha256": "fbb4775209b4966fc74ec37a316b0d63f6b77005ba9e2f0fc7567fea856e0457"
+    },
+    {
+      "path": "LICENSE",
+      "blob": "b0c65ca4f0b19233f6c17373cef719e26a3c526c",
+      "bytes": 1676,
+      "sha256": "cecd376296c7ec756378b50d684811c820c91e00fe5d7f00e97b50c9bb212b94"
+    },
+    {
+      "path": "README.md",
+      "blob": "db86c9b9a02724ad29ec65d27e216bbd0484e639",
+      "bytes": 3112,
+      "sha256": "567d2aa641fa68e8e60c9dbc50f41af61a879e7bb96379855e1097692961f659"
+    },
+    {
+      "path": "action.yml",
+      "blob": "dd9b8ca1b0dba96884cc20059dd82f22d5ceb753",
+      "bytes": 1431,
+      "sha256": "e02e6986160799505e20c5b9ac01ed76bc2e59b5a963b617557d519e67a9311f"
+    },
+    {
+      "path": "images/github-actions.png",
+      "blob": "1a35260c52dbeeb5acff09ebc6d26a456f8f9a60",
+      "bytes": 301013,
+      "sha256": "f18fc7a039e6a6a82feb0d747e455128374b8b8615d7d4f30d64d41c40d50e41"
+    },
+    {
+      "path": "package.json",
+      "blob": "aa67cc1f1c28bd55666f12a7d01a1fe891783bfc",
+      "bytes": 1586,
+      "sha256": "9ed7b0f0e95d1d6a8b770ce60919476238cc51b115c09c9c8bb1e4957105a48c"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "blob": "3680d4e79987fdc28f026f865d13724ea999bb31",
+      "bytes": 155769,
+      "sha256": "803e169a01427ebf8a945b704ce11a42fee2eac3dbb2d1a73658b317c380bdcc"
+    },
+    {
+      "path": "src/ai-models/ai-provider.ts",
+      "blob": "71ead47dfaf49ed6fb5b472614b1bff2da6d63f0",
+      "bytes": 2479,
+      "sha256": "ec1b7b1e3c3752e7ffdda0722db271e00bae8b618b81600575abda9fd11e16d6"
+    },
+    {
+      "path": "src/ai-models/anthropic.ts",
+      "blob": "264742aebea50f8dac2250a4df2e186d24fb35e2",
+      "bytes": 898,
+      "sha256": "625312643bf152e7393af42bbbfaf26769f30428bf33e8bc753f151cb0d73e56"
+    },
+    {
+      "path": "src/ai-models/google.ts",
+      "blob": "b3f77323d8146e80b1e585b31480362c37c5e782",
+      "bytes": 1266,
+      "sha256": "fd37348388d0aee0e0d9d9b8854e4523b76cae14ca4ba626744484c4064542bb"
+    },
+    {
+      "path": "src/ai-models/index.ts",
+      "blob": "9cfe410f5ac7230ea75e27946fc5fb056f71cbcb",
+      "bytes": 767,
+      "sha256": "51a40420fccf06781dbbd7af5eb6b99e6ca58f89bebce7a3e532be391c412755"
+    },
+    {
+      "path": "src/ai-models/openai.ts",
+      "blob": "643e8c143aca96912422b8789c78faf2e13fd38f",
+      "bytes": 2140,
+      "sha256": "aa92b2edeab2cbe32c652f70b4b15b06b2ea2ed3705ccda9eb7f7be388c89ba7"
+    },
+    {
+      "path": "src/index.ts",
+      "blob": "92741ed2bdcc9d5058216199c1053735bfa17ed9",
+      "bytes": 2075,
+      "sha256": "ae0b11e19674a46a4c7819254c9ac42840767023aaeb42517dbc1a969b319fbf"
+    },
+    {
+      "path": "src/lib/ai.ts",
+      "blob": "1aa955b0691613abebc88b79d9cc7a15bd0065a3",
+      "bytes": 2356,
+      "sha256": "fce2107c5d144df606a6d32ea3ec61dd3b801eeddd3119db0047eaf6587edfce"
+    },
+    {
+      "path": "src/lib/eventcatalog.ts",
+      "blob": "ddaa8cf195b89f52e0780517519eff4d3bced640",
+      "bytes": 349,
+      "sha256": "c2f193e96a08dfd2dd62db197bcf69a830601d084f888c0fcd9d464d832ab324"
+    },
+    {
+      "path": "src/lib/github.ts",
+      "blob": "0a433d6da9c86bdd0294417c8da9fd73c9da1532",
+      "bytes": 8725,
+      "sha256": "2bc8008276e650781495913c05bbb182e2775350ad08ae78bed1fae787b2505e"
+    },
+    {
+      "path": "src/license/check-license.ts",
+      "blob": "3f5934730851a2ed3a2e164ecff5e7e7f4e51867",
+      "bytes": 2032,
+      "sha256": "6531229b8955646b23b786444d98335003ab5bc69d43fae952de369ca0ea1ff6"
+    },
+    {
+      "path": "src/tasks/index.ts",
+      "blob": "8328708f64aa396faf87cd3f0de96c9ea8d01b13",
+      "bytes": 189,
+      "sha256": "591d00a8870ad072cf894072fbed27c8e7e5aed080c9864d6ecefab57fd6cbdd"
+    },
+    {
+      "path": "src/tasks/schema-review/github-comment.ts",
+      "blob": "49360a522cae5817cae011fa54c485aef6eb0016",
+      "bytes": 3162,
+      "sha256": "eb7776dba4dc947488ee3287ec94c20b005715a1f1bd5c157493a10b4013afde"
+    },
+    {
+      "path": "src/tasks/schema-review/index.ts",
+      "blob": "0d9469919a098fc479eb63f91dec9ba726b83a34",
+      "bytes": 5375,
+      "sha256": "814eb2147aa7f730228bff2e51e52278fe26e4bdb0604efa249105e775d73218"
+    },
+    {
+      "path": "src/tasks/schema-review/prompt.ts",
+      "blob": "a9184b01fd99498f975c7005655ac29f88efb61b",
+      "bytes": 3873,
+      "sha256": "05b241a02dfb011101e52a81949d080334800dacc92a73db32ed86b2e0e46c9b"
+    },
+    {
+      "path": "src/tasks/schema-review/review.ts",
+      "blob": "0143fe51063e1b9ece3ba55b2cef19ab6fb7b040",
+      "bytes": 2436,
+      "sha256": "75cee88548e7fc5af3db49072473613a52c23fbcbf3975750ff8b5db67433fb9"
+    },
+    {
+      "path": "tsconfig.json",
+      "blob": "0cafad903713021e9f3ad0fcfd25a985c38aea9b",
+      "bytes": 373,
+      "sha256": "2c24ff3e20ceed5b3f8078fd3a7f23fa9a5efefbb576026c2a4275f2a1803a5f"
+    },
+    {
+      "path": "vite.config.ts",
+      "blob": "a0e56ec8706a5201933b655a142955ead475cb61",
+      "bytes": 200,
+      "sha256": "30d0ad2d557db5b6870d24f73aa8563e87aa655ac86b1f71416ff2429351eaa1"
+    }
+  ],
+  "dependencies": {
+    "same_real_directory": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules",
+    "package_lock_unchanged_from_base": true,
+    "build_script": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "runtime_and_lock_identity": {
+      "initial_host_node": "v22.23.4",
+      "verification_node": "v20.20.2",
+      "pnpm": "10.33.4",
+      "python": "Python 3.12.3",
+      "package_sha256": "9ed7b0f0e95d1d6a8b770ce60919476238cc51b115c09c9c8bb1e4957105a48c",
+      "lock_sha256": "803e169a01427ebf8a945b704ce11a42fee2eac3dbb2d1a73658b317c380bdcc",
+      "resolved_packages": {
+        "ai": {
+          "version": "4.3.16",
+          "package_json_sha256": "52538ecaf2a09dfba3b34874413c2b6a1dfae69eac119589a9f8d4b6715d5cd0"
+        },
+        "@ai-sdk/openai": {
+          "version": "1.3.22",
+          "package_json_sha256": "cf0e1d0555675024c58bee53f16f1a967fddfb6b51f09bd95a788b5ea128dccc"
+        },
+        "@ai-sdk/anthropic": {
+          "version": "1.2.12",
+          "package_json_sha256": "0ed9cf84f76b32e004e85f4500e088baef787aa0486fc9e48f95a7bd0fd4cb84"
+        },
+        "@ai-sdk/google": {
+          "version": "1.2.18",
+          "package_json_sha256": "6b1d6b06cf00af4fc5d1ff86fc8811dd79645907ead3a6b06408063c4d8ce866"
+        },
+        "@eventcatalog/sdk": {
+          "version": "2.6.3",
+          "package_json_sha256": "1f6e0f48ab1bf365d1e4b7194a5a799ccb3109bd3859a9a6d7a174f5cb13bd91"
+        },
+        "zod": {
+          "version": "3.25.48",
+          "package_json_sha256": "4a14561a6e1b2fa92c07acbae6474eb75dcef3c76bd4f60a733b6e9ef7ecfd9b"
+        },
+        "@vercel/ncc": {
+          "version": "0.38.3",
+          "package_json_sha256": "18def2aedb64768209b33aa67106a1cbf5f1080aa578b58f76cb174f0372220d"
+        },
+        "typescript": {
+          "version": "5.8.3",
+          "package_json_sha256": "ebb0ce176c85ac13ce82f5be7e6f15114732ba0f064ccc893fd9051426d35d3a"
+        },
+        "vitest": {
+          "version": "3.2.0",
+          "package_json_sha256": "7799f79d488b70df756bb1a7b462afda2997845ee5c755f8ef5a25ac79dd1cc8"
+        }
+      },
+      "predecessor_generated_dist": {
+        "dist/886.index.js": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d",
+        "dist/886.index.js.map": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852",
+        "dist/index.js": "168d95ee138aeccd3b97ca89e3cf0776ac4924d2434b261f4338634b8a17aba9",
+        "dist/index.js.map": "4a1022793fa07a19a712088d7c53c07814a1cb34c9178752dd999addf10bb69c",
+        "dist/licenses.txt": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea",
+        "dist/sourcemap-register.js": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+      },
+      "generated_dist": {
+        "dist/886.index.js": "cc97f10f334118e11b246d7c3f0c67769d5405dc7d5011e8dee4c0812854515d",
+        "dist/886.index.js.map": "b513cc00a927b4b83a9f80aa5ed586b1b79a271c9fd846cdc217894edc1b2852",
+        "dist/index.js": "1b1ab5e90c49c1a71d70d0f2d9faef3c85f312b8f2d5ffd4191ec43fd134a788",
+        "dist/index.js.map": "13d605694626a8aeb14b5a6e76447c0df09b59305385d4689391df60b1586a88",
+        "dist/licenses.txt": "73a65c4125eb8b71d83c5b7fa750277d8a9eee55a2080c01e89874028b927aea",
+        "dist/sourcemap-register.js": "c2a14a81784d12c15b7baeed88c1faae3457e84890d1e5244cbfc0f4455b5e06"
+      },
+      "source_files": {
+        "src/lib/github.ts": "2bc8008276e650781495913c05bbb182e2775350ad08ae78bed1fae787b2505e",
+        "src/tasks/schema-review/github-comment.ts": "eb7776dba4dc947488ee3287ec94c20b005715a1f1bd5c157493a10b4013afde",
+        "src/tasks/schema-review/index.ts": "814eb2147aa7f730228bff2e51e52278fe26e4bdb0604efa249105e775d73218",
+        "src/tasks/schema-review/prompt.ts": "05b241a02dfb011101e52a81949d080334800dacc92a73db32ed86b2e0e46c9b",
+        "src/tasks/schema-review/review.ts": "75cee88548e7fc5af3db49072473613a52c23fbcbf3975750ff8b5db67433fb9"
+      }
+    }
+  },
+  "scope": "Every projected tracked non-test/non-dist file, including source, package, lock, tsconfig, license and root config, is raw-equal to canonical. Dependencies and all their license inputs use the identical shared real node_modules directory. No install or dependency amendment."
+}
