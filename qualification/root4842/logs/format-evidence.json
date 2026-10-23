@@ -1,0 +1,33 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "prettier",
+    "--config",
+    ".prettierrc",
+    "--write",
+    "qualification/root4842/WORKER-HANDBACK.md",
+    "qualification/root4842/WORKER-RESULT.json",
+    "qualification/root4842/PR-DRAFT.md",
+    "qualification/root4842/PROJECTIONS.json",
+    "qualification/root4842/PROJECTED-TREE.json",
+    "qualification/root4842/PRODUCTION-INPUTS.json",
+    "qualification/root4842/DIST-COMPARISON.json",
+    "qualification/root4842/RUNTIME.json",
+    "qualification/root4842/REFERENCES.json",
+    "qualification/root4842/CASE-MATRIX.json",
+    "qualification/root4842/PACKAGING-FAILURES.json",
+    "qualification/root4842/guard-control.cjs"
+  ],
+  "cwd": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023",
+  "started_utc": "2026-10-23T14:28:42.235457+00:00",
+  "finished_utc": "2026-10-23T14:28:42.916590+00:00",
+  "exit_code": 0,
+  "sample_interval_seconds": 0.05,
+  "peak_command_tree_rss_kib": 189056,
+  "peak_command_plus_native_owner_rss_kib": 443424,
+  "native_owner_found": true,
+  "memory_method": "sampled RSS sum of the entire native owner process tree, including all command descendants",
+  "reserve_kib": 2097152,
+  "reserve_exceeded": false
+}

@@ -1,0 +1,12 @@
+qualification/root4842/WORKER-HANDBACK.md 48ms
+qualification/root4842/WORKER-RESULT.json 57ms
+qualification/root4842/PR-DRAFT.md 6ms (unchanged)
+qualification/root4842/PROJECTIONS.json 5ms (unchanged)
+qualification/root4842/PROJECTED-TREE.json 12ms (unchanged)
+qualification/root4842/PRODUCTION-INPUTS.json 8ms (unchanged)
+qualification/root4842/DIST-COMPARISON.json 2ms (unchanged)
+qualification/root4842/RUNTIME.json 2ms (unchanged)
+qualification/root4842/REFERENCES.json 1ms (unchanged)
+qualification/root4842/CASE-MATRIX.json 8ms (unchanged)
+qualification/root4842/PACKAGING-FAILURES.json 1ms
+qualification/root4842/guard-control.cjs 13ms (unchanged)

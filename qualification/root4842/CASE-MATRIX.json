@@ -1,0 +1,550 @@
+{
+  "head": "f46aaa3d9b62ea83659514fc2c791192e22cd2ec",
+  "tree": "64e9216af767db7cd2431090920a49d5d076472d",
+  "counts": {
+    "focused": {
+      "passed": 96,
+      "failed": 0,
+      "skipped": 0
+    },
+    "full": {
+      "passed": 104,
+      "failed": 0,
+      "skipped": 0
+    },
+    "shipped-review": {
+      "passed": 18,
+      "failed": 0,
+      "skipped": 0
+    },
+    "shipped-source": {
+      "passed": 40,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "captures": [
+    {
+      "scenario": "authentication",
+      "capture": "captures/review/authentication.json",
+      "sha256": "3c8d66c001acfa50aa21c1cdded85109738dbf1ea9b1258eb5aa27b36d81afd5",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "below",
+      "capture": "captures/review/below.json",
+      "sha256": "5590648422f4ae93ce7b9dbad751cda9ac760c66be2a71c330c51d98d40af25a",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "exact",
+      "capture": "captures/review/exact.json",
+      "sha256": "bc9eef7bbfaca1939de63b988236542e2596f95a3915f584dc94eb4551a547d1",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "healthy",
+      "capture": "captures/review/healthy.json",
+      "sha256": "09645c7bbc51a1140366f76325659a8d7b1fe91be073679be8bc3003468f1f11",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "invalid-json",
+      "capture": "captures/review/invalid-json.json",
+      "sha256": "0c4c8ac7e061aa6226745e7d75da05652b22958acc77d037cb39c1e6e7e77686",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "invalid-license",
+      "capture": "captures/review/invalid-license.json",
+      "sha256": "52df5a44bceab107f263bef435f19968a70ad9857d1215ca2de0ba77c6e792d6",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "invalid-schema",
+      "capture": "captures/review/invalid-schema.json",
+      "sha256": "82afb50ac0797ef333344657ff66caccf0a032ed705ddd6d49604f4ed7b61ab5",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "legacy",
+      "capture": "captures/review/legacy.json",
+      "sha256": "6f265e0de194d371ffde98af874e35433b2d10ff29a05587a9359773e89fdf15",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "luna",
+      "capture": "captures/review/luna.json",
+      "sha256": "b9969a6ef14c3726819b1e260fc743d3636dc27407786a4031adb303e11368aa",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "missing-license",
+      "capture": "captures/review/missing-license.json",
+      "sha256": "3138a05bb80d49cba98ddeb3a20b332b0e7a437f5f8c196140dba25f3000b007",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 0,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "missing",
+      "capture": "captures/review/missing.json",
+      "sha256": "7d93a43d1c7eaeb19d44fcc6e8dcddd7742a1dc06b665fbabcf92b6c60a6df32",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "mixed",
+      "capture": "captures/review/mixed.json",
+      "sha256": "f3bf991591eff8f707732d6e018e46b804a374006a6c8a696864483b892ec437",
+      "action_exit": 1,
+      "provider_requests": 2,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "network",
+      "capture": "captures/review/network.json",
+      "sha256": "6fdb30663506cc2eb2cb0185c37ba42599e5602790c41932ed0e7d68362758b1",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "recovery",
+      "capture": "captures/review/recovery.json",
+      "sha256": "46ae39f04b45e2b127ef3d80791ca9fc12cc0719fe5dd5e1e00942e8a403a29c",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "sdk-rejection",
+      "capture": "captures/review/sdk-rejection.json",
+      "sha256": "873d87dd17ca4edae5fabc98ed60176a94f8c106a36772c937f0abdb74356014",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "timeout",
+      "capture": "captures/review/timeout.json",
+      "sha256": "4949ce8713a2737edc237a61d13dddfa6123eb9dfdd903714e96bfbfa699e238",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "zero-threshold",
+      "capture": "captures/review/zero-threshold.json",
+      "sha256": "9a6f2b19f3ee483af0bb96a1a28c0cb339ca6cafe9e2bb0bcb810fd2bf07ffa3",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "zero",
+      "capture": "captures/review/zero.json",
+      "sha256": "c25b4dc5843651b9cb221234c752a552604cdc699f97e577e534d47abad94735",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-added",
+      "capture": "captures/source/source-added.json",
+      "sha256": "c602dcbe01c92352750f467e24170be6afad923a32a41f7519c08c0b19fe505e",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-401",
+      "capture": "captures/source/source-base-401.json",
+      "sha256": "495be69b3f9ae18b14ccfc94b26586ea3b81e1c489200759e646286673f5424b",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-403",
+      "capture": "captures/source/source-base-403.json",
+      "sha256": "cdd3e3b9e175c456f3a4f11c8dfcb68804b9478e98c33a6a218d09b2f947b6f0",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-404",
+      "capture": "captures/source/source-base-404.json",
+      "sha256": "53b8b4320ec780dc12bb338a53e0666a447c487d1663ee9c510871a8163b56f6",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-503",
+      "capture": "captures/source/source-base-503.json",
+      "sha256": "fa1ae2ecbfef4bf37560199f824714a7df9a3f91879f49b0bcb2ff0a617a298d",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-base64",
+      "capture": "captures/source/source-base-base64.json",
+      "sha256": "70bc2d6155167254fe8c1f5dbfa0d757c48abe1872715a1bf208531398782e97",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-directory",
+      "capture": "captures/source/source-base-directory.json",
+      "sha256": "f56901c128a3c174975595b4af8496a6f6fad8b23c89abfbf681822cf7facd54",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-empty",
+      "capture": "captures/source/source-base-empty.json",
+      "sha256": "8eb014e55560513f7f06a20545b9bcd86460ef79efb5565eda7ac3b0340f25b8",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-encoding",
+      "capture": "captures/source/source-base-encoding.json",
+      "sha256": "d7f7c63e7540779ff8923d3b0db84746e34a76bcbd463c9a50a546f7cc8310e2",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-malformed",
+      "capture": "captures/source/source-base-malformed.json",
+      "sha256": "9253a96526fe1799c96190cad76f1054d7897fd134031285678a6a7f3d70a17a",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-missing",
+      "capture": "captures/source/source-base-missing.json",
+      "sha256": "41c0744cd067a9414848837f0a20c2ab5048abb651a6954fe4f2a8e1714294f4",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-network",
+      "capture": "captures/source/source-base-network.json",
+      "sha256": "06e788ba283ee7852d9372329cd07f9922589fbf72fed06f390357f3997c5ead",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-timeout",
+      "capture": "captures/source/source-base-timeout.json",
+      "sha256": "81e8d62970bd11baababeb0ca3f8d67560f35741dbd111293010cdc9adc123ac",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-truncated",
+      "capture": "captures/source/source-base-truncated.json",
+      "sha256": "3548b8582326e47ec157d02e5ecc4a5326d8285f5d29ffb8150bbfe0ea489701",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-base-utf8",
+      "capture": "captures/source/source-base-utf8.json",
+      "sha256": "ce2f456c254efd5e5b529333749e410f88e48d453eeb3fe5617deb304c627b20",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-commentwrite",
+      "capture": "captures/source/source-commentwrite.json",
+      "sha256": "42f6992c8bbb9a58f53e233c1795b8ff9b148d7575c174d46c6d6a45cf7c483f",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-401",
+      "capture": "captures/source/source-head-401.json",
+      "sha256": "c4acc80b02097fbafacf3968f2eee186f377c6f4b284144bb5998885a84140b5",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-403",
+      "capture": "captures/source/source-head-403.json",
+      "sha256": "1ab5636e0e2215bbd5feda85fa5425c416688705cb49d09e3ebaee7d76f4f421",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-404",
+      "capture": "captures/source/source-head-404.json",
+      "sha256": "d249151bbea7c64bbaf033b82a93a671fc0aa1b5d1e85ac6f75361fdcca44523",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-503",
+      "capture": "captures/source/source-head-503.json",
+      "sha256": "b9ec77340771432f609451e511964ea6966c02e3d9d1e78124d61802fb1f620d",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-base64",
+      "capture": "captures/source/source-head-base64.json",
+      "sha256": "4fe1d46e3cc5c813c0e6fccef91fc48f64d808546fe10a224aac8095539c06ea",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-directory",
+      "capture": "captures/source/source-head-directory.json",
+      "sha256": "997e8307df95ef4032ca6bfc67b72f7193a817de7d2c89bb4370a0fae6ad3706",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-empty",
+      "capture": "captures/source/source-head-empty.json",
+      "sha256": "eb35d4ceca45ddf9308d6f3a36557f5fe82e3cb4e77ba896d607a8f446f4334c",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-encoding",
+      "capture": "captures/source/source-head-encoding.json",
+      "sha256": "a08c973a13ddb1fe59b4f6c882f0f33378d3fd242604e06eb7bff9fadf3fe3e3",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-malformed",
+      "capture": "captures/source/source-head-malformed.json",
+      "sha256": "6735cfb062070097168998a575c4cdb7b9bf60ad2accbaba23df0cf8fe97daaf",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-missing",
+      "capture": "captures/source/source-head-missing.json",
+      "sha256": "9919081784a3eb1f550edc20308c3b8fe238aadaa12b41755446a372324e867d",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-network",
+      "capture": "captures/source/source-head-network.json",
+      "sha256": "0ae6fce83cb6d9ff374518c5b92d47c3b1d2f45b84321b7bd7f5d882a584c3b0",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-timeout",
+      "capture": "captures/source/source-head-timeout.json",
+      "sha256": "5c3369746499691b6813391d618300d0b0a5570215cdb742e2476b44a09e9794",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-truncated",
+      "capture": "captures/source/source-head-truncated.json",
+      "sha256": "576083581b4c2e8a99421311bbad847f88d1d390ec05bf9d902e0386edad54eb",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-head-utf8",
+      "capture": "captures/source/source-head-utf8.json",
+      "sha256": "d1c622bd0bf1207f16711b926aaa8cd5d952dc07c0bd401464e8436d1d98259f",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-mixed",
+      "capture": "captures/source/source-mixed.json",
+      "sha256": "2dc9f37efb64a92cbd447da0be4706a7bc659ee2fc679729d5432a6e1d1b7e90",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-modified",
+      "capture": "captures/source/source-modified.json",
+      "sha256": "b8a9a52a4fdf575ba699235900eacf10376339aff67b59cb7d805a02410aae2c",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-recovered",
+      "capture": "captures/source/source-recovered.json",
+      "sha256": "befd47475fc5bca65d250ff1c70b9b5e0d64b131310ef138157e31565b6fa705",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-removed",
+      "capture": "captures/source/source-removed.json",
+      "sha256": "194f2252360e07eb33c1f7a564f455627a1b955dbcd0ac9a4a0d0681aa2236f7",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-rename-ambiguous",
+      "capture": "captures/source/source-rename-ambiguous.json",
+      "sha256": "679600c5da9a54735c597ed36a78ae727a79c758e40f662f5c1b4051855acbf3",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-renamed-change",
+      "capture": "captures/source/source-renamed-change.json",
+      "sha256": "2d06ca0b4e012b549c8533ed55b998c833e5730e9411b6a656634c8431d8b0d6",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-renamed-same",
+      "capture": "captures/source/source-renamed-same.json",
+      "sha256": "704482e39e0ebed9f527cf6c43681199e5f0320326de6493e094f6ed6bc5432d",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-unknown",
+      "capture": "captures/source/source-unknown.json",
+      "sha256": "a0fa1850b1ccccc740884b34ac2a187225a5d83202ef583c924c526433ae862a",
+      "action_exit": 1,
+      "provider_requests": 0,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-zero-threshold",
+      "capture": "captures/source/source-zero-threshold.json",
+      "sha256": "57824fe17b6bd1a07453d5c8583afd94c83c450d5f4aedbff606fbb794e0dfd6",
+      "action_exit": 0,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    },
+    {
+      "scenario": "source-zero",
+      "capture": "captures/source/source-zero.json",
+      "sha256": "e5ad2afbce647fa40d88c46b6b69c5eab2e487afb55c79fbbc405552eef50717",
+      "action_exit": 1,
+      "provider_requests": 1,
+      "license_calls": 1,
+      "unexpected_routes": 0
+    }
+  ]
+}

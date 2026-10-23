@@ -10,6 +10,6 @@ Require complete UTF-8 schema contents before requesting review. Preserve PR sta
 
 ## Validation
 
-The projected candidate passes 104 Vitest tests, TypeScript no-emit, and 58 shipped-action cases using synthetic GitHub/license/provider boundaries. The generated action was rebuilt with the existing ncc command in the original build context and all six generated files compared as raw bytes. The minimal reusable harness lives in `tests/action/`, with reproduction commands in its README.
+Validation passes 104 Vitest tests, TypeScript no-emit, scoped formatting, and 58 shipped-action cases using synthetic GitHub/license/provider boundaries. The generated action was rebuilt with the existing ncc command in the original build context and all six generated files compared as raw bytes. The minimal reusable harness lives in `tests/action/`, with reproduction commands in its README.
 
 The shipped cases cover supported requests, license refusal, provider and fetch failures, secret redaction, zero/thresholds, additions/renames, mixed results, comment publication failure and later recovery. Live provider quality/availability, installed licensed invocation and hosted CI have not been tested. No dependency upgrade or workflow change is included.

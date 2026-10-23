@@ -1,0 +1,33 @@
+[
+  {
+    "phase": "first inline input proof",
+    "utc": "2026-10-23T14:16:24Z",
+    "exit_code": 1,
+    "shell_exit": 0,
+    "cause": "Path.cwd() was the projection archive, so the proof looked for canonical evidence under the deliberately absent qualification subtree. The shell then ran the focused suite, which passed.",
+    "retained_log": "logs/input-proof-first-failure.log",
+    "correction": "Explicit canonical path derived from __file__ in prove-projection.py; recorded proof passed before build. No product predicate changed."
+  },
+  {
+    "phase": "first owner evidence staged whitespace check",
+    "utc": "2026-10-23T14:19:28Z",
+    "command": ["git", "diff", "--cached", "--check"],
+    "exit_code": 2,
+    "cause": "Raw nested patch documents contain context-only space lines and removed original whitespace. They must remain exact binary-capable Git diffs.",
+    "bounded_diagnostic": [
+      "qualification/root4842/RELOCATION.diff:72: trailing whitespace.",
+      "+ ",
+      "qualification/root4842/candidate.diff:8: trailing whitespace.",
+      "+ ",
+      "qualification/root4842/candidate.diff:17: trailing whitespace.",
+      "+-          "
+    ],
+    "correction": "Preserved both raw diffs unchanged; scoped the evidence check to exclude *.diff documents. Actual candidate git diff --check passed."
+  },
+  {
+    "phase": "handback edit tool",
+    "exit": "tool rejected before mutation",
+    "cause": "apply_patch rejected delete/add operations targeting the same file in one patch.",
+    "correction": "Wrote the authorized new qualification handback directly; no projected file or test changed."
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "node": {
+    "path": "/tmp/root4410-a-runtime/node-v20.20.2-linux-x64/bin/node",
+    "version": "v20.20.2",
+    "sha256": "6295488653f0d93b0a157841746fef7e72cc4328cfb60c4bbe0ca2668a836ffd"
+  },
+  "pnpm": {
+    "path": "/home/ubuntu/.cache/node/corepack/v1/pnpm/10.33.4/bin/pnpm.cjs",
+    "version": "10.33.4",
+    "sha256": "b276da51dc8ca5b0d3ee3371695b50fc8b3244b281b091c63a3f082a88dadeb9"
+  },
+  "packages": {
+    "typescript": {
+      "version": "5.8.3",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/typescript@5.8.3/node_modules/typescript/package.json",
+      "sha256": "ebb0ce176c85ac13ce82f5be7e6f15114732ba0f064ccc893fd9051426d35d3a"
+    },
+    "vitest": {
+      "version": "3.2.0",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/vitest@3.2.0_@types+node@20.17.57/node_modules/vitest/package.json",
+      "sha256": "7799f79d488b70df756bb1a7b462afda2997845ee5c755f8ef5a25ac79dd1cc8"
+    },
+    "@vercel/ncc": {
+      "version": "0.38.3",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@vercel+ncc@0.38.3/node_modules/@vercel/ncc/package.json",
+      "sha256": "18def2aedb64768209b33aa67106a1cbf5f1080aa578b58f76cb174f0372220d"
+    },
+    "ai": {
+      "version": "4.3.16",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/ai@4.3.16_react@19.1.0_zod@3.25.48/node_modules/ai/package.json",
+      "sha256": "52538ecaf2a09dfba3b34874413c2b6a1dfae69eac119589a9f8d4b6715d5cd0"
+    },
+    "@ai-sdk/openai": {
+      "version": "1.3.22",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@ai-sdk+openai@1.3.22_zod@3.25.48/node_modules/@ai-sdk/openai/package.json",
+      "sha256": "cf0e1d0555675024c58bee53f16f1a967fddfb6b51f09bd95a788b5ea128dccc"
+    },
+    "@ai-sdk/anthropic": {
+      "version": "1.2.12",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@ai-sdk+anthropic@1.2.12_zod@3.25.48/node_modules/@ai-sdk/anthropic/package.json",
+      "sha256": "0ed9cf84f76b32e004e85f4500e088baef787aa0486fc9e48f95a7bd0fd4cb84"
+    },
+    "@ai-sdk/google": {
+      "version": "1.2.18",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@ai-sdk+google@1.2.18_zod@3.25.48/node_modules/@ai-sdk/google/package.json",
+      "sha256": "6b1d6b06cf00af4fc5d1ff86fc8811dd79645907ead3a6b06408063c4d8ce866"
+    },
+    "@eventcatalog/sdk": {
+      "version": "2.6.3",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/@eventcatalog+sdk@2.6.3/node_modules/@eventcatalog/sdk/package.json",
+      "sha256": "1f6e0f48ab1bf365d1e4b7194a5a799ccb3109bd3859a9a6d7a174f5cb13bd91"
+    },
+    "zod": {
+      "version": "3.25.48",
+      "path": "/home/ubuntu/ae14-work/root4410-a-eventcatalog-compatibility-20261023/node_modules/.pnpm/zod@3.25.48/node_modules/zod/package.json",
+      "sha256": "4a14561a6e1b2fa92c07acbae6474eb75dcef3c76bd4f60a733b6e9ef7ecfd9b"
+    }
+  },
+  "package_sha256": "9ed7b0f0e95d1d6a8b770ce60919476238cc51b115c09c9c8bb1e4957105a48c",
+  "lock_sha256": "803e169a01427ebf8a945b704ce11a42fee2eac3dbb2d1a73658b317c380bdcc"
+}
