@@ -70514,7 +70514,7 @@ class SchemaSourceError extends GitHubOperationError {
 exports.SchemaSourceError = SchemaSourceError;
 function getSchemaSourcePaths(change) {
     if (change.status === 'removed') {
-        throw new SchemaSourceError('Removed schema review is unsupported: the head catalog no longer defines this schema.', 'unsupported_change');
+        throw new SchemaSourceError('Removed schema review is unsupported. Review this deletion manually.', 'unsupported_change');
     }
     if (!['modified', 'added', 'renamed'].includes(change.status || '')) {
         throw new SchemaSourceError('Schema review requires supported, unambiguous PR change metadata.', 'unsupported_change');
@@ -70528,9 +70528,13 @@ function getSchemaSourcePaths(change) {
     };
 }
 function containsDirectory(targetPath, directoryName) {
-    const normalizedPath = path_1.default.normalize(targetPath);
-    const segments = normalizedPath.split(path_1.default.sep);
-    return segments.includes(directoryName);
+    const segments = path_1.default.normalize(targetPath).split(path_1.default.sep);
+    const directorySegments = path_1.default
+        .normalize(directoryName)
+        .split(path_1.default.sep)
+        .filter((segment) => segment !== '.');
+    return (directorySegments.length === 0 ||
+        segments.some((_, index) => directorySegments.every((segment, offset) => segments[index + offset] === segment)));
 }
 // A successful result is exact UTF-8 file content, including an empty string.
 // Absence is established separately by PR change metadata, never by a caught 404.
@@ -70547,10 +70551,12 @@ async function getFileContentAtRef(octokit, context, filePath, ref) {
     }
     catch (cause) {
         const status = getHttpStatus(cause);
-        const timedOut = cause instanceof Error && ['TimeoutError', 'AbortError'].includes(cause.name);
+        const nestedCause = cause?.cause;
+        const timedOut = [cause, nestedCause].some((error) => error instanceof Error && ['TimeoutError', 'AbortError'].includes(error.name));
+        const transportFailure = cause instanceof TypeError || (nestedCause instanceof Error && !cause.response);
         throw new SchemaSourceError(timedOut
             ? 'Schema source retrieval timed out or was aborted.'
-            : `Schema source retrieval failed (${status ? `HTTP ${status}` : 'network error'}).`, timedOut ? 'timeout' : 'request_failed', status, cause);
+            : `Schema source retrieval failed (${transportFailure || !status ? 'network error' : `HTTP ${status}`}).`, timedOut ? 'timeout' : transportFailure || !status ? 'network' : 'request_failed', status, cause);
     }
     if (!response || typeof response !== 'object' || Array.isArray(response)) {
         throw new SchemaSourceError('Schema source response is not a file.', 'invalid_response');
@@ -70831,7 +70837,9 @@ const generateGitHubCommentForSchemaReview = async ({ context, reviewedFiles, mo
     };
     const messages = await Promise.all(reviewedFiles.map(async (file) => {
         const relativeFilePath = file.filePath.replace(catalogFolderName, '');
-        const message = file.sourceError?.category === 'unsupported_change' ? undefined : await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
+        const message = file.sourceError?.category === 'unsupported_change'
+            ? undefined
+            : await getMessageBySchemaPath(relativeFilePath).catch(() => undefined);
         return {
             ...file,
             name: message?.name || file.filePath,
@@ -70942,8 +70950,15 @@ const task = async ({ octokit, context, catalogDirectory }) => {
         const filePath = change.filename;
         try {
             (0, github_1.getSchemaSourcePaths)(change);
+            const relativePath = path_1.default.relative(catalogDirectory || '.', filePath);
+            if (relativePath === '..' ||
+                relativePath.startsWith(`..${path_1.default.sep}`) ||
+                path_1.default.isAbsolute(relativePath) ||
+                (0, eventcatalog_1.getSchemasFromFilePaths)([filePath]).length === 0) {
+                throw new github_1.SchemaSourceError('Schema moved outside the selected catalog or schema formats; review this change manually.', 'unsupported_change');
+            }
             core.info(`Reviewing schema: ${filePath}`);
-            const message = await getMessageBySchemaPath(path_1.default.relative(catalogDirectory || '.', filePath));
+            const message = await getMessageBySchemaPath(relativePath);
             const { consumers = [] } = await getProducersAndConsumersForMessage(message.id, message.version);
             core.info(`Message consumers: ${consumers.map((c) => `${c.name} (${c.version})`).join(', ')}`);
             const schemaReviewResponse = await (0, review_1.reviewSchema)(octokit, context, filePath, consumers, change);
@@ -70953,8 +70968,6 @@ const task = async ({ octokit, context, catalogDirectory }) => {
             core.error(`Error reviewing schema: ${filePath}`);
             reviewedFiles.push({
                 filePath,
-                oldFileContent: '',
-                newFileContent: '',
                 aiError: error instanceof github_1.SchemaSourceError
                     ? error.message
                     : 'Schema review could not be completed. Check the schema mapping in EventCatalog.',
@@ -71041,7 +71054,9 @@ Please analyze these changes for potential issues, especially breaking changes i
 
 Review the following changes to the schema:
 Change type: ${changeStatus}.
-${previousSchema === null ? 'Base schema: absent, verified by GitHub added-file metadata.' : `Previous schema:
+${previousSchema === null
+    ? 'Base schema: absent, verified by GitHub added-file metadata.'
+    : `Previous schema:
 \`\`\`
 ${previousSchema}
 \`\`\``}
@@ -71131,12 +71146,12 @@ const reviewSchema = async (octokit, context, schemaFilePath, messages, change =
     core.info(`Performing schema review for file: ${schemaFilePath}`);
     const baseSha = context.payload.pull_request.base.sha;
     const headSha = context.payload.pull_request.head.sha;
-    const reviewedFileEntry = { filePath: schemaFilePath, oldFileContent: null, newFileContent: null };
+    const reviewedFileEntry = { filePath: schemaFilePath };
     try {
         const paths = (0, github_1.getSchemaSourcePaths)(change);
         const previousFileContent = paths.base === undefined ? null : await (0, github_1.getFileContentAtRef)(octokit, context, paths.base, baseSha);
-        const newFileContent = await (0, github_1.getFileContentAtRef)(octokit, context, paths.head, headSha);
         reviewedFileEntry.oldFileContent = previousFileContent;
+        const newFileContent = await (0, github_1.getFileContentAtRef)(octokit, context, paths.head, headSha);
         reviewedFileEntry.newFileContent = newFileContent;
         if (previousFileContent === '' || newFileContent === '') {
             throw new github_1.SchemaSourceError('Schema source is empty; an empty schema cannot be reviewed.', 'empty_schema');
@@ -71152,7 +71167,7 @@ const reviewSchema = async (octokit, context, schemaFilePath, messages, change =
         if (error instanceof github_1.SchemaSourceError)
             reviewedFileEntry.sourceError = error;
         const errorMessage = error instanceof github_1.SchemaSourceError ? error.message : (0, ai_1.getAIErrorMessage)(error);
-        core.error(`AI review failed for ${schemaFilePath}: ${errorMessage}`);
+        core.error(`Schema review failed for ${schemaFilePath}: ${errorMessage}`);
         reviewedFileEntry.aiError = errorMessage;
     }
     return reviewedFileEntry;

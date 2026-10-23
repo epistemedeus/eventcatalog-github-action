@@ -1,9 +1,11 @@
 ## Motivation
 
-The default `o4-mini` has an announced retirement, and the locked AI SDK sends the named substitute a request shape reported as unsupported in #1. A failed AI call also becomes a green “Safe” schema review because absent reviews and score zero are replaced with 100.
+The action's default model has an announced retirement, and the locked SDK sends its named substitute an incompatible request shape. Failed AI calls, zero scores and failed GitHub schema retrieval can also produce misleading Safe reviews.
 
-Use `gpt-5.6-terra` by default with the existing SDK's native schema-constrained output and temperature 1. Update the README workflow and explain explicit copied inputs. Preserve explicit models, including an additional Luna compatibility case, and the Anthropic/Google paths.
+Use `gpt-5.6-terra` with the existing SDK's strict schema output and temperature 1, and update the copied workflow example. Preserve explicit models and the Anthropic/Google paths.
 
-Validate review results, render failed items without a score, fail incomplete reviews even beside successful siblings, and preserve zero and threshold behavior. Keep original thrown errors while exposing safe status/parameter diagnostics. Rebuild the committed action with the existing ncc command.
+Require complete, verified UTF-8 schema content before requesting AI review. Preserve PR status and previous filename metadata: additions have an explicit absent base, and renames fetch the old path at base and new path at head. Removed schemas, ambiguous metadata, moves outside the selected schema scope and empty schemas produce clear failed reviews without an AI score. Retrieval failures retain their original cause/status internally and expose safe diagnostics. Successful siblings remain visible, zero and thresholds remain correct, and comment publication cannot erase a source failure.
 
-Validation: 40 Vitest tests, TypeScript no-emit, scoped Prettier, production build and 18 Node 20 generated-action scenarios pass. The exact baseline fails 22/29 source regressions and 15/18 bundle assertions; legacy and license controls pass. All final action tests use synthetic inputs and local GitHub/license/provider boundaries. No live provider qualification or licensed production run is claimed. See `qualification/root4410-a/RESULT.md` for preserved setup failures and commands.
+Validation: 104 Vitest tests, TypeScript no-emit, scoped Prettier, the existing ncc production build, and 58 Node 20 shipped-action scenarios pass (18 original plus 40 source-acquisition cases). The preserved predecessor fails 60 of 67 focused source assertions and 35 of 40 acquisition bundle assertions. Tests use synthetic inputs and local GitHub/license/provider boundaries. No dependency upgrade or license-gate change is needed.
+
+See `qualification/root4590/WORKER-HANDBACK.md` for exact source/artifact identities, commands, retained failures and limits. Live provider quality, licensed installed behavior and hosted CI remain unreceived.

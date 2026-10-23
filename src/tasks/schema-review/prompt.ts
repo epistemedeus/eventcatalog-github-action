@@ -41,10 +41,14 @@ Please analyze these changes for potential issues, especially breaking changes i
 
 Review the following changes to the schema:
 Change type: ${changeStatus}.
-${previousSchema === null ? 'Base schema: absent, verified by GitHub added-file metadata.' : `Previous schema:
+${
+  previousSchema === null
+    ? 'Base schema: absent, verified by GitHub added-file metadata.'
+    : `Previous schema:
 \`\`\`
 ${previousSchema}
-\`\`\``}
+\`\`\``
+}
 New schema:
 \`\`\`
 ${newSchema}

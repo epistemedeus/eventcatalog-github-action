@@ -62,8 +62,20 @@ export const task = async ({ octokit, context, catalogDirectory }: TaskParams) =
     const filePath = change.filename;
     try {
       getSchemaSourcePaths(change);
+      const relativePath = path.relative(catalogDirectory || '.', filePath);
+      if (
+        relativePath === '..' ||
+        relativePath.startsWith(`..${path.sep}`) ||
+        path.isAbsolute(relativePath) ||
+        getSchemasFromFilePaths([filePath]).length === 0
+      ) {
+        throw new SchemaSourceError(
+          'Schema moved outside the selected catalog or schema formats; review this change manually.',
+          'unsupported_change'
+        );
+      }
       core.info(`Reviewing schema: ${filePath}`);
-      const message = await getMessageBySchemaPath(path.relative(catalogDirectory || '.', filePath));
+      const message = await getMessageBySchemaPath(relativePath);
       const { consumers = [] } = await getProducersAndConsumersForMessage(message.id, message.version);
       core.info(`Message consumers: ${consumers.map((c) => `${c.name} (${c.version})`).join(', ')}`);
       const schemaReviewResponse = await reviewSchema(octokit, context, filePath, consumers, change);
@@ -72,8 +84,6 @@ export const task = async ({ octokit, context, catalogDirectory }: TaskParams) =
       core.error(`Error reviewing schema: ${filePath}`);
       reviewedFiles.push({
         filePath,
-        oldFileContent: '',
-        newFileContent: '',
         aiError:
           error instanceof SchemaSourceError
             ? error.message

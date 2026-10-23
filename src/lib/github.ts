@@ -19,7 +19,11 @@ function getHttpStatus(cause: unknown): number | undefined {
 
 export class GitHubOperationError extends Error {
   readonly cause?: unknown;
-  constructor(message: string, readonly status?: number, cause?: unknown) {
+  constructor(
+    message: string,
+    readonly status?: number,
+    cause?: unknown
+  ) {
     super(message);
     this.name = 'GitHubOperationError';
     Object.defineProperty(this, 'cause', { value: cause, enumerable: false });
@@ -27,7 +31,12 @@ export class GitHubOperationError extends Error {
 }
 
 export class SchemaSourceError extends GitHubOperationError {
-  constructor(message: string, readonly category: string, status?: number, cause?: unknown) {
+  constructor(
+    message: string,
+    readonly category: string,
+    status?: number,
+    cause?: unknown
+  ) {
     super(message, status, cause);
     this.name = 'SchemaSourceError';
   }
@@ -35,10 +44,7 @@ export class SchemaSourceError extends GitHubOperationError {
 
 export function getSchemaSourcePaths(change: ChangedFile): { base?: string; head: string } {
   if (change.status === 'removed') {
-    throw new SchemaSourceError(
-      'Removed schema review is unsupported: the head catalog no longer defines this schema.',
-      'unsupported_change'
-    );
+    throw new SchemaSourceError('Removed schema review is unsupported. Review this deletion manually.', 'unsupported_change');
   }
   if (!['modified', 'added', 'renamed'].includes(change.status || '')) {
     throw new SchemaSourceError('Schema review requires supported, unambiguous PR change metadata.', 'unsupported_change');
@@ -67,8 +73,8 @@ export interface AiReview {
 
 export interface ReviewedFile {
   filePath: string;
-  oldFileContent: string | null;
-  newFileContent: string | null;
+  oldFileContent?: string | null;
+  newFileContent?: string;
   sourceError?: SchemaSourceError;
   aiReview?: AiReview;
   aiError?: string;
@@ -80,9 +86,15 @@ export interface InitialChecksResult {
 }
 
 function containsDirectory(targetPath: string, directoryName: string) {
-  const normalizedPath = path.normalize(targetPath);
-  const segments = normalizedPath.split(path.sep);
-  return segments.includes(directoryName);
+  const segments = path.normalize(targetPath).split(path.sep);
+  const directorySegments = path
+    .normalize(directoryName)
+    .split(path.sep)
+    .filter((segment) => segment !== '.');
+  return (
+    directorySegments.length === 0 ||
+    segments.some((_, index) => directorySegments.every((segment, offset) => segments[index + offset] === segment))
+  );
 }
 
 // A successful result is exact UTF-8 file content, including an empty string.
@@ -104,12 +116,17 @@ export async function getFileContentAtRef(
     response = result.data;
   } catch (cause) {
     const status = getHttpStatus(cause);
-    const timedOut = cause instanceof Error && ['TimeoutError', 'AbortError'].includes(cause.name);
+    const nestedCause = (cause as { cause?: unknown } | null)?.cause;
+    const timedOut = [cause, nestedCause].some(
+      (error) => error instanceof Error && ['TimeoutError', 'AbortError'].includes(error.name)
+    );
+    const transportFailure =
+      cause instanceof TypeError || (nestedCause instanceof Error && !(cause as { response?: unknown }).response);
     throw new SchemaSourceError(
       timedOut
         ? 'Schema source retrieval timed out or was aborted.'
-        : `Schema source retrieval failed (${status ? `HTTP ${status}` : 'network error'}).`,
-      timedOut ? 'timeout' : 'request_failed',
+        : `Schema source retrieval failed (${transportFailure || !status ? 'network error' : `HTTP ${status}`}).`,
+      timedOut ? 'timeout' : transportFailure || !status ? 'network' : 'request_failed',
       status,
       cause
     );
@@ -212,27 +229,31 @@ export async function upsertComment(
   }
 
   try {
-  if (existingCommentId) {
-    core.info(`Updating existing comment id: ${existingCommentId}`);
-    const { data: updatedComment } = await octokit.rest.issues.updateComment({
-      owner,
-      repo,
-      comment_id: existingCommentId,
-      body: commentBody,
-    });
-    return updatedComment.id;
-  } else {
-    core.info('Creating new comment');
-    const { data: newComment } = await octokit.rest.issues.createComment({
-      owner,
-      repo,
-      issue_number: pullRequestNumber,
-      body: commentBody,
-    });
-    return newComment.id;
-  }
+    if (existingCommentId) {
+      core.info(`Updating existing comment id: ${existingCommentId}`);
+      const { data: updatedComment } = await octokit.rest.issues.updateComment({
+        owner,
+        repo,
+        comment_id: existingCommentId,
+        body: commentBody,
+      });
+      return updatedComment.id;
+    } else {
+      core.info('Creating new comment');
+      const { data: newComment } = await octokit.rest.issues.createComment({
+        owner,
+        repo,
+        issue_number: pullRequestNumber,
+        body: commentBody,
+      });
+      return newComment.id;
+    }
   } catch (cause) {
     const status = getHttpStatus(cause);
-    throw new GitHubOperationError(`Schema review comment publication failed (${status ? `HTTP ${status}` : 'request error'}).`, status, cause);
+    throw new GitHubOperationError(
+      `Schema review comment publication failed (${status ? `HTTP ${status}` : 'request error'}).`,
+      status,
+      cause
+    );
   }
 }

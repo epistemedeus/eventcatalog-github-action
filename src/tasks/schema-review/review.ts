@@ -19,14 +19,14 @@ export const reviewSchema = async (
   const baseSha = context.payload.pull_request!.base.sha;
   const headSha = context.payload.pull_request!.head.sha;
 
-  const reviewedFileEntry: ReviewedFile = { filePath: schemaFilePath, oldFileContent: null, newFileContent: null };
+  const reviewedFileEntry: ReviewedFile = { filePath: schemaFilePath };
 
   try {
     const paths = getSchemaSourcePaths(change);
     const previousFileContent =
       paths.base === undefined ? null : await getFileContentAtRef(octokit, context, paths.base, baseSha);
-    const newFileContent = await getFileContentAtRef(octokit, context, paths.head, headSha);
     reviewedFileEntry.oldFileContent = previousFileContent;
+    const newFileContent = await getFileContentAtRef(octokit, context, paths.head, headSha);
     reviewedFileEntry.newFileContent = newFileContent;
     if (previousFileContent === '' || newFileContent === '') {
       throw new SchemaSourceError('Schema source is empty; an empty schema cannot be reviewed.', 'empty_schema');
@@ -40,7 +40,7 @@ export const reviewSchema = async (
   } catch (error) {
     if (error instanceof SchemaSourceError) reviewedFileEntry.sourceError = error;
     const errorMessage = error instanceof SchemaSourceError ? error.message : getAIErrorMessage(error);
-    core.error(`AI review failed for ${schemaFilePath}: ${errorMessage}`);
+    core.error(`Schema review failed for ${schemaFilePath}: ${errorMessage}`);
     reviewedFileEntry.aiError = errorMessage;
   }
   return reviewedFileEntry;

@@ -28,6 +28,7 @@ fs.writeFileSync(
   path.join(serviceDirectory, 'index.mdx'),
   '---\nid: SyntheticService\nname: Synthetic service\nversion: 1.0.0\n---\nSynthetic fixture.'
 );
+if (scenario === 'source-removed') fs.rmSync(path.join(workspace, 'events/InventoryAdjusted'), { recursive: true });
 const eventPath = path.join(workspace, 'event.json');
 fs.writeFileSync(
   eventPath,
@@ -48,12 +49,13 @@ Object.assign(process.env, {
   INPUT_API_KEY: 'sk-synthetic-private',
   INPUT_PROVIDER: 'openai',
   INPUT_MODEL: scenario === 'luna' ? 'gpt-5.6-luna' : scenario === 'legacy' ? 'o4-mini' : '',
-  INPUT_FAILURE_THRESHOLD: scenario === 'zero-threshold' ? '0' : '75',
+  INPUT_FAILURE_THRESHOLD: ['zero-threshold', 'source-zero-threshold'].includes(scenario) ? '0' : '75',
 });
 const record = {
   scenario,
   node: process.version,
   comments: [],
+  commentAttempts: [],
   requests: [],
   licenseCalls: 0,
   githubCalls: [],
@@ -100,27 +102,88 @@ const responseFor = (body, value) => {
 };
 globalThis.fetch = async (url, init = {}) => {
   const target = new URL(String(url));
+  const decodedPath = decodeURIComponent(target.pathname);
   const body = init.body ? JSON.parse(init.body) : undefined;
   if (target.hostname === 'api.github.com') {
-    record.githubCalls.push({ path: target.pathname, method: init.method || 'GET' });
-    if (target.pathname.endsWith('/files'))
-      return json([{ filename: schemaFile, status: 'modified' }, ...(scenario === 'mixed' ? [{ filename: otherFile, status: 'modified' }] : [])]);
-    if (target.pathname.includes('/contents/'))
-      return json({ type: 'file', size: Buffer.byteLength('{"synthetic-private-schema":true}'), content: Buffer.from('{"synthetic-private-schema":true}').toString('base64'), encoding: 'base64' });
-    if (target.pathname.endsWith('/comments') && (!init.method || init.method === 'GET'))
+    record.githubCalls.push({
+      path: decodedPath,
+      encodedPath: target.pathname,
+      ref: target.searchParams.get('ref') || undefined,
+      method: init.method || 'GET',
+    });
+    if (decodedPath.endsWith('/files')) {
+      const status =
+        scenario === 'source-added'
+          ? 'added'
+          : scenario === 'source-removed'
+            ? 'removed'
+            : scenario.startsWith('source-renamed') || scenario === 'source-rename-ambiguous'
+              ? 'renamed'
+              : scenario === 'source-unknown'
+                ? 'copied'
+                : 'modified';
+      return json([
+        {
+          filename: schemaFile,
+          status,
+          ...(scenario.startsWith('source-renamed') && { previous_filename: 'events/OldEvent/schema.json' }),
+        },
+        ...(['mixed', 'source-mixed'].includes(scenario) ? [{ filename: otherFile, status: 'modified' }] : []),
+      ]);
+    }
+    if (decodedPath.includes('/contents/')) {
+      const ref = target.searchParams.get('ref');
+      const firstFile = !decodedPath.endsWith(otherFile);
+      const [, phase, fault] = scenario.split('-');
+      if ((phase === 'base' || phase === 'head') && ref === phase && firstFile) {
+        if (/^\d+$/.test(fault)) return json({ message: 'SECRET_SOURCE_FIXTURE' }, Number(fault));
+        if (fault === 'timeout') return json({ message: 'SECRET_SOURCE_FIXTURE' }, 504);
+        if (fault === 'directory') return json([]);
+        if (fault === 'missing') return json({ type: 'file', encoding: 'base64', size: 20 });
+        if (fault === 'encoding') return json({ type: 'file', encoding: 'none', content: '', size: 2000000 });
+        if (fault === 'truncated') return json({ type: 'file', encoding: 'base64', content: 'e30=', size: 999 });
+        if (fault === 'malformed') return json(null);
+        if (fault === 'base64') return json({ type: 'file', encoding: 'base64', content: '%%bad', size: 3 });
+        if (fault === 'utf8') return json({ type: 'file', encoding: 'base64', content: '/w==', size: 1 });
+        if (fault === 'empty') return json({ type: 'file', encoding: 'base64', content: '', size: 0 });
+      }
+      if (['source-mixed', 'source-commentwrite'].includes(scenario) && ref === 'head' && firstFile)
+        return json({ message: 'SECRET_SOURCE_FIXTURE' }, 403);
+      if (scenario === 'source-added' && ref === 'base') return json({ message: 'Unexpected added base request' }, 404);
+      if (scenario.startsWith('source-renamed')) {
+        if ((ref === 'base') !== decodedPath.endsWith('events/OldEvent/schema.json'))
+          return json({ message: 'Wrong rename source path' }, 404);
+      }
+      const text = scenario.startsWith('source-renamed')
+        ? scenario === 'source-renamed-change' && ref === 'head'
+          ? '{"after":true}'
+          : '{"before":true}'
+        : '{"synthetic-private-schema":true}';
+      return json({
+        type: 'file',
+        size: Buffer.byteLength(text),
+        content: Buffer.from(text).toString('base64'),
+        encoding: 'base64',
+      });
+    }
+    if (decodedPath.endsWith('/comments') && (!init.method || init.method === 'GET'))
       return json(
-        scenario === 'recovery' ? [{ id: 123, body: '<!-- eventcatalog-schema-review-comment -->\nReview failed' }] : []
+        ['recovery', 'source-recovered'].includes(scenario)
+          ? [{ id: 123, body: '<!-- eventcatalog-schema-review-comment -->\nReview failed' }]
+          : []
       );
     if (
-      (target.pathname.endsWith('/comments') && init.method === 'POST') ||
-      (target.pathname.endsWith('/comments/123') && init.method === 'PATCH')
+      (decodedPath.endsWith('/comments') && init.method === 'POST') ||
+      (decodedPath.endsWith('/comments/123') && init.method === 'PATCH')
     ) {
+      record.commentAttempts.push({ method: init.method, body: body.body });
+      if (scenario === 'source-commentwrite') return json({ message: 'SECRET_SOURCE_FIXTURE' }, 503);
       record.comments.push({ method: init.method, body: body.body });
       return json({ id: 123 });
     }
     throw new Error('Unexpected synthetic GitHub route');
   }
-  if (target.hostname === 'api.openai.com' && target.pathname === '/v1/chat/completions') {
+  if (target.hostname === 'api.openai.com' && decodedPath === '/v1/chat/completions') {
     record.requests.push({ url: String(url), body });
     if (scenario === 'sdk-rejection')
       return json(
@@ -151,11 +214,18 @@ globalThis.fetch = async (url, init = {}) => {
           400
         );
     }
-    const score =
-      scenario === 'zero' || scenario === 'zero-threshold' ? 0 : scenario === 'below' ? 74 : scenario === 'exact' ? 75 : 85;
+    const score = ['zero', 'zero-threshold', 'source-zero', 'source-zero-threshold'].includes(scenario)
+      ? 0
+      : scenario === 'below'
+        ? 74
+        : scenario === 'exact'
+          ? 75
+          : scenario.startsWith('source-')
+            ? 100
+            : 85;
     return responseFor(body, goodReview(score));
   }
-  record.unexpectedNetwork.push(target.origin + target.pathname);
+  record.unexpectedNetwork.push(target.origin + decodedPath);
   throw new Error('External network is disabled by qualification');
 };
 
@@ -165,6 +235,18 @@ globalThis.fetch = async (url, init = {}) => {
   const server = http.createServer(async (request, response) => {
     let body = '';
     for await (const chunk of request) body += chunk;
+    const sourceUrl = new URL(request.url, 'http://localhost');
+    const [, phase, fault] = scenario.split('-');
+    if (fault === 'network' && sourceUrl.pathname.includes('/contents/') && sourceUrl.searchParams.get('ref') === phase) {
+      record.githubCalls.push({
+        path: decodeURIComponent(sourceUrl.pathname),
+        encodedPath: sourceUrl.pathname,
+        ref: phase,
+        method: request.method,
+      });
+      request.socket.destroy();
+      return;
+    }
     if (request.url === '/license') {
       record.licenseCalls++;
       response.writeHead(scenario === 'invalid-license' ? 401 : 200, { 'content-type': 'application/json', connection: 'close' });
@@ -228,6 +310,9 @@ globalThis.fetch = async (url, init = {}) => {
     if (
       record.unexpectedNetwork.length ||
       record.stdout.includes('name=comment-url') ||
+      (scenario === 'source-commentwrite' &&
+        (record.stdout.includes('::error::Schema review comment publication failed') ||
+          record.stdout.includes('::error::SECRET_SOURCE_FIXTURE'))) ||
       (['missing-license', 'invalid-license'].includes(scenario) && record.stdout.includes('::error::Invalid license key'))
     )
       finish();

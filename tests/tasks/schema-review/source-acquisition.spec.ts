@@ -44,6 +44,10 @@ const adverse: [string, () => any][] = [
     },
   ],
   ['directory', () => ({ data: [] })],
+  ['symlink', () => ({ data: { ...content().data, type: 'symlink' } })],
+  ['submodule', () => ({ data: { ...content().data, submodule_git_url: secret } })],
+  ['truncated flag', () => ({ data: { ...content().data, truncated: true } })],
+  ['missing size', () => ({ data: { type: 'file', encoding: 'base64', content: 'e30=' } })],
   ['no content', () => ({ data: { type: 'file', encoding: 'base64', size: 10 } })],
   ['unsupported encoding', () => ({ data: { type: 'file', encoding: 'none', content: '', size: 2000000 } })],
   ['truncated', () => ({ data: { ...content().data, size: 999 } })],
@@ -58,14 +62,18 @@ let diagnostics: any[];
 let threshold: string;
 let score: number;
 let changes: any[];
+let catalogDirectory: string;
 
 beforeEach(() => {
+  catalogDirectory = '';
   changes = [{ filename: filePath, status: 'modified' }];
   threshold = '75';
   score = 100;
   metadata.read.mockClear();
   vi.spyOn(core, 'getInput').mockImplementation(
-    (name) => ({ failure_threshold: threshold, provider: 'openai', model: 'gpt-5.6-terra' })[name] || ''
+    (name) =>
+      ({ failure_threshold: threshold, provider: 'openai', model: 'gpt-5.6-terra', catalog_directory: catalogDirectory })[name] ||
+      ''
   );
   diagnostics = [
     vi.spyOn(core, 'error'),
@@ -78,14 +86,12 @@ beforeEach(() => {
   diagnostics.forEach((spy) => spy.mockImplementation(() => {}));
   vi.spyOn(core, 'setOutput').mockImplementation(() => {});
   failed = vi.spyOn(core, 'setFailed').mockImplementation(() => {});
-  provider = vi
-    .spyOn(ai, 'sendPromptToModel')
-    .mockImplementation(async () => ({
-      score,
-      executiveSummary: 'Synthetic result',
-      schemaFormat: 'json',
-      effectedConsumers: [],
-    }));
+  provider = vi.spyOn(ai, 'sendPromptToModel').mockImplementation(async () => ({
+    score,
+    executiveSummary: 'Synthetic result',
+    schemaFormat: 'json',
+    effectedConsumers: [],
+  }));
   octokit = {
     rest: {
       pulls: { listFiles: vi.fn(async () => ({ data: changes })) },
@@ -96,7 +102,7 @@ beforeEach(() => {
 });
 afterEach(() => vi.restoreAllMocks());
 async function run() {
-  await task({ octokit, context, catalogDirectory: '' });
+  await task({ octokit, context, catalogDirectory });
   return octokit.rest.issues.createComment.mock.calls[0]?.[0].body as string;
 }
 function failAt(ref: string, response: () => any, target = filePath) {
@@ -193,6 +199,92 @@ describe('source acquisition through the actual task with a score-100 negative c
     failAt(ref, () => content(''));
     assertRefusal(await run());
   });
+  it('fails an addition if its required head is missing', async () => {
+    changes[0].status = 'added';
+    failAt('exact-head', () => {
+      throw httpError(404);
+    });
+    assertRefusal(await run());
+    expect(octokit.rest.repos.getContent).toHaveBeenCalledTimes(1);
+  });
+  it('fails a rename if the metadata-bound previous path cannot be read', async () => {
+    changes[0] = { filename: filePath, status: 'renamed', previous_filename: 'events/Old/schema.json' };
+    failAt(
+      'exact-base',
+      () => {
+        throw httpError(404);
+      },
+      'events/Old/schema.json'
+    );
+    assertRefusal(await run());
+  });
+  it('does not silently skip a schema renamed to an unsupported extension', async () => {
+    changes[0] = { filename: 'events/Event/schema.txt', status: 'renamed', previous_filename: filePath };
+    assertRefusal(await run());
+    expect(octokit.rest.repos.getContent).not.toHaveBeenCalled();
+  });
+  it.each(['modified', 'renamed'])('reviews %s metadata through nested catalog filtering', async (status) => {
+    catalogDirectory = 'docs/catalog';
+    changes[0] = {
+      filename: `${catalogDirectory}/${filePath}`,
+      status,
+      ...(status === 'renamed' && { previous_filename: 'archive/events/Event/schema.json' }),
+    };
+    expect(await run()).toContain('100/100');
+    expect(failed).not.toHaveBeenCalled();
+    expect(metadata.read.mock.calls[0][0]).toBe(filePath);
+    expect(octokit.rest.repos.getContent.mock.calls[0][0].path).toBe(
+      status === 'renamed' ? 'archive/events/Event/schema.json' : changes[0].filename
+    );
+  });
+  it('reports a rename leaving the selected catalog instead of silently skipping it', async () => {
+    catalogDirectory = 'docs/catalog';
+    changes[0] = {
+      filename: 'archive/events/Event/schema.json',
+      previous_filename: `${catalogDirectory}/${filePath}`,
+      status: 'renamed',
+    };
+    assertRefusal(await run());
+    expect(metadata.read).not.toHaveBeenCalled();
+  });
+  it('retains the acquisition error and original cause on the real review result', async () => {
+    const original = httpError(403);
+    octokit.rest.repos.getContent.mockRejectedValue(original);
+    const { reviewSchema } = await import('../../../src/tasks/schema-review/review');
+    const result = await reviewSchema(octokit, context, filePath, [], changes[0]);
+    expect(result.sourceError?.cause).toBe(original);
+    expect(result.sourceError?.status).toBe(403);
+    expect(result.oldFileContent).toBeUndefined();
+    expect(result.newFileContent).toBeUndefined();
+    expect(JSON.stringify(result)).not.toContain(secret);
+  });
+  it.each(['modified', 'added'])('keeps %s base evidence distinct from a failed head acquisition', async (status) => {
+    changes[0].status = status;
+    failAt('exact-head', () => {
+      throw httpError(404);
+    });
+    const { reviewSchema } = await import('../../../src/tasks/schema-review/review');
+    const result = await reviewSchema(octokit, context, filePath, [], changes[0]);
+    expect(result.oldFileContent).toBe(status === 'added' ? null : '{"type":"object"}');
+    expect(result.newFileContent).toBeUndefined();
+    expect(result.sourceError?.status).toBe(404);
+    expect(provider).not.toHaveBeenCalled();
+  });
+  it('redacts failed comment-listing and comment-write messages while preserving publication cause', async () => {
+    const original = httpError(503);
+    failAt('exact-head', () => {
+      throw httpError(401);
+    });
+    octokit.rest.issues.listComments.mockRejectedValue(httpError(403));
+    octokit.rest.issues.createComment.mockRejectedValue(original);
+    const error = await run().catch((error) => error);
+    expect(error).toBeInstanceOf(Error);
+    expect(error.cause).toBe(original);
+    expect(error.status).toBe(503);
+    expect(failed).toHaveBeenCalled();
+    expect(provider).not.toHaveBeenCalled();
+    expect(JSON.stringify([error, ...diagnostics.map((spy) => spy.mock.calls)])).not.toContain(secret);
+  });
   it('does not ban legitimate schema text resembling the old sentinel', async () => {
     const text = 'Could not retrieve content (Error: these are legitimate file bytes)';
     octokit.rest.repos.getContent.mockResolvedValue(content(text));
@@ -221,9 +313,9 @@ describe('source acquisition through the actual task with a score-100 negative c
 });
 
 describe('shared fetch contract', () => {
-  it('returns exact file bytes including a real empty file', async () => {
-    octokit.rest.repos.getContent.mockResolvedValue(content(''));
-    expect(await github.getFileContentAtRef(octokit, context, filePath, 'exact-base')).toBe('');
+  it.each(['', '\ufeff{"title":"Å雪"}\n', 'line1\r\nline2\n'])('returns exact UTF-8 file content %j', async (text) => {
+    octokit.rest.repos.getContent.mockResolvedValue(content(text));
+    expect(await github.getFileContentAtRef(octokit, context, filePath, 'exact-base')).toBe(text);
   });
   it('throws a safe typed error retaining original status and cause', async () => {
     const original = httpError(404);
